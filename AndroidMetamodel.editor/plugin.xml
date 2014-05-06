@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated Android -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="Android.presentation.AndroidModelWizardID"
+            name="%_UI_AndroidModelWizard_label"
+            class="Android.presentation.AndroidModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/AndroidModelFile.gif">
+         <description>%_UI_AndroidModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated Android -->
+      <editor
+            id="Android.presentation.AndroidEditorID"
+            name="%_UI_AndroidEditor_label"
+            icon="icons/full/obj16/AndroidModelFile.gif"
+            extensions="android"
+            class="Android.presentation.AndroidEditor"
+            contributorClass="Android.presentation.AndroidActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

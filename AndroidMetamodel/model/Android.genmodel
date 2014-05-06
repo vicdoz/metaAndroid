@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/AndroidMetamodel/src" modelPluginID="AndroidMetamodel"
+    modelName="Android" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>Android.ecore</foreignModel>
+  <genPackages prefix="Android" disposableProviderFactory="true" ecorePackage="Android.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Android.ecore#//tipoLayout">
+      <genEnumLiterals ecoreEnumLiteral="Android.ecore#//tipoLayout/Horizontal"/>
+      <genEnumLiterals ecoreEnumLiteral="Android.ecore#//tipoLayout/Vertical"/>
+      <genEnumLiterals ecoreEnumLiteral="Android.ecore#//tipoLayout/Relative"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Android.ecore#//tipo_permiso">
+      <genEnumLiterals ecoreEnumLiteral="Android.ecore#//tipo_permiso/INTERNET"/>
+      <genEnumLiterals ecoreEnumLiteral="Android.ecore#//tipo_permiso/FINE_LOCATION"/>
+      <genEnumLiterals ecoreEnumLiteral="Android.ecore#//tipo_permiso/COARSE_LOCATION"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Android.ecore#//tipoEntradaTexto">
+      <genEnumLiterals ecoreEnumLiteral="Android.ecore#//tipoEntradaTexto/Normal"/>
+      <genEnumLiterals ecoreEnumLiteral="Android.ecore#//tipoEntradaTexto/Password"/>
+      <genEnumLiterals ecoreEnumLiteral="Android.ecore#//tipoEntradaTexto/Mail"/>
+      <genEnumLiterals ecoreEnumLiteral="Android.ecore#//tipoEntradaTexto/Telefono"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Android.ecore#//duracionDialogo">
+      <genEnumLiterals ecoreEnumLiteral="Android.ecore#//duracionDialogo/SHORT"/>
+      <genEnumLiterals ecoreEnumLiteral="Android.ecore#//duracionDialogo/LONG"/>
+    </genEnums>
+    <genClasses ecoreClass="Android.ecore#//Aplicacion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Android.ecore#//Aplicacion/Nombre"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Android.ecore#//Aplicacion/actividades"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Android.ecore#//Aplicacion/layout"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Android.ecore#//Aplicacion/permiso"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Android.ecore#//Aplicacion/minSDK"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Android.ecore#//Aplicacion/targetSDK"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Android.ecore#//Aplicacion/paquete"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Android.ecore#//Aplicacion/versionCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Android.ecore#//Aplicacion/versionName"/>
+    </genClasses>
+    <genClasses ecoreClass="Android.ecore#//Activity">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Android.ecore#//Activity/app"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Android.ecore#//Activity/controla"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Android.ecore#//Activity/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Android.ecore#//Activity/paquete"/>
+    </genClasses>
+    <genClasses ecoreClass="Android.ecore#//Layout">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Android.ecore#//Layout/padre"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Android.ecore#//Layout/hijo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Android.ecore#//Layout/widget"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Android.ecore#//Layout/perteneceAapp"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Android.ecore#//Layout/activities"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Android.ecore#//Layout/tipo"/>
+    </genClasses>
+    <genClasses ecoreClass="Android.ecore#//Controlador">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Android.ecore#//Controlador/esControladaPor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Android.ecore#//Controlador/manejaWidget"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Android.ecore#//Controlador/haceAccion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Android.ecore#//Controlador/nombre"/>
+    </genClasses>
+    <genClasses ecoreClass="Android.ecore#//EClass0"/>
+    <genClasses ecoreClass="Android.ecore#//Widget">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Android.ecore#//Widget/perteneceAlayout"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Android.ecore#//Widget/esControladoPor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Android.ecore#//Widget/id"/>
+    </genClasses>
+    <genClasses ecoreClass="Android.ecore#//Boton">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Android.ecore#//Boton/accion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Android.ecore#//Boton/texto"/>
+    </genClasses>
+    <genClasses ecoreClass="Android.ecore#//EditText">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Android.ecore#//EditText/tipo"/>
+    </genClasses>
+    <genClasses ecoreClass="Android.ecore#//accion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Android.ecore#//accion/click"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Android.ecore#//accion/longClick"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Android.ecore#//accion/perteneceA"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Android.ecore#//accion/muestra"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Android.ecore#//accion/esAccionadoPor"/>
+    </genClasses>
+    <genClasses ecoreClass="Android.ecore#//Dialogo">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Android.ecore#//Dialogo/esMostradoEnUnaAccion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Android.ecore#//Dialogo/Duracion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Android.ecore#//Dialogo/Texto"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Android.ecore#//Dialogo/Imagen"/>
+    </genClasses>
+    <genClasses ecoreClass="Android.ecore#//permiso">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Android.ecore#//permiso/daPermisoA"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Android.ecore#//permiso/nombre"/>
+    </genClasses>
+    <genClasses ecoreClass="Android.ecore#//containers"/>
+    <genClasses ecoreClass="Android.ecore#//objects"/>
+    <genClasses ecoreClass="Android.ecore#//TextView">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Android.ecore#//TextView/text"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

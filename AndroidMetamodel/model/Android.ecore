@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Android" nsURI="Android" nsPrefix="Android">
+  <eClassifiers xsi:type="ecore:EClass" name="Aplicacion">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actividades" upperBound="-1"
+        eType="#//Activity" containment="true" eOpposite="#//Activity/app"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="layout" upperBound="-1"
+        eType="#//Layout" containment="true" eOpposite="#//Layout/perteneceAapp"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="permiso" upperBound="-1"
+        eType="#//tipo_permiso"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minSDK" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetSDK" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="paquete" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="versionCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="versionName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Activity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="app" lowerBound="1" eType="#//Aplicacion"
+        eOpposite="#//Aplicacion/actividades"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="controla" lowerBound="1"
+        eType="#//Controlador" eOpposite="#//Controlador/esControladaPor"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="paquete" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Layout">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="padre" eType="#//Layout"
+        eOpposite="#//Layout/hijo"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hijo" upperBound="-1" eType="#//Layout"
+        eOpposite="#//Layout/padre"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="widget" eType="#//Widget"
+        eOpposite="#//Widget/perteneceAlayout"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="perteneceAapp" lowerBound="1"
+        eType="#//Aplicacion" eOpposite="#//Aplicacion/layout"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activities" upperBound="-1"
+        eType="#//Activity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="#//tipoLayout"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Controlador">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="esControladaPor" lowerBound="1"
+        eType="#//Activity" eOpposite="#//Activity/controla"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="manejaWidget" lowerBound="1"
+        eType="#//Widget" eOpposite="#//Widget/esControladoPor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="haceAccion" upperBound="-1"
+        eType="#//accion" eOpposite="#//accion/perteneceA"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EClass0"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="tipoLayout">
+    <eLiterals name="Horizontal"/>
+    <eLiterals name="Vertical" value="1"/>
+    <eLiterals name="Relative" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Widget">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="perteneceAlayout" lowerBound="1"
+        eType="#//Layout" eOpposite="#//Layout/widget"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="esControladoPor" upperBound="-1"
+        eType="#//Controlador" eOpposite="#//Controlador/manejaWidget"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Boton" eSuperTypes="#//Widget">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="accion" lowerBound="1"
+        upperBound="-1" eType="#//accion" eOpposite="#//accion/esAccionadoPor"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="texto" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EditText" eSuperTypes="#//Widget">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="#//tipoEntradaTexto"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="accion">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="click" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="longClick" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="perteneceA" lowerBound="1"
+        eType="#//Controlador" eOpposite="#//Controlador/haceAccion"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="muestra" eType="#//Dialogo"
+        eOpposite="#//Dialogo/esMostradoEnUnaAccion"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="esAccionadoPor" lowerBound="1"
+        upperBound="-1" eType="#//Boton" eOpposite="#//Boton/accion"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Dialogo">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="esMostradoEnUnaAccion"
+        lowerBound="1" eType="#//accion" eOpposite="#//accion/muestra"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Duracion" eType="#//duracionDialogo"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Texto" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Imagen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="permiso">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="daPermisoA" lowerBound="1"
+        eType="#//Aplicacion"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nombre" eType="#//permiso"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="tipo_permiso">
+    <eLiterals name="INTERNET"/>
+    <eLiterals name="FINE_LOCATION" value="1"/>
+    <eLiterals name="COARSE_LOCATION" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="tipoEntradaTexto">
+    <eLiterals name="Normal"/>
+    <eLiterals name="Password" value="1"/>
+    <eLiterals name="Mail" value="2"/>
+    <eLiterals name="Telefono" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="duracionDialogo">
+    <eLiterals name="SHORT"/>
+    <eLiterals name="LONG" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="containers" eSuperTypes="#//Widget"/>
+  <eClassifiers xsi:type="ecore:EClass" name="objects" eSuperTypes="#//Widget"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TextView" eSuperTypes="#//Widget">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+  </eClassifiers>
+</ecore:EPackage>

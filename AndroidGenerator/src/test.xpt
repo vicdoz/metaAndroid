@@ -1,0 +1,17 @@
+«IMPORT Android»
+
+
+   
+«DEFINE Root FOR Android::Aplicacion»
+
+	«FILE "manifest.xml"»
+		Nombre:«Nombre»
+		Paquete:«paquete»	
+		TargetSDK:«targetSDK»	
+		
+	«ENDFILE»
+
+«ENDDEFINE»
+
+
+
