@@ -11,10 +11,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="layout" upperBound="-1"
         eType="#//Layout" containment="true" eOpposite="#//Layout/perteneceAapp"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="permiso" upperBound="-1"
-        eType="#//permiso.1"/>
+        eType="#//tipo_permiso"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="minSDK" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxSDK" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetSDK" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="paquete" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="versionCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="versionName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Activity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="app" lowerBound="1" eType="#//Aplicacion"
@@ -22,24 +24,26 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="controla" lowerBound="1"
         eType="#//Controlador" eOpposite="#//Controlador/esControladaPor"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="paquete" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Layout">
     <eStructuralFeatures xsi:type="ecore:EReference" name="padre" eType="#//Layout"
         eOpposite="#//Layout/hijo"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hijo" upperBound="-1" eType="#//Layout"
         eOpposite="#//Layout/padre"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="#//tipoLayout"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="widget"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="widget" eType="#//Widget"
+        eOpposite="#//Widget/perteneceAlayout"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="perteneceAapp" lowerBound="1"
         eType="#//Aplicacion" eOpposite="#//Aplicacion/layout"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="EReference0" eType="#//Layout"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="activities" upperBound="-1"
         eType="#//Activity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="#//tipoLayout"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Controlador">
     <eStructuralFeatures xsi:type="ecore:EReference" name="esControladaPor" lowerBound="1"
         eType="#//Activity" eOpposite="#//Activity/controla"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="manejaWidget"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="manejaWidget" lowerBound="1"
+        eType="#//Widget" eOpposite="#//Widget/esControladoPor"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="haceAccion" upperBound="-1"
         eType="#//accion" eOpposite="#//accion/perteneceA"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -55,16 +59,14 @@
         eType="#//Layout" eOpposite="#//Layout/widget"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="esControladoPor" upperBound="-1"
         eType="#//Controlador" eOpposite="#//Controlador/manejaWidget"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="EReference0" upperBound="-1"
-        eType="#//Controlador"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Boton" eSuperTypes="#//Widget">
     <eStructuralFeatures xsi:type="ecore:EReference" name="accion" lowerBound="1"
         upperBound="-1" eType="#//accion" eOpposite="#//accion/esAccionadoPor"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="texto" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TextView" eSuperTypes="#//Widget"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TextField" eSuperTypes="#//Widget">
+  <eClassifiers xsi:type="ecore:EClass" name="EditText" eSuperTypes="#//Widget">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="#//tipoEntradaTexto"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="accion">
@@ -87,9 +89,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="permiso">
     <eStructuralFeatures xsi:type="ecore:EReference" name="daPermisoA" lowerBound="1"
         eType="#//Aplicacion"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="#//permiso.1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nombre" eType="#//permiso"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="permiso">
+  <eClassifiers xsi:type="ecore:EEnum" name="tipo_permiso">
     <eLiterals name="INTERNET"/>
     <eLiterals name="FINE_LOCATION" value="1"/>
     <eLiterals name="COARSE_LOCATION" value="2"/>
@@ -106,5 +108,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="containers" eSuperTypes="#//Widget"/>
   <eClassifiers xsi:type="ecore:EClass" name="objects" eSuperTypes="#//Widget"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TextView" eSuperTypes="#//Widget"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TextView" eSuperTypes="#//Widget">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+  </eClassifiers>
 </ecore:EPackage>

@@ -1,0 +1,3 @@
+Permisos de android:
+http://developer.android.com/reference/android/Manifest.permission.html
+Añadir mas tipos de entrada en los textfield
