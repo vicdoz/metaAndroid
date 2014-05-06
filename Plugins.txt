@@ -1,0 +1,2 @@
+La carpeta de plugins es la que va dentro de la carpeta de instalación de eclipse. Dentro de la carpeta de dropins.
+Copiar la carpeta de plugins dentro de la dropins.
