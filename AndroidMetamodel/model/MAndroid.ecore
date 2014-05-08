@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="mandroid" nsURI="http://mandroid/1.0" nsPrefix="mandroid">
+  <eClassifiers xsi:type="ecore:EClass" name="Activity">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="package" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="runsIn" lowerBound="1"
+        eType="#//Aplication" eOpposite="#//Aplication/run"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Widget">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="layoutOwner" eType="#//Layout"
+        eOpposite="#//Layout/contains"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Layout">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//LayoutType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contains" upperBound="-1"
+        eType="#//Widget" containment="true" eOpposite="#//Widget/layoutOwner"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="layOn" eType="#//Aplication"
+        eOpposite="#//Aplication/contains"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Button" eSuperTypes="#//Widget">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="triggers" eType="#//Action"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TextView" eSuperTypes="#//Widget"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Aplication">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="package" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minSDK" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetSDK" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="versionCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="versionName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="permissions" eType="#//Permissions"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="run" upperBound="-1" eType="#//Activity"
+        containment="true" eOpposite="#//Activity/runsIn"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contains" upperBound="-1"
+        eType="#//Layout" containment="true" eOpposite="#//Layout/layOn"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Permissions">
+    <eLiterals name="INTERNET"/>
+    <eLiterals name="FINE_LOCATION" value="1"/>
+    <eLiterals name="COARSE_LOCATION" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="LayoutType">
+    <eLiterals name="VERTICAL"/>
+    <eLiterals name="LAND" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TextField" eSuperTypes="#//Widget"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Action">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="shows" lowerBound="1" eType="#//Dialog"
+        containment="true" eOpposite="#//Dialog/actionOwner"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="buttonOwner" eType="#//Button"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Dialog">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actionOwner" lowerBound="1"
+        upperBound="-1" eType="#//Action" eOpposite="#//Action/shows"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Length">
+    <eLiterals name="LONG"/>
+    <eLiterals name="SHORT" value="1"/>
+  </eClassifiers>
+</ecore:EPackage>
