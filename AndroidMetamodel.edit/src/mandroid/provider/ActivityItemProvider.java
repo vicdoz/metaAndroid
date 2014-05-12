@@ -62,6 +62,7 @@ public class ActivityItemProvider
 
 			addNamePropertyDescriptor(object);
 			addPackagePropertyDescriptor(object);
+			addMainPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -111,6 +112,28 @@ public class ActivityItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Main feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addMainPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Activity_main_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Activity_main_feature", "_UI_Activity_type"),
+				 MandroidPackage.Literals.ACTIVITY__MAIN,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Activity.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -149,6 +172,7 @@ public class ActivityItemProvider
 		switch (notification.getFeatureID(Activity.class)) {
 			case MandroidPackage.ACTIVITY__NAME:
 			case MandroidPackage.ACTIVITY__PACKAGE:
+			case MandroidPackage.ACTIVITY__MAIN:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see Android.AndroidFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/OCL/Import ecore='http://www.eclipse.org/emf/2002/Ecore#/'"
  * @generated
  */
 public interface AndroidPackage extends EPackage {
@@ -213,13 +214,22 @@ public interface AndroidPackage extends EPackage {
 	int ACTIVITY__PAQUETE = 3;
 
 	/**
+	 * The feature id for the '<em><b>Ismain</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY__ISMAIN = 4;
+
+	/**
 	 * The number of structural features of the '<em>Activity</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_FEATURE_COUNT = 4;
+	int ACTIVITY_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Activity</em>' class.
@@ -1158,6 +1168,17 @@ public interface AndroidPackage extends EPackage {
 	EAttribute getActivity_Paquete();
 
 	/**
+	 * Returns the meta object for the attribute '{@link Android.Activity#isIsmain <em>Ismain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ismain</em>'.
+	 * @see Android.Activity#isIsmain()
+	 * @see #getActivity()
+	 * @generated
+	 */
+	EAttribute getActivity_Ismain();
+
+	/**
 	 * Returns the meta object for class '{@link Android.Layout <em>Layout</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1771,6 +1792,14 @@ public interface AndroidPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ACTIVITY__PAQUETE = eINSTANCE.getActivity_Paquete();
+
+		/**
+		 * The meta object literal for the '<em><b>Ismain</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACTIVITY__ISMAIN = eINSTANCE.getActivity_Ismain();
 
 		/**
 		 * The meta object literal for the '{@link Android.impl.LayoutImpl <em>Layout</em>}' class.

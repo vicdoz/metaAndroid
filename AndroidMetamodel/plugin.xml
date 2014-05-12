@@ -11,7 +11,7 @@
       <package
             uri="Android"
             class="Android.AndroidPackage"
-            genModel="model/Android.genmodel"/>
+            genModel="src/Android.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">

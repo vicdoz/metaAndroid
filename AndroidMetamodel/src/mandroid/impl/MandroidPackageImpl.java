@@ -218,6 +218,15 @@ public class MandroidPackageImpl extends EPackageImpl implements MandroidPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getActivity_Main() {
+		return (EAttribute)activityEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getWidget() {
 		return widgetEClass;
 	}
@@ -524,6 +533,7 @@ public class MandroidPackageImpl extends EPackageImpl implements MandroidPackage
 		createEAttribute(activityEClass, ACTIVITY__NAME);
 		createEAttribute(activityEClass, ACTIVITY__PACKAGE);
 		createEReference(activityEClass, ACTIVITY__RUNS_IN);
+		createEAttribute(activityEClass, ACTIVITY__MAIN);
 
 		widgetEClass = createEClass(WIDGET);
 		createEAttribute(widgetEClass, WIDGET__NAME);
@@ -604,6 +614,7 @@ public class MandroidPackageImpl extends EPackageImpl implements MandroidPackage
 		initEAttribute(getActivity_Name(), ecorePackage.getEString(), "name", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getActivity_Package(), ecorePackage.getEString(), "package", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivity_RunsIn(), this.getAplication(), this.getAplication_Run(), "runsIn", null, 1, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getActivity_Main(), ecorePackage.getEBoolean(), "main", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(widgetEClass, Widget.class, "Widget", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getWidget_Name(), ecorePackage.getEString(), "name", null, 0, 1, Widget.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

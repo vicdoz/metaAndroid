@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link Android.impl.ActivityImpl#getControla <em>Controla</em>}</li>
  *   <li>{@link Android.impl.ActivityImpl#getNombre <em>Nombre</em>}</li>
  *   <li>{@link Android.impl.ActivityImpl#getPaquete <em>Paquete</em>}</li>
+ *   <li>{@link Android.impl.ActivityImpl#isIsmain <em>Ismain</em>}</li>
  * </ul>
  * </p>
  *
@@ -84,6 +85,26 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * @ordered
 	 */
 	protected String paquete = PAQUETE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isIsmain() <em>Ismain</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsmain()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean ISMAIN_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isIsmain() <em>Ismain</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsmain()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean ismain = ISMAIN_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -252,6 +273,27 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isIsmain() {
+		return ismain;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsmain(boolean newIsmain) {
+		boolean oldIsmain = ismain;
+		ismain = newIsmain;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AndroidPackage.ACTIVITY__ISMAIN, oldIsmain, ismain));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -314,6 +356,8 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 				return getNombre();
 			case AndroidPackage.ACTIVITY__PAQUETE:
 				return getPaquete();
+			case AndroidPackage.ACTIVITY__ISMAIN:
+				return isIsmain();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -337,6 +381,9 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 				return;
 			case AndroidPackage.ACTIVITY__PAQUETE:
 				setPaquete((String)newValue);
+				return;
+			case AndroidPackage.ACTIVITY__ISMAIN:
+				setIsmain((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -362,6 +409,9 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 			case AndroidPackage.ACTIVITY__PAQUETE:
 				setPaquete(PAQUETE_EDEFAULT);
 				return;
+			case AndroidPackage.ACTIVITY__ISMAIN:
+				setIsmain(ISMAIN_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -382,6 +432,8 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
 			case AndroidPackage.ACTIVITY__PAQUETE:
 				return PAQUETE_EDEFAULT == null ? paquete != null : !PAQUETE_EDEFAULT.equals(paquete);
+			case AndroidPackage.ACTIVITY__ISMAIN:
+				return ismain != ISMAIN_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -400,6 +452,8 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 		result.append(nombre);
 		result.append(", paquete: ");
 		result.append(paquete);
+		result.append(", ismain: ");
+		result.append(ismain);
 		result.append(')');
 		return result.toString();
 	}

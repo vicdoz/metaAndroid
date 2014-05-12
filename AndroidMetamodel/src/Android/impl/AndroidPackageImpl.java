@@ -365,6 +365,15 @@ public class AndroidPackageImpl extends EPackageImpl implements AndroidPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getActivity_Ismain() {
+		return (EAttribute)activityEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getLayout() {
 		return layoutEClass;
 	}
@@ -800,6 +809,7 @@ public class AndroidPackageImpl extends EPackageImpl implements AndroidPackage {
 		createEReference(activityEClass, ACTIVITY__CONTROLA);
 		createEAttribute(activityEClass, ACTIVITY__NOMBRE);
 		createEAttribute(activityEClass, ACTIVITY__PAQUETE);
+		createEAttribute(activityEClass, ACTIVITY__ISMAIN);
 
 		layoutEClass = createEClass(LAYOUT);
 		createEReference(layoutEClass, LAYOUT__PADRE);
@@ -911,6 +921,7 @@ public class AndroidPackageImpl extends EPackageImpl implements AndroidPackage {
 		initEReference(getActivity_Controla(), this.getControlador(), this.getControlador_EsControladaPor(), "controla", null, 1, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getActivity_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getActivity_Paquete(), ecorePackage.getEString(), "paquete", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getActivity_Ismain(), ecorePackage.getEBoolean(), "ismain", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(layoutEClass, Layout.class, "Layout", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLayout_Padre(), this.getLayout(), this.getLayout_Hijo(), "padre", null, 0, 1, Layout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -987,6 +998,26 @@ public class AndroidPackageImpl extends EPackageImpl implements AndroidPackage {
 
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// http://www.eclipse.org/OCL/Import
+		createImportAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/OCL/Import</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createImportAnnotations() {
+		String source = "http://www.eclipse.org/OCL/Import";		
+		addAnnotation
+		  (this, 
+		   source, 
+		   new String[] {
+			 "ecore", "http://www.eclipse.org/emf/2002/Ecore#/"
+		   });
 	}
 
 } //AndroidPackageImpl

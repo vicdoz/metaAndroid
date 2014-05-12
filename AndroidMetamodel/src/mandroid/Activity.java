@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link mandroid.Activity#getName <em>Name</em>}</li>
  *   <li>{@link mandroid.Activity#getPackage <em>Package</em>}</li>
  *   <li>{@link mandroid.Activity#getRunsIn <em>Runs In</em>}</li>
+ *   <li>{@link mandroid.Activity#isMain <em>Main</em>}</li>
  * </ul>
  * </p>
  *
@@ -102,5 +103,31 @@ public interface Activity extends EObject {
 	 * @generated
 	 */
 	void setRunsIn(Aplication value);
+
+	/**
+	 * Returns the value of the '<em><b>Main</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Main</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Main</em>' attribute.
+	 * @see #setMain(boolean)
+	 * @see mandroid.MandroidPackage#getActivity_Main()
+	 * @model
+	 * @generated
+	 */
+	boolean isMain();
+
+	/**
+	 * Sets the value of the '{@link mandroid.Activity#isMain <em>Main</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Main</em>' attribute.
+	 * @see #isMain()
+	 * @generated
+	 */
+	void setMain(boolean value);
 
 } // Activity

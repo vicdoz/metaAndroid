@@ -1,19 +1,32 @@
 
-		Nombre:Linterna
-		Package:app
-		MinSDK:10
-		TargetSDK:18
+		<?xml version="1.0" encoding="utf-8"?>
+		<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+		    package="app"
+		    android:versionCode="1"
+		    android:versionName="1.0" >
 		
-	</activity>   
-          <activity
-            android:name=paquete1.Main
-            android:label=Main >
-        </activity> 
+		    <uses-sdk
+		        android:minSdkVersion="10"
+		        android:targetSdkVersion="18" />
+		
+		    <application
+		        android:allowBackup="true"
+		        android:icon="@drawable/ic_launcher"
+		        android:label="@string/"Linterna
+		        android:theme="@style/AppTheme" >
+		        
+			
+	<activity
+        android:name=paquete1.Main
+        android:label=Main >
+    </activity> 
 
-	</activity>   
-          <activity
-            android:name=paquete2.Second
-            android:label=Second >
-        </activity> 
+	<activity
+        android:name=paquete2.Second
+        android:label=Second >
+    </activity> 
 
+			</application>
+
+		</manifest>
 	

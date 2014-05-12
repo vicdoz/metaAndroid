@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link mandroid.impl.ActivityImpl#getName <em>Name</em>}</li>
  *   <li>{@link mandroid.impl.ActivityImpl#getPackage <em>Package</em>}</li>
  *   <li>{@link mandroid.impl.ActivityImpl#getRunsIn <em>Runs In</em>}</li>
+ *   <li>{@link mandroid.impl.ActivityImpl#isMain <em>Main</em>}</li>
  * </ul>
  * </p>
  *
@@ -72,6 +73,26 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * @ordered
 	 */
 	protected String package_ = PACKAGE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isMain() <em>Main</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isMain()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean MAIN_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isMain() <em>Main</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isMain()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean main = MAIN_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -180,6 +201,27 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isMain() {
+		return main;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMain(boolean newMain) {
+		boolean oldMain = main;
+		main = newMain;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MandroidPackage.ACTIVITY__MAIN, oldMain, main));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -233,6 +275,8 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 				return getPackage();
 			case MandroidPackage.ACTIVITY__RUNS_IN:
 				return getRunsIn();
+			case MandroidPackage.ACTIVITY__MAIN:
+				return isMain();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -253,6 +297,9 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 				return;
 			case MandroidPackage.ACTIVITY__RUNS_IN:
 				setRunsIn((Aplication)newValue);
+				return;
+			case MandroidPackage.ACTIVITY__MAIN:
+				setMain((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -275,6 +322,9 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 			case MandroidPackage.ACTIVITY__RUNS_IN:
 				setRunsIn((Aplication)null);
 				return;
+			case MandroidPackage.ACTIVITY__MAIN:
+				setMain(MAIN_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -293,6 +343,8 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 				return PACKAGE_EDEFAULT == null ? package_ != null : !PACKAGE_EDEFAULT.equals(package_);
 			case MandroidPackage.ACTIVITY__RUNS_IN:
 				return getRunsIn() != null;
+			case MandroidPackage.ACTIVITY__MAIN:
+				return main != MAIN_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -311,6 +363,8 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 		result.append(name);
 		result.append(", package: ");
 		result.append(package_);
+		result.append(", main: ");
+		result.append(main);
 		result.append(')');
 		return result.toString();
 	}

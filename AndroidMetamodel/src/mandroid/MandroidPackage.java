@@ -95,13 +95,22 @@ public interface MandroidPackage extends EPackage {
 	int ACTIVITY__RUNS_IN = 2;
 
 	/**
+	 * The feature id for the '<em><b>Main</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY__MAIN = 3;
+
+	/**
 	 * The number of structural features of the '<em>Activity</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_FEATURE_COUNT = 3;
+	int ACTIVITY_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Activity</em>' class.
@@ -699,6 +708,17 @@ public interface MandroidPackage extends EPackage {
 	EReference getActivity_RunsIn();
 
 	/**
+	 * Returns the meta object for the attribute '{@link mandroid.Activity#isMain <em>Main</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Main</em>'.
+	 * @see mandroid.Activity#isMain()
+	 * @see #getActivity()
+	 * @generated
+	 */
+	EAttribute getActivity_Main();
+
+	/**
 	 * Returns the meta object for class '{@link mandroid.Widget <em>Widget</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1084,6 +1104,14 @@ public interface MandroidPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ACTIVITY__RUNS_IN = eINSTANCE.getActivity_RunsIn();
+
+		/**
+		 * The meta object literal for the '<em><b>Main</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACTIVITY__MAIN = eINSTANCE.getActivity_Main();
 
 		/**
 		 * The meta object literal for the '{@link mandroid.impl.WidgetImpl <em>Widget</em>}' class.

@@ -23,6 +23,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MAndroid.ecore#//Activity/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MAndroid.ecore#//Activity/package"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference MAndroid.ecore#//Activity/runsIn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MAndroid.ecore#//Activity/main"/>
     </genClasses>
     <genClasses ecoreClass="MAndroid.ecore#//Widget">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MAndroid.ecore#//Widget/name"/>

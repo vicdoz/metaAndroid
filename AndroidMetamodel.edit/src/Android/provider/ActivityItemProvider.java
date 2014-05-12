@@ -63,6 +63,7 @@ public class ActivityItemProvider
 			addControlaPropertyDescriptor(object);
 			addNombrePropertyDescriptor(object);
 			addPaquetePropertyDescriptor(object);
+			addIsmainPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -134,6 +135,28 @@ public class ActivityItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Ismain feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsmainPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Activity_ismain_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Activity_ismain_feature", "_UI_Activity_type"),
+				 AndroidPackage.Literals.ACTIVITY__ISMAIN,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Activity.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -172,6 +195,7 @@ public class ActivityItemProvider
 		switch (notification.getFeatureID(Activity.class)) {
 			case AndroidPackage.ACTIVITY__NOMBRE:
 			case AndroidPackage.ACTIVITY__PAQUETE:
+			case AndroidPackage.ACTIVITY__ISMAIN:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

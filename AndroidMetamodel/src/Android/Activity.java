@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link Android.Activity#getControla <em>Controla</em>}</li>
  *   <li>{@link Android.Activity#getNombre <em>Nombre</em>}</li>
  *   <li>{@link Android.Activity#getPaquete <em>Paquete</em>}</li>
+ *   <li>{@link Android.Activity#isIsmain <em>Ismain</em>}</li>
  * </ul>
  * </p>
  *
@@ -131,5 +132,31 @@ public interface Activity extends EObject {
 	 * @generated
 	 */
 	void setPaquete(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Ismain</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Ismain</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Ismain</em>' attribute.
+	 * @see #setIsmain(boolean)
+	 * @see Android.AndroidPackage#getActivity_Ismain()
+	 * @model
+	 * @generated
+	 */
+	boolean isIsmain();
+
+	/**
+	 * Sets the value of the '{@link Android.Activity#isIsmain <em>Ismain</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Ismain</em>' attribute.
+	 * @see #isIsmain()
+	 * @generated
+	 */
+	void setIsmain(boolean value);
 
 } // Activity
