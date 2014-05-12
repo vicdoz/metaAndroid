@@ -15,7 +15,13 @@
 
 «DEFINE GeneraActivtyFichero  FOR Activity»
 
-	«FILE this.name+".java"»
+	«FILE "/src//"+this.package+"/"+this.name+".java"»
+	package «package»;
+	
+	import android.app.Activity;
+	import android.content.Intent;
+	import android.os.Bundle;
+	
 	public class «name» extends Activity {
 	@Override
 	  protected void onCreate(Bundle savedInstanceState) {

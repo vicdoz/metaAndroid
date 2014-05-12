@@ -1,18 +1,18 @@
 
 		Nombre:Linterna
-		Package:com.upv
+		Package:app
 		MinSDK:10
 		TargetSDK:18
 		
 	</activity>   
           <activity
-            android:name=com.upv.Main
+            android:name=paquete1.Main
             android:label=Main >
         </activity> 
 
 	</activity>   
           <activity
-            android:name=com.upv.Second
+            android:name=paquete2.Second
             android:label=Second >
         </activity> 
 
