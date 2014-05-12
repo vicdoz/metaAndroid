@@ -14,4 +14,12 @@
             genModel="model/Android.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated MAndroid -->
+      <package
+            uri="http://mandroid/1.0"
+            class="mandroid.MandroidPackage"
+            genModel="model/MAndroid.genmodel"/>
+   </extension>
+
 </plugin>

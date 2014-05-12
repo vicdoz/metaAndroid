@@ -26,7 +26,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TextView" eSuperTypes="#//Widget"/>
   <eClassifiers xsi:type="ecore:EClass" name="Aplication">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="package" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="minSDK" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetSDK" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
@@ -55,7 +55,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Dialog">
     <eStructuralFeatures xsi:type="ecore:EReference" name="actionOwner" lowerBound="1"
-        upperBound="-1" eType="#//Action" eOpposite="#//Action/shows"/>
+        eType="#//Action" eOpposite="#//Action/shows"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Length">
     <eLiterals name="LONG"/>

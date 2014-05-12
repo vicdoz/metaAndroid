@@ -9,7 +9,10 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: Android,
  Android.impl,
- Android.util
+ Android.util,
+ mandroid,
+ mandroid.impl,
+ mandroid.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore
 Bundle-ActivationPolicy: lazy
