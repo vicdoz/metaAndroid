@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Android:Aplicacion xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:Android="Android" Nombre="Prueba1" minSDK="1" targetSDK="10" paquete="PaqueteDePrueba" versionCode="1" versionName="1.0">
-  <actividades nombre="MainActivity" paquete="pruebaActivity"/>
-  <permiso>INTERNET</permiso>
-  <permiso>FINE_LOCATION</permiso>
-  <permiso>COARSE_LOCATION</permiso>
-</Android:Aplicacion>

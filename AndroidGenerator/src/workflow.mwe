@@ -1,6 +1,6 @@
 <workflow> 
-  <property name="modelFile" value="My.android"/> 
-  <property name="metaModelPackage" value="Android.AndroidPackage"/> 
+  <property name="modelFile" value="My.mandroid"/> 
+  <property name="metaModelPackage" value="mandroid.MandroidPackage"/> 
   <property name="srcGenPath" value="src-gen"/> 
   <property name="fileEncoding" value="ISO-8859-1"/> 
 
@@ -18,7 +18,7 @@
       class="org.eclipse.xtend.typesystem.emf.EmfMetaModel"> 
       <metaModelPackage value="${metaModelPackage}"/> 
     </metaModel> 
-	<expand value="src::test::Root FOR model"/> 
+   	<expand value="src::test::Root FOR model"/>
 	<outlet path="${srcGenPath}/"/> 
 	</component>
 	

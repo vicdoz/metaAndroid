@@ -4,11 +4,11 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: AndroidMetamodel.editor;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: Android.presentation.AndroidEditorPlugin$Implementation
+Bundle-Activator: mandroid.presentation.MAndroidEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Export-Package: Android.presentation
+Export-Package: mandroid.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  AndroidMetamodel.edit;visibility:=reexport,

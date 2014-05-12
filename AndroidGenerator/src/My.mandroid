@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mandroid:Aplication xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:mandroid="http://mandroid/1.0" name="Linterna" package="com.upv" minSDK="10" targetSDK="18" versionCode="1" versionName="alfa">
+  <run name="Main" package="com.upv"/>
+  <run name="Second" package="com.upv"/>
+</mandroid:Aplication>

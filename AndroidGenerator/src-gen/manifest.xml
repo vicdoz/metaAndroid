@@ -1,5 +1,19 @@
 
-		Nombre:Prueba1
-		Paquete:PaqueteDePrueba	
-		TargetSDK:10
+		Nombre:Linterna
+		Package:com.upv
+		MinSDK:10
+		TargetSDK:18
+		
+	</activity>   
+          <activity
+            android:name=com.upv.Main
+            android:label=Main >
+        </activity> 
+
+	</activity>   
+          <activity
+            android:name=com.upv.Second
+            android:label=Second >
+        </activity> 
+
 	

@@ -1,9 +1,34 @@
-«IMPORT Android»
-«DEFINE Root FOR Android::Aplicacion»
+«IMPORT mandroid»
+
+«DEFINE Root FOR mandroid::Aplication»
 	
 	«FILE "manifest.xml"»
-		Nombre:«Nombre»
-		Paquete:«paquete»	
+		Nombre:«name»
+		Package:«package»
+		MinSDK:«minSDK»
 		TargetSDK:«targetSDK»
+		«EXPAND GeneraActivtyEnManifest  FOREACH run.typeSelect(Activity)»
 	«ENDFILE»
+	
+	«EXPAND GeneraActivty  FOREACH run.typeSelect(Activity)»
+«ENDDEFINE»
+
+«DEFINE GeneraActivty  FOR Activity»
+
+	«FILE this.name+".java"»
+	public class «name» extends Activity {
+	@Override
+	  protected void onCreate(Bundle savedInstanceState) {
+	         super.onCreate(savedInstanceState);
+	           
+	  }
+	
+	«ENDFILE»
+«ENDDEFINE»
+«DEFINE GeneraActivtyEnManifest  FOR Activity»
+	</activity>   
+          <activity
+            android:name=«package».«name»
+            android:label=«name» >
+        </activity> 
 «ENDDEFINE»
