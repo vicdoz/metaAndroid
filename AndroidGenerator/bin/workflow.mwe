@@ -18,7 +18,7 @@
       class="org.eclipse.xtend.typesystem.emf.EmfMetaModel"> 
       <metaModelPackage value="${metaModelPackage}"/> 
     </metaModel> 
-   	<expand value="src::test::Root FOR model"/>
+   	<expand value="src::plantillaDeGeneracion::Root FOR model"/>
 	<outlet path="${srcGenPath}/"/> 
 	</component>
 	

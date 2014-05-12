@@ -10,10 +10,10 @@
 		«EXPAND GeneraActivtyEnManifest  FOREACH run.typeSelect(Activity)»
 	«ENDFILE»
 	
-	«EXPAND GeneraActivty  FOREACH run.typeSelect(Activity)»
+	«EXPAND GeneraActivtyFichero  FOREACH run.typeSelect(Activity)»
 «ENDDEFINE»
 
-«DEFINE GeneraActivty  FOR Activity»
+«DEFINE GeneraActivtyFichero  FOR Activity»
 
 	«FILE this.name+".java"»
 	public class «name» extends Activity {
