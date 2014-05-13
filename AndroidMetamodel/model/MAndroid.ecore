@@ -7,6 +7,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="runsIn" lowerBound="1"
         eType="#//Aplication" eOpposite="#//Aplication/run"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="main" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="muestra" eType="#//Layout"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Widget">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -21,6 +22,8 @@
         eType="#//Widget" containment="true" eOpposite="#//Widget/layoutOwner"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="layOn" eType="#//Aplication"
         eOpposite="#//Aplication/contains"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="esMostrado" upperBound="-1"
+        eType="#//Activity"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Button" eSuperTypes="#//Widget">
     <eStructuralFeatures xsi:type="ecore:EReference" name="triggers" eType="#//Action"/>
