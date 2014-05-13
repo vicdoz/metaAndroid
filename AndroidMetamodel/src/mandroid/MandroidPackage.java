@@ -104,13 +104,31 @@ public interface MandroidPackage extends EPackage {
 	int ACTIVITY__MAIN = 3;
 
 	/**
+	 * The feature id for the '<em><b>Muestra</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY__MUESTRA = 4;
+
+	/**
+	 * The feature id for the '<em><b>Show</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY__SHOW = 5;
+
+	/**
 	 * The number of structural features of the '<em>Activity</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_FEATURE_COUNT = 4;
+	int ACTIVITY_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Activity</em>' class.
@@ -223,13 +241,22 @@ public interface MandroidPackage extends EPackage {
 	int LAYOUT__LAY_ON = 2;
 
 	/**
+	 * The feature id for the '<em><b>Es Mostrado</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAYOUT__ES_MOSTRADO = 3;
+
+	/**
 	 * The number of structural features of the '<em>Layout</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LAYOUT_FEATURE_COUNT = 3;
+	int LAYOUT_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Layout</em>' class.
@@ -442,7 +469,7 @@ public interface MandroidPackage extends EPackage {
 	int APLICATION__VERSION_NAME = 5;
 
 	/**
-	 * The feature id for the '<em><b>Permissions</b></em>' attribute.
+	 * The feature id for the '<em><b>Permissions</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -469,13 +496,22 @@ public interface MandroidPackage extends EPackage {
 	int APLICATION__CONTAINS = 8;
 
 	/**
+	 * The feature id for the '<em><b>Has Strings</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APLICATION__HAS_STRINGS = 9;
+
+	/**
 	 * The number of structural features of the '<em>Aplication</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APLICATION_FEATURE_COUNT = 9;
+	int APLICATION_FEATURE_COUNT = 10;
 
 	/**
 	 * The number of operations of the '<em>Aplication</em>' class.
@@ -533,13 +569,22 @@ public interface MandroidPackage extends EPackage {
 	int TEXT_FIELD__LAYOUT_OWNER = WIDGET__LAYOUT_OWNER;
 
 	/**
+	 * The feature id for the '<em><b>Input</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_FIELD__INPUT = WIDGET_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Text Field</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_FIELD_FEATURE_COUNT = WIDGET_FEATURE_COUNT + 0;
+	int TEXT_FIELD_FEATURE_COUNT = WIDGET_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Text Field</em>' class.
@@ -579,13 +624,22 @@ public interface MandroidPackage extends EPackage {
 	int ACTION__BUTTON_OWNER = 1;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__TYPE = 2;
+
+	/**
 	 * The number of structural features of the '<em>Action</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION_FEATURE_COUNT = 2;
+	int ACTION_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Action</em>' class.
@@ -616,13 +670,31 @@ public interface MandroidPackage extends EPackage {
 	int DIALOG__ACTION_OWNER = 0;
 
 	/**
+	 * The feature id for the '<em><b>Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIALOG__TIME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIALOG__TEXT = 2;
+
+	/**
 	 * The number of structural features of the '<em>Dialog</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DIALOG_FEATURE_COUNT = 1;
+	int DIALOG_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Dialog</em>' class.
@@ -634,6 +706,162 @@ public interface MandroidPackage extends EPackage {
 	int DIALOG_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link mandroid.impl.StringsImpl <em>Strings</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mandroid.impl.StringsImpl
+	 * @see mandroid.impl.MandroidPackageImpl#getStrings()
+	 * @generated
+	 */
+	int STRINGS = 9;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRINGS__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRINGS__VALUE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Strings</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRINGS_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Strings</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRINGS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link mandroid.impl.MenuImpl <em>Menu</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mandroid.impl.MenuImpl
+	 * @see mandroid.impl.MandroidPackageImpl#getMenu()
+	 * @generated
+	 */
+	int MENU = 10;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MENU__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Has Item</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MENU__HAS_ITEM = 1;
+
+	/**
+	 * The number of structural features of the '<em>Menu</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MENU_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Menu</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MENU_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link mandroid.impl.ItemImpl <em>Item</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mandroid.impl.ItemImpl
+	 * @see mandroid.impl.MandroidPackageImpl#getItem()
+	 * @generated
+	 */
+	int ITEM = 11;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Show As Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM__SHOW_AS_ACTION = 1;
+
+	/**
+	 * The feature id for the '<em><b>Order</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM__ORDER = 2;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM__TITLE = 3;
+
+	/**
+	 * The number of structural features of the '<em>Item</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Item</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link mandroid.Permissions <em>Permissions</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -641,7 +869,7 @@ public interface MandroidPackage extends EPackage {
 	 * @see mandroid.impl.MandroidPackageImpl#getPermissions()
 	 * @generated
 	 */
-	int PERMISSIONS = 9;
+	int PERMISSIONS = 12;
 
 	/**
 	 * The meta object id for the '{@link mandroid.LayoutType <em>Layout Type</em>}' enum.
@@ -651,7 +879,7 @@ public interface MandroidPackage extends EPackage {
 	 * @see mandroid.impl.MandroidPackageImpl#getLayoutType()
 	 * @generated
 	 */
-	int LAYOUT_TYPE = 10;
+	int LAYOUT_TYPE = 13;
 
 	/**
 	 * The meta object id for the '{@link mandroid.Length <em>Length</em>}' enum.
@@ -661,7 +889,37 @@ public interface MandroidPackage extends EPackage {
 	 * @see mandroid.impl.MandroidPackageImpl#getLength()
 	 * @generated
 	 */
-	int LENGTH = 11;
+	int LENGTH = 14;
+
+	/**
+	 * The meta object id for the '{@link mandroid.TypeAction <em>Type Action</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mandroid.TypeAction
+	 * @see mandroid.impl.MandroidPackageImpl#getTypeAction()
+	 * @generated
+	 */
+	int TYPE_ACTION = 15;
+
+	/**
+	 * The meta object id for the '{@link mandroid.InputType <em>Input Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mandroid.InputType
+	 * @see mandroid.impl.MandroidPackageImpl#getInputType()
+	 * @generated
+	 */
+	int INPUT_TYPE = 16;
+
+	/**
+	 * The meta object id for the '{@link mandroid.ActionType <em>Action Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mandroid.ActionType
+	 * @see mandroid.impl.MandroidPackageImpl#getActionType()
+	 * @generated
+	 */
+	int ACTION_TYPE = 17;
 
 
 	/**
@@ -717,6 +975,28 @@ public interface MandroidPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getActivity_Main();
+
+	/**
+	 * Returns the meta object for the reference '{@link mandroid.Activity#getMuestra <em>Muestra</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Muestra</em>'.
+	 * @see mandroid.Activity#getMuestra()
+	 * @see #getActivity()
+	 * @generated
+	 */
+	EReference getActivity_Muestra();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link mandroid.Activity#getShow <em>Show</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Show</em>'.
+	 * @see mandroid.Activity#getShow()
+	 * @see #getActivity()
+	 * @generated
+	 */
+	EReference getActivity_Show();
 
 	/**
 	 * Returns the meta object for class '{@link mandroid.Widget <em>Widget</em>}'.
@@ -814,6 +1094,17 @@ public interface MandroidPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLayout_LayOn();
+
+	/**
+	 * Returns the meta object for the reference list '{@link mandroid.Layout#getEsMostrado <em>Es Mostrado</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Es Mostrado</em>'.
+	 * @see mandroid.Layout#getEsMostrado()
+	 * @see #getLayout()
+	 * @generated
+	 */
+	EReference getLayout_EsMostrado();
 
 	/**
 	 * Returns the meta object for class '{@link mandroid.Button <em>Button</em>}'.
@@ -923,10 +1214,10 @@ public interface MandroidPackage extends EPackage {
 	EAttribute getAplication_VersionName();
 
 	/**
-	 * Returns the meta object for the attribute '{@link mandroid.Aplication#getPermissions <em>Permissions</em>}'.
+	 * Returns the meta object for the attribute list '{@link mandroid.Aplication#getPermissions <em>Permissions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Permissions</em>'.
+	 * @return the meta object for the attribute list '<em>Permissions</em>'.
 	 * @see mandroid.Aplication#getPermissions()
 	 * @see #getAplication()
 	 * @generated
@@ -956,6 +1247,17 @@ public interface MandroidPackage extends EPackage {
 	EReference getAplication_Contains();
 
 	/**
+	 * Returns the meta object for the reference list '{@link mandroid.Aplication#getHasStrings <em>Has Strings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Has Strings</em>'.
+	 * @see mandroid.Aplication#getHasStrings()
+	 * @see #getAplication()
+	 * @generated
+	 */
+	EReference getAplication_HasStrings();
+
+	/**
 	 * Returns the meta object for class '{@link mandroid.TextField <em>Text Field</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -964,6 +1266,17 @@ public interface MandroidPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTextField();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mandroid.TextField#getInput <em>Input</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Input</em>'.
+	 * @see mandroid.TextField#getInput()
+	 * @see #getTextField()
+	 * @generated
+	 */
+	EAttribute getTextField_Input();
 
 	/**
 	 * Returns the meta object for class '{@link mandroid.Action <em>Action</em>}'.
@@ -998,6 +1311,17 @@ public interface MandroidPackage extends EPackage {
 	EReference getAction_ButtonOwner();
 
 	/**
+	 * Returns the meta object for the attribute '{@link mandroid.Action#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see mandroid.Action#getType()
+	 * @see #getAction()
+	 * @generated
+	 */
+	EAttribute getAction_Type();
+
+	/**
 	 * Returns the meta object for class '{@link mandroid.Dialog <em>Dialog</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1017,6 +1341,146 @@ public interface MandroidPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDialog_ActionOwner();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mandroid.Dialog#getTime <em>Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Time</em>'.
+	 * @see mandroid.Dialog#getTime()
+	 * @see #getDialog()
+	 * @generated
+	 */
+	EAttribute getDialog_Time();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mandroid.Dialog#getText <em>Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text</em>'.
+	 * @see mandroid.Dialog#getText()
+	 * @see #getDialog()
+	 * @generated
+	 */
+	EAttribute getDialog_Text();
+
+	/**
+	 * Returns the meta object for class '{@link mandroid.Strings <em>Strings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Strings</em>'.
+	 * @see mandroid.Strings
+	 * @generated
+	 */
+	EClass getStrings();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mandroid.Strings#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see mandroid.Strings#getName()
+	 * @see #getStrings()
+	 * @generated
+	 */
+	EAttribute getStrings_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mandroid.Strings#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see mandroid.Strings#getValue()
+	 * @see #getStrings()
+	 * @generated
+	 */
+	EAttribute getStrings_Value();
+
+	/**
+	 * Returns the meta object for class '{@link mandroid.Menu <em>Menu</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Menu</em>'.
+	 * @see mandroid.Menu
+	 * @generated
+	 */
+	EClass getMenu();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mandroid.Menu#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see mandroid.Menu#getId()
+	 * @see #getMenu()
+	 * @generated
+	 */
+	EAttribute getMenu_Id();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link mandroid.Menu#getHasItem <em>Has Item</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Has Item</em>'.
+	 * @see mandroid.Menu#getHasItem()
+	 * @see #getMenu()
+	 * @generated
+	 */
+	EReference getMenu_HasItem();
+
+	/**
+	 * Returns the meta object for class '{@link mandroid.Item <em>Item</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Item</em>'.
+	 * @see mandroid.Item
+	 * @generated
+	 */
+	EClass getItem();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mandroid.Item#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see mandroid.Item#getId()
+	 * @see #getItem()
+	 * @generated
+	 */
+	EAttribute getItem_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mandroid.Item#getShowAsAction <em>Show As Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Show As Action</em>'.
+	 * @see mandroid.Item#getShowAsAction()
+	 * @see #getItem()
+	 * @generated
+	 */
+	EAttribute getItem_ShowAsAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mandroid.Item#getOrder <em>Order</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Order</em>'.
+	 * @see mandroid.Item#getOrder()
+	 * @see #getItem()
+	 * @generated
+	 */
+	EAttribute getItem_Order();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mandroid.Item#getTitle <em>Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Title</em>'.
+	 * @see mandroid.Item#getTitle()
+	 * @see #getItem()
+	 * @generated
+	 */
+	EAttribute getItem_Title();
 
 	/**
 	 * Returns the meta object for enum '{@link mandroid.Permissions <em>Permissions</em>}'.
@@ -1047,6 +1511,36 @@ public interface MandroidPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getLength();
+
+	/**
+	 * Returns the meta object for enum '{@link mandroid.TypeAction <em>Type Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Type Action</em>'.
+	 * @see mandroid.TypeAction
+	 * @generated
+	 */
+	EEnum getTypeAction();
+
+	/**
+	 * Returns the meta object for enum '{@link mandroid.InputType <em>Input Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Input Type</em>'.
+	 * @see mandroid.InputType
+	 * @generated
+	 */
+	EEnum getInputType();
+
+	/**
+	 * Returns the meta object for enum '{@link mandroid.ActionType <em>Action Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Action Type</em>'.
+	 * @see mandroid.ActionType
+	 * @generated
+	 */
+	EEnum getActionType();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1112,6 +1606,22 @@ public interface MandroidPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ACTIVITY__MAIN = eINSTANCE.getActivity_Main();
+
+		/**
+		 * The meta object literal for the '<em><b>Muestra</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ACTIVITY__MUESTRA = eINSTANCE.getActivity_Muestra();
+
+		/**
+		 * The meta object literal for the '<em><b>Show</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ACTIVITY__SHOW = eINSTANCE.getActivity_Show();
 
 		/**
 		 * The meta object literal for the '{@link mandroid.impl.WidgetImpl <em>Widget</em>}' class.
@@ -1188,6 +1698,14 @@ public interface MandroidPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LAYOUT__LAY_ON = eINSTANCE.getLayout_LayOn();
+
+		/**
+		 * The meta object literal for the '<em><b>Es Mostrado</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LAYOUT__ES_MOSTRADO = eINSTANCE.getLayout_EsMostrado();
 
 		/**
 		 * The meta object literal for the '{@link mandroid.impl.ButtonImpl <em>Button</em>}' class.
@@ -1276,7 +1794,7 @@ public interface MandroidPackage extends EPackage {
 		EAttribute APLICATION__VERSION_NAME = eINSTANCE.getAplication_VersionName();
 
 		/**
-		 * The meta object literal for the '<em><b>Permissions</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Permissions</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1300,6 +1818,14 @@ public interface MandroidPackage extends EPackage {
 		EReference APLICATION__CONTAINS = eINSTANCE.getAplication_Contains();
 
 		/**
+		 * The meta object literal for the '<em><b>Has Strings</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference APLICATION__HAS_STRINGS = eINSTANCE.getAplication_HasStrings();
+
+		/**
 		 * The meta object literal for the '{@link mandroid.impl.TextFieldImpl <em>Text Field</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1308,6 +1834,14 @@ public interface MandroidPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TEXT_FIELD = eINSTANCE.getTextField();
+
+		/**
+		 * The meta object literal for the '<em><b>Input</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_FIELD__INPUT = eINSTANCE.getTextField_Input();
 
 		/**
 		 * The meta object literal for the '{@link mandroid.impl.ActionImpl <em>Action</em>}' class.
@@ -1336,6 +1870,14 @@ public interface MandroidPackage extends EPackage {
 		EReference ACTION__BUTTON_OWNER = eINSTANCE.getAction_ButtonOwner();
 
 		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACTION__TYPE = eINSTANCE.getAction_Type();
+
+		/**
 		 * The meta object literal for the '{@link mandroid.impl.DialogImpl <em>Dialog</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1352,6 +1894,116 @@ public interface MandroidPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DIALOG__ACTION_OWNER = eINSTANCE.getDialog_ActionOwner();
+
+		/**
+		 * The meta object literal for the '<em><b>Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DIALOG__TIME = eINSTANCE.getDialog_Time();
+
+		/**
+		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DIALOG__TEXT = eINSTANCE.getDialog_Text();
+
+		/**
+		 * The meta object literal for the '{@link mandroid.impl.StringsImpl <em>Strings</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see mandroid.impl.StringsImpl
+		 * @see mandroid.impl.MandroidPackageImpl#getStrings()
+		 * @generated
+		 */
+		EClass STRINGS = eINSTANCE.getStrings();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STRINGS__NAME = eINSTANCE.getStrings_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STRINGS__VALUE = eINSTANCE.getStrings_Value();
+
+		/**
+		 * The meta object literal for the '{@link mandroid.impl.MenuImpl <em>Menu</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see mandroid.impl.MenuImpl
+		 * @see mandroid.impl.MandroidPackageImpl#getMenu()
+		 * @generated
+		 */
+		EClass MENU = eINSTANCE.getMenu();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MENU__ID = eINSTANCE.getMenu_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Has Item</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MENU__HAS_ITEM = eINSTANCE.getMenu_HasItem();
+
+		/**
+		 * The meta object literal for the '{@link mandroid.impl.ItemImpl <em>Item</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see mandroid.impl.ItemImpl
+		 * @see mandroid.impl.MandroidPackageImpl#getItem()
+		 * @generated
+		 */
+		EClass ITEM = eINSTANCE.getItem();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ITEM__ID = eINSTANCE.getItem_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Show As Action</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ITEM__SHOW_AS_ACTION = eINSTANCE.getItem_ShowAsAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Order</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ITEM__ORDER = eINSTANCE.getItem_Order();
+
+		/**
+		 * The meta object literal for the '<em><b>Title</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ITEM__TITLE = eINSTANCE.getItem_Title();
 
 		/**
 		 * The meta object literal for the '{@link mandroid.Permissions <em>Permissions</em>}' enum.
@@ -1382,6 +2034,36 @@ public interface MandroidPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum LENGTH = eINSTANCE.getLength();
+
+		/**
+		 * The meta object literal for the '{@link mandroid.TypeAction <em>Type Action</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see mandroid.TypeAction
+		 * @see mandroid.impl.MandroidPackageImpl#getTypeAction()
+		 * @generated
+		 */
+		EEnum TYPE_ACTION = eINSTANCE.getTypeAction();
+
+		/**
+		 * The meta object literal for the '{@link mandroid.InputType <em>Input Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see mandroid.InputType
+		 * @see mandroid.impl.MandroidPackageImpl#getInputType()
+		 * @generated
+		 */
+		EEnum INPUT_TYPE = eINSTANCE.getInputType();
+
+		/**
+		 * The meta object literal for the '{@link mandroid.ActionType <em>Action Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see mandroid.ActionType
+		 * @see mandroid.impl.MandroidPackageImpl#getActionType()
+		 * @generated
+		 */
+		EEnum ACTION_TYPE = eINSTANCE.getActionType();
 
 	}
 

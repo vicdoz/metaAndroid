@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link mandroid.Aplication#getPermissions <em>Permissions</em>}</li>
  *   <li>{@link mandroid.Aplication#getRun <em>Run</em>}</li>
  *   <li>{@link mandroid.Aplication#getContains <em>Contains</em>}</li>
+ *   <li>{@link mandroid.Aplication#getHasStrings <em>Has Strings</em>}</li>
  * </ul>
  * </p>
  *
@@ -190,33 +191,22 @@ public interface Aplication extends EObject {
 	void setVersionName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Permissions</b></em>' attribute.
+	 * Returns the value of the '<em><b>Permissions</b></em>' attribute list.
+	 * The list contents are of type {@link mandroid.Permissions}.
 	 * The literals are from the enumeration {@link mandroid.Permissions}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Permissions</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Permissions</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Permissions</em>' attribute.
+	 * @return the value of the '<em>Permissions</em>' attribute list.
 	 * @see mandroid.Permissions
-	 * @see #setPermissions(Permissions)
 	 * @see mandroid.MandroidPackage#getAplication_Permissions()
 	 * @model
 	 * @generated
 	 */
-	Permissions getPermissions();
-
-	/**
-	 * Sets the value of the '{@link mandroid.Aplication#getPermissions <em>Permissions</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Permissions</em>' attribute.
-	 * @see mandroid.Permissions
-	 * @see #getPermissions()
-	 * @generated
-	 */
-	void setPermissions(Permissions value);
+	EList<Permissions> getPermissions();
 
 	/**
 	 * Returns the value of the '<em><b>Run</b></em>' containment reference list.
@@ -253,5 +243,21 @@ public interface Aplication extends EObject {
 	 * @generated
 	 */
 	EList<Layout> getContains();
+
+	/**
+	 * Returns the value of the '<em><b>Has Strings</b></em>' reference list.
+	 * The list contents are of type {@link mandroid.Strings}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Has Strings</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Has Strings</em>' reference list.
+	 * @see mandroid.MandroidPackage#getAplication_HasStrings()
+	 * @model
+	 * @generated
+	 */
+	EList<Strings> getHasStrings();
 
 } // Aplication

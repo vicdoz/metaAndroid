@@ -6,17 +6,13 @@ package mandroid.provider;
 import java.util.Collection;
 import java.util.List;
 
-import mandroid.Action;
-import mandroid.MandroidFactory;
+import mandroid.Item;
 import mandroid.MandroidPackage;
 
-import mandroid.TypeAction;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-
-import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -30,12 +26,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link mandroid.Action} object.
+ * This is the item provider adapter for a {@link mandroid.Item} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ActionItemProvider
+public class ItemItemProvider
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -49,7 +45,7 @@ public class ActionItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ActionItemProvider(AdapterFactory adapterFactory) {
+	public ItemItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -64,48 +60,28 @@ public class ActionItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addButtonOwnerPropertyDescriptor(object);
-			addTypePropertyDescriptor(object);
+			addIdPropertyDescriptor(object);
+			addShowAsActionPropertyDescriptor(object);
+			addOrderPropertyDescriptor(object);
+			addTitlePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Button Owner feature.
+	 * This adds a property descriptor for the Id feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addButtonOwnerPropertyDescriptor(Object object) {
+	protected void addIdPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Action_buttonOwner_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Action_buttonOwner_feature", "_UI_Action_type"),
-				 MandroidPackage.Literals.ACTION__BUTTON_OWNER,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Type feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Action_type_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Action_type_feature", "_UI_Action_type"),
-				 MandroidPackage.Literals.ACTION__TYPE,
+				 getString("_UI_Item_id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Item_id_feature", "_UI_Item_type"),
+				 MandroidPackage.Literals.ITEM__ID,
 				 true,
 				 false,
 				 false,
@@ -115,44 +91,80 @@ public class ActionItemProvider
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * This adds a property descriptor for the Show As Action feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(MandroidPackage.Literals.ACTION__SHOWS);
-		}
-		return childrenFeatures;
+	protected void addShowAsActionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Item_showAsAction_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Item_showAsAction_feature", "_UI_Item_type"),
+				 MandroidPackage.Literals.ITEM__SHOW_AS_ACTION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
+	 * This adds a property descriptor for the Order feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
+	protected void addOrderPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Item_order_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Item_order_feature", "_UI_Item_type"),
+				 MandroidPackage.Literals.ITEM__ORDER,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
-	 * This returns Action.gif.
+	 * This adds a property descriptor for the Title feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTitlePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Item_title_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Item_title_feature", "_UI_Item_type"),
+				 MandroidPackage.Literals.ITEM__TITLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This returns Item.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Action"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Item"));
 	}
 
 	/**
@@ -163,11 +175,10 @@ public class ActionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		TypeAction labelValue = ((Action)object).getType();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((Item)object).getId();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Action_type") :
-			getString("_UI_Action_type") + " " + label;
+			getString("_UI_Item_type") :
+			getString("_UI_Item_type") + " " + label;
 	}
 
 	/**
@@ -181,12 +192,12 @@ public class ActionItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Action.class)) {
-			case MandroidPackage.ACTION__TYPE:
+		switch (notification.getFeatureID(Item.class)) {
+			case MandroidPackage.ITEM__ID:
+			case MandroidPackage.ITEM__SHOW_AS_ACTION:
+			case MandroidPackage.ITEM__ORDER:
+			case MandroidPackage.ITEM__TITLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case MandroidPackage.ACTION__SHOWS:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -202,11 +213,6 @@ public class ActionItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(MandroidPackage.Literals.ACTION__SHOWS,
-				 MandroidFactory.eINSTANCE.createDialog()));
 	}
 
 	/**

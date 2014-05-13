@@ -19,11 +19,27 @@
       <genEnumLiterals ecoreEnumLiteral="MAndroid.ecore#//Length/LONG"/>
       <genEnumLiterals ecoreEnumLiteral="MAndroid.ecore#//Length/SHORT"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="MAndroid.ecore#//TypeAction">
+      <genEnumLiterals ecoreEnumLiteral="MAndroid.ecore#//TypeAction/Always"/>
+      <genEnumLiterals ecoreEnumLiteral="MAndroid.ecore#//TypeAction/Never"/>
+      <genEnumLiterals ecoreEnumLiteral="MAndroid.ecore#//TypeAction/IfRoom"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="MAndroid.ecore#//InputType">
+      <genEnumLiterals ecoreEnumLiteral="MAndroid.ecore#//InputType/Password"/>
+      <genEnumLiterals ecoreEnumLiteral="MAndroid.ecore#//InputType/Number"/>
+      <genEnumLiterals ecoreEnumLiteral="MAndroid.ecore#//InputType/TExt"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="MAndroid.ecore#//ActionType">
+      <genEnumLiterals ecoreEnumLiteral="MAndroid.ecore#//ActionType/Click"/>
+      <genEnumLiterals ecoreEnumLiteral="MAndroid.ecore#//ActionType/LongClick"/>
+    </genEnums>
     <genClasses ecoreClass="MAndroid.ecore#//Activity">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MAndroid.ecore#//Activity/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MAndroid.ecore#//Activity/package"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference MAndroid.ecore#//Activity/runsIn"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MAndroid.ecore#//Activity/main"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MAndroid.ecore#//Activity/muestra"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MAndroid.ecore#//Activity/show"/>
     </genClasses>
     <genClasses ecoreClass="MAndroid.ecore#//Widget">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MAndroid.ecore#//Widget/name"/>
@@ -35,6 +51,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MAndroid.ecore#//Layout/type"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MAndroid.ecore#//Layout/contains"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference MAndroid.ecore#//Layout/layOn"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MAndroid.ecore#//Layout/esMostrado"/>
     </genClasses>
     <genClasses ecoreClass="MAndroid.ecore#//Button">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MAndroid.ecore#//Button/triggers"/>
@@ -50,14 +67,34 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MAndroid.ecore#//Aplication/permissions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MAndroid.ecore#//Aplication/run"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MAndroid.ecore#//Aplication/contains"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MAndroid.ecore#//Aplication/hasStrings"/>
     </genClasses>
-    <genClasses ecoreClass="MAndroid.ecore#//TextField"/>
+    <genClasses ecoreClass="MAndroid.ecore#//TextField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MAndroid.ecore#//TextField/input"/>
+    </genClasses>
     <genClasses ecoreClass="MAndroid.ecore#//Action">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MAndroid.ecore#//Action/shows"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MAndroid.ecore#//Action/buttonOwner"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MAndroid.ecore#//Action/type"/>
     </genClasses>
     <genClasses ecoreClass="MAndroid.ecore#//Dialog">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference MAndroid.ecore#//Dialog/actionOwner"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MAndroid.ecore#//Dialog/time"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MAndroid.ecore#//Dialog/text"/>
+    </genClasses>
+    <genClasses ecoreClass="MAndroid.ecore#//Strings">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MAndroid.ecore#//Strings/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MAndroid.ecore#//Strings/value"/>
+    </genClasses>
+    <genClasses ecoreClass="MAndroid.ecore#//Menu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MAndroid.ecore#//Menu/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MAndroid.ecore#//Menu/hasItem"/>
+    </genClasses>
+    <genClasses ecoreClass="MAndroid.ecore#//Item">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MAndroid.ecore#//Item/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MAndroid.ecore#//Item/showAsAction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MAndroid.ecore#//Item/order"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MAndroid.ecore#//Item/title"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

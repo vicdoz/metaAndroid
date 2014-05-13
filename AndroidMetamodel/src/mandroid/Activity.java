@@ -16,6 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link mandroid.Activity#getPackage <em>Package</em>}</li>
  *   <li>{@link mandroid.Activity#getRunsIn <em>Runs In</em>}</li>
  *   <li>{@link mandroid.Activity#isMain <em>Main</em>}</li>
+ *   <li>{@link mandroid.Activity#getMuestra <em>Muestra</em>}</li>
+ *   <li>{@link mandroid.Activity#getShow <em>Show</em>}</li>
  * </ul>
  * </p>
  *
@@ -129,5 +131,59 @@ public interface Activity extends EObject {
 	 * @generated
 	 */
 	void setMain(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Muestra</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link mandroid.Layout#getEsMostrado <em>Es Mostrado</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Muestra</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Muestra</em>' reference.
+	 * @see #setMuestra(Layout)
+	 * @see mandroid.MandroidPackage#getActivity_Muestra()
+	 * @see mandroid.Layout#getEsMostrado
+	 * @model opposite="esMostrado"
+	 * @generated
+	 */
+	Layout getMuestra();
+
+	/**
+	 * Sets the value of the '{@link mandroid.Activity#getMuestra <em>Muestra</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Muestra</em>' reference.
+	 * @see #getMuestra()
+	 * @generated
+	 */
+	void setMuestra(Layout value);
+
+	/**
+	 * Returns the value of the '<em><b>Show</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Show</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Show</em>' containment reference.
+	 * @see #setShow(Menu)
+	 * @see mandroid.MandroidPackage#getActivity_Show()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Menu getShow();
+
+	/**
+	 * Sets the value of the '{@link mandroid.Activity#getShow <em>Show</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Show</em>' containment reference.
+	 * @see #getShow()
+	 * @generated
+	 */
+	void setShow(Menu value);
 
 } // Activity

@@ -4,6 +4,7 @@ package mandroid.impl;
 
 import mandroid.Action;
 import mandroid.Dialog;
+import mandroid.Length;
 import mandroid.MandroidPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -25,12 +26,54 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * The following features are implemented:
  * <ul>
  *   <li>{@link mandroid.impl.DialogImpl#getActionOwner <em>Action Owner</em>}</li>
+ *   <li>{@link mandroid.impl.DialogImpl#getTime <em>Time</em>}</li>
+ *   <li>{@link mandroid.impl.DialogImpl#getText <em>Text</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class DialogImpl extends MinimalEObjectImpl.Container implements Dialog {
+	/**
+	 * The default value of the '{@link #getTime() <em>Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Length TIME_EDEFAULT = Length.LONG;
+
+	/**
+	 * The cached value of the '{@link #getTime() <em>Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected Length time = TIME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getText() <em>Text</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getText()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String TEXT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getText() <em>Text</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getText()
+	 * @generated
+	 * @ordered
+	 */
+	protected String text = TEXT_EDEFAULT;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -96,6 +139,48 @@ public class DialogImpl extends MinimalEObjectImpl.Container implements Dialog {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Length getTime() {
+		return time;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTime(Length newTime) {
+		Length oldTime = time;
+		time = newTime == null ? TIME_EDEFAULT : newTime;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MandroidPackage.DIALOG__TIME, oldTime, time));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getText() {
+		return text;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setText(String newText) {
+		String oldText = text;
+		text = newText;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MandroidPackage.DIALOG__TEXT, oldText, text));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -145,6 +230,10 @@ public class DialogImpl extends MinimalEObjectImpl.Container implements Dialog {
 		switch (featureID) {
 			case MandroidPackage.DIALOG__ACTION_OWNER:
 				return getActionOwner();
+			case MandroidPackage.DIALOG__TIME:
+				return getTime();
+			case MandroidPackage.DIALOG__TEXT:
+				return getText();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -159,6 +248,12 @@ public class DialogImpl extends MinimalEObjectImpl.Container implements Dialog {
 		switch (featureID) {
 			case MandroidPackage.DIALOG__ACTION_OWNER:
 				setActionOwner((Action)newValue);
+				return;
+			case MandroidPackage.DIALOG__TIME:
+				setTime((Length)newValue);
+				return;
+			case MandroidPackage.DIALOG__TEXT:
+				setText((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -175,6 +270,12 @@ public class DialogImpl extends MinimalEObjectImpl.Container implements Dialog {
 			case MandroidPackage.DIALOG__ACTION_OWNER:
 				setActionOwner((Action)null);
 				return;
+			case MandroidPackage.DIALOG__TIME:
+				setTime(TIME_EDEFAULT);
+				return;
+			case MandroidPackage.DIALOG__TEXT:
+				setText(TEXT_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -189,8 +290,30 @@ public class DialogImpl extends MinimalEObjectImpl.Container implements Dialog {
 		switch (featureID) {
 			case MandroidPackage.DIALOG__ACTION_OWNER:
 				return getActionOwner() != null;
+			case MandroidPackage.DIALOG__TIME:
+				return time != TIME_EDEFAULT;
+			case MandroidPackage.DIALOG__TEXT:
+				return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (time: ");
+		result.append(time);
+		result.append(", text: ");
+		result.append(text);
+		result.append(')');
+		return result.toString();
 	}
 
 } //DialogImpl

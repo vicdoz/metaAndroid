@@ -70,6 +70,7 @@ public class AplicationItemProvider
 			addVersionCodePropertyDescriptor(object);
 			addVersionNamePropertyDescriptor(object);
 			addPermissionsPropertyDescriptor(object);
+			addHasStringsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -224,6 +225,28 @@ public class AplicationItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Has Strings feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addHasStringsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Aplication_hasStrings_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Aplication_hasStrings_feature", "_UI_Aplication_type"),
+				 MandroidPackage.Literals.APLICATION__HAS_STRINGS,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

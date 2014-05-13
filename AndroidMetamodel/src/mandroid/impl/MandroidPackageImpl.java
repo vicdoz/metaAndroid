@@ -3,18 +3,24 @@
 package mandroid.impl;
 
 import mandroid.Action;
+import mandroid.ActionType;
 import mandroid.Activity;
 import mandroid.Aplication;
 import mandroid.Button;
 import mandroid.Dialog;
+import mandroid.InputType;
+import mandroid.Item;
 import mandroid.Layout;
 import mandroid.LayoutType;
 import mandroid.Length;
 import mandroid.MandroidFactory;
 import mandroid.MandroidPackage;
+import mandroid.Menu;
 import mandroid.Permissions;
+import mandroid.Strings;
 import mandroid.TextField;
 import mandroid.TextView;
+import mandroid.TypeAction;
 import mandroid.Widget;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -100,6 +106,27 @@ public class MandroidPackageImpl extends EPackageImpl implements MandroidPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass stringsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass menuEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass itemEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum permissionsEEnum = null;
 
 	/**
@@ -115,6 +142,27 @@ public class MandroidPackageImpl extends EPackageImpl implements MandroidPackage
 	 * @generated
 	 */
 	private EEnum lengthEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum typeActionEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum inputTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum actionTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -227,6 +275,24 @@ public class MandroidPackageImpl extends EPackageImpl implements MandroidPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getActivity_Muestra() {
+		return (EReference)activityEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getActivity_Show() {
+		return (EReference)activityEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getWidget() {
 		return widgetEClass;
 	}
@@ -301,6 +367,15 @@ public class MandroidPackageImpl extends EPackageImpl implements MandroidPackage
 	 */
 	public EReference getLayout_LayOn() {
 		return (EReference)layoutEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLayout_EsMostrado() {
+		return (EReference)layoutEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -425,8 +500,26 @@ public class MandroidPackageImpl extends EPackageImpl implements MandroidPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getAplication_HasStrings() {
+		return (EReference)aplicationEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTextField() {
 		return textFieldEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTextField_Input() {
+		return (EAttribute)textFieldEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -461,6 +554,15 @@ public class MandroidPackageImpl extends EPackageImpl implements MandroidPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getAction_Type() {
+		return (EAttribute)actionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDialog() {
 		return dialogEClass;
 	}
@@ -472,6 +574,123 @@ public class MandroidPackageImpl extends EPackageImpl implements MandroidPackage
 	 */
 	public EReference getDialog_ActionOwner() {
 		return (EReference)dialogEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDialog_Time() {
+		return (EAttribute)dialogEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDialog_Text() {
+		return (EAttribute)dialogEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStrings() {
+		return stringsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStrings_Name() {
+		return (EAttribute)stringsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStrings_Value() {
+		return (EAttribute)stringsEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMenu() {
+		return menuEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMenu_Id() {
+		return (EAttribute)menuEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMenu_HasItem() {
+		return (EReference)menuEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getItem() {
+		return itemEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getItem_Id() {
+		return (EAttribute)itemEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getItem_ShowAsAction() {
+		return (EAttribute)itemEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getItem_Order() {
+		return (EAttribute)itemEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getItem_Title() {
+		return (EAttribute)itemEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -499,6 +718,33 @@ public class MandroidPackageImpl extends EPackageImpl implements MandroidPackage
 	 */
 	public EEnum getLength() {
 		return lengthEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getTypeAction() {
+		return typeActionEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getInputType() {
+		return inputTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getActionType() {
+		return actionTypeEEnum;
 	}
 
 	/**
@@ -534,6 +780,8 @@ public class MandroidPackageImpl extends EPackageImpl implements MandroidPackage
 		createEAttribute(activityEClass, ACTIVITY__PACKAGE);
 		createEReference(activityEClass, ACTIVITY__RUNS_IN);
 		createEAttribute(activityEClass, ACTIVITY__MAIN);
+		createEReference(activityEClass, ACTIVITY__MUESTRA);
+		createEReference(activityEClass, ACTIVITY__SHOW);
 
 		widgetEClass = createEClass(WIDGET);
 		createEAttribute(widgetEClass, WIDGET__NAME);
@@ -545,6 +793,7 @@ public class MandroidPackageImpl extends EPackageImpl implements MandroidPackage
 		createEAttribute(layoutEClass, LAYOUT__TYPE);
 		createEReference(layoutEClass, LAYOUT__CONTAINS);
 		createEReference(layoutEClass, LAYOUT__LAY_ON);
+		createEReference(layoutEClass, LAYOUT__ES_MOSTRADO);
 
 		buttonEClass = createEClass(BUTTON);
 		createEReference(buttonEClass, BUTTON__TRIGGERS);
@@ -561,20 +810,42 @@ public class MandroidPackageImpl extends EPackageImpl implements MandroidPackage
 		createEAttribute(aplicationEClass, APLICATION__PERMISSIONS);
 		createEReference(aplicationEClass, APLICATION__RUN);
 		createEReference(aplicationEClass, APLICATION__CONTAINS);
+		createEReference(aplicationEClass, APLICATION__HAS_STRINGS);
 
 		textFieldEClass = createEClass(TEXT_FIELD);
+		createEAttribute(textFieldEClass, TEXT_FIELD__INPUT);
 
 		actionEClass = createEClass(ACTION);
 		createEReference(actionEClass, ACTION__SHOWS);
 		createEReference(actionEClass, ACTION__BUTTON_OWNER);
+		createEAttribute(actionEClass, ACTION__TYPE);
 
 		dialogEClass = createEClass(DIALOG);
 		createEReference(dialogEClass, DIALOG__ACTION_OWNER);
+		createEAttribute(dialogEClass, DIALOG__TIME);
+		createEAttribute(dialogEClass, DIALOG__TEXT);
+
+		stringsEClass = createEClass(STRINGS);
+		createEAttribute(stringsEClass, STRINGS__NAME);
+		createEAttribute(stringsEClass, STRINGS__VALUE);
+
+		menuEClass = createEClass(MENU);
+		createEAttribute(menuEClass, MENU__ID);
+		createEReference(menuEClass, MENU__HAS_ITEM);
+
+		itemEClass = createEClass(ITEM);
+		createEAttribute(itemEClass, ITEM__ID);
+		createEAttribute(itemEClass, ITEM__SHOW_AS_ACTION);
+		createEAttribute(itemEClass, ITEM__ORDER);
+		createEAttribute(itemEClass, ITEM__TITLE);
 
 		// Create enums
 		permissionsEEnum = createEEnum(PERMISSIONS);
 		layoutTypeEEnum = createEEnum(LAYOUT_TYPE);
 		lengthEEnum = createEEnum(LENGTH);
+		typeActionEEnum = createEEnum(TYPE_ACTION);
+		inputTypeEEnum = createEEnum(INPUT_TYPE);
+		actionTypeEEnum = createEEnum(ACTION_TYPE);
 	}
 
 	/**
@@ -615,6 +886,8 @@ public class MandroidPackageImpl extends EPackageImpl implements MandroidPackage
 		initEAttribute(getActivity_Package(), ecorePackage.getEString(), "package", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivity_RunsIn(), this.getAplication(), this.getAplication_Run(), "runsIn", null, 1, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getActivity_Main(), ecorePackage.getEBoolean(), "main", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_Muestra(), this.getLayout(), this.getLayout_EsMostrado(), "muestra", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_Show(), this.getMenu(), null, "show", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(widgetEClass, Widget.class, "Widget", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getWidget_Name(), ecorePackage.getEString(), "name", null, 0, 1, Widget.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -626,6 +899,7 @@ public class MandroidPackageImpl extends EPackageImpl implements MandroidPackage
 		initEAttribute(getLayout_Type(), this.getLayoutType(), "type", null, 0, 1, Layout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLayout_Contains(), this.getWidget(), this.getWidget_LayoutOwner(), "contains", null, 0, -1, Layout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLayout_LayOn(), this.getAplication(), this.getAplication_Contains(), "layOn", null, 0, 1, Layout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLayout_EsMostrado(), this.getActivity(), this.getActivity_Muestra(), "esMostrado", null, 0, -1, Layout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(buttonEClass, Button.class, "Button", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getButton_Triggers(), this.getAction(), null, "triggers", null, 0, 1, Button.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -639,18 +913,37 @@ public class MandroidPackageImpl extends EPackageImpl implements MandroidPackage
 		initEAttribute(getAplication_TargetSDK(), ecorePackage.getEBigInteger(), "targetSDK", null, 0, 1, Aplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAplication_VersionCode(), ecorePackage.getEBigInteger(), "versionCode", null, 0, 1, Aplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAplication_VersionName(), ecorePackage.getEString(), "versionName", null, 0, 1, Aplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAplication_Permissions(), this.getPermissions(), "permissions", null, 0, 1, Aplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAplication_Permissions(), this.getPermissions(), "permissions", null, 0, -1, Aplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAplication_Run(), this.getActivity(), this.getActivity_RunsIn(), "run", null, 0, -1, Aplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAplication_Contains(), this.getLayout(), this.getLayout_LayOn(), "contains", null, 0, -1, Aplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAplication_HasStrings(), this.getStrings(), null, "hasStrings", null, 0, -1, Aplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(textFieldEClass, TextField.class, "TextField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTextField_Input(), this.getInputType(), "input", null, 0, 1, TextField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(actionEClass, Action.class, "Action", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAction_Shows(), this.getDialog(), this.getDialog_ActionOwner(), "shows", null, 1, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAction_ButtonOwner(), this.getButton(), null, "buttonOwner", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAction_Type(), this.getTypeAction(), "type", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dialogEClass, Dialog.class, "Dialog", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDialog_ActionOwner(), this.getAction(), this.getAction_Shows(), "actionOwner", null, 1, 1, Dialog.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDialog_Time(), this.getLength(), "time", null, 0, 1, Dialog.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDialog_Text(), ecorePackage.getEString(), "text", null, 0, 1, Dialog.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(stringsEClass, Strings.class, "Strings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getStrings_Name(), ecorePackage.getEString(), "name", null, 0, 1, Strings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStrings_Value(), ecorePackage.getEString(), "value", null, 0, 1, Strings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(menuEClass, Menu.class, "Menu", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMenu_Id(), ecorePackage.getEString(), "id", null, 0, 1, Menu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMenu_HasItem(), this.getItem(), null, "hasItem", null, 0, -1, Menu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(itemEClass, Item.class, "Item", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getItem_Id(), ecorePackage.getEString(), "id", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getItem_ShowAsAction(), this.getTypeAction(), "showAsAction", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getItem_Order(), ecorePackage.getEIntegerObject(), "order", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getItem_Title(), ecorePackage.getEString(), "title", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(permissionsEEnum, Permissions.class, "Permissions");
@@ -665,6 +958,20 @@ public class MandroidPackageImpl extends EPackageImpl implements MandroidPackage
 		initEEnum(lengthEEnum, Length.class, "Length");
 		addEEnumLiteral(lengthEEnum, Length.LONG);
 		addEEnumLiteral(lengthEEnum, Length.SHORT);
+
+		initEEnum(typeActionEEnum, TypeAction.class, "TypeAction");
+		addEEnumLiteral(typeActionEEnum, TypeAction.ALWAYS);
+		addEEnumLiteral(typeActionEEnum, TypeAction.NEVER);
+		addEEnumLiteral(typeActionEEnum, TypeAction.IF_ROOM);
+
+		initEEnum(inputTypeEEnum, InputType.class, "InputType");
+		addEEnumLiteral(inputTypeEEnum, InputType.PASSWORD);
+		addEEnumLiteral(inputTypeEEnum, InputType.NUMBER);
+		addEEnumLiteral(inputTypeEEnum, InputType.TEXT);
+
+		initEEnum(actionTypeEEnum, ActionType.class, "ActionType");
+		addEEnumLiteral(actionTypeEEnum, ActionType.CLICK);
+		addEEnumLiteral(actionTypeEEnum, ActionType.LONG_CLICK);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -4,6 +4,7 @@ package mandroid.impl;
 
 import java.util.Collection;
 
+import mandroid.Activity;
 import mandroid.Aplication;
 import mandroid.Layout;
 import mandroid.LayoutType;
@@ -22,6 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -35,6 +37,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link mandroid.impl.LayoutImpl#getType <em>Type</em>}</li>
  *   <li>{@link mandroid.impl.LayoutImpl#getContains <em>Contains</em>}</li>
  *   <li>{@link mandroid.impl.LayoutImpl#getLayOn <em>Lay On</em>}</li>
+ *   <li>{@link mandroid.impl.LayoutImpl#getEsMostrado <em>Es Mostrado</em>}</li>
  * </ul>
  * </p>
  *
@@ -70,6 +73,16 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 	 * @ordered
 	 */
 	protected EList<Widget> contains;
+
+	/**
+	 * The cached value of the '{@link #getEsMostrado() <em>Es Mostrado</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEsMostrado()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Activity> esMostrado;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -169,6 +182,18 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Activity> getEsMostrado() {
+		if (esMostrado == null) {
+			esMostrado = new EObjectWithInverseResolvingEList<Activity>(Activity.class, this, MandroidPackage.LAYOUT__ES_MOSTRADO, MandroidPackage.ACTIVITY__MUESTRA);
+		}
+		return esMostrado;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -179,6 +204,8 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetLayOn((Aplication)otherEnd, msgs);
+			case MandroidPackage.LAYOUT__ES_MOSTRADO:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getEsMostrado()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -195,6 +222,8 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 				return ((InternalEList<?>)getContains()).basicRemove(otherEnd, msgs);
 			case MandroidPackage.LAYOUT__LAY_ON:
 				return basicSetLayOn(null, msgs);
+			case MandroidPackage.LAYOUT__ES_MOSTRADO:
+				return ((InternalEList<?>)getEsMostrado()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -227,6 +256,8 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 				return getContains();
 			case MandroidPackage.LAYOUT__LAY_ON:
 				return getLayOn();
+			case MandroidPackage.LAYOUT__ES_MOSTRADO:
+				return getEsMostrado();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -250,6 +281,10 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 			case MandroidPackage.LAYOUT__LAY_ON:
 				setLayOn((Aplication)newValue);
 				return;
+			case MandroidPackage.LAYOUT__ES_MOSTRADO:
+				getEsMostrado().clear();
+				getEsMostrado().addAll((Collection<? extends Activity>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -271,6 +306,9 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 			case MandroidPackage.LAYOUT__LAY_ON:
 				setLayOn((Aplication)null);
 				return;
+			case MandroidPackage.LAYOUT__ES_MOSTRADO:
+				getEsMostrado().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -289,6 +327,8 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 				return contains != null && !contains.isEmpty();
 			case MandroidPackage.LAYOUT__LAY_ON:
 				return getLayOn() != null;
+			case MandroidPackage.LAYOUT__ES_MOSTRADO:
+				return esMostrado != null && !esMostrado.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

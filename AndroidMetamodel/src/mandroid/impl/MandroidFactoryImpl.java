@@ -66,6 +66,9 @@ public class MandroidFactoryImpl extends EFactoryImpl implements MandroidFactory
 			case MandroidPackage.TEXT_FIELD: return createTextField();
 			case MandroidPackage.ACTION: return createAction();
 			case MandroidPackage.DIALOG: return createDialog();
+			case MandroidPackage.STRINGS: return createStrings();
+			case MandroidPackage.MENU: return createMenu();
+			case MandroidPackage.ITEM: return createItem();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -85,6 +88,12 @@ public class MandroidFactoryImpl extends EFactoryImpl implements MandroidFactory
 				return createLayoutTypeFromString(eDataType, initialValue);
 			case MandroidPackage.LENGTH:
 				return createLengthFromString(eDataType, initialValue);
+			case MandroidPackage.TYPE_ACTION:
+				return createTypeActionFromString(eDataType, initialValue);
+			case MandroidPackage.INPUT_TYPE:
+				return createInputTypeFromString(eDataType, initialValue);
+			case MandroidPackage.ACTION_TYPE:
+				return createActionTypeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -104,6 +113,12 @@ public class MandroidFactoryImpl extends EFactoryImpl implements MandroidFactory
 				return convertLayoutTypeToString(eDataType, instanceValue);
 			case MandroidPackage.LENGTH:
 				return convertLengthToString(eDataType, instanceValue);
+			case MandroidPackage.TYPE_ACTION:
+				return convertTypeActionToString(eDataType, instanceValue);
+			case MandroidPackage.INPUT_TYPE:
+				return convertInputTypeToString(eDataType, instanceValue);
+			case MandroidPackage.ACTION_TYPE:
+				return convertActionTypeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -204,6 +219,36 @@ public class MandroidFactoryImpl extends EFactoryImpl implements MandroidFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Strings createStrings() {
+		StringsImpl strings = new StringsImpl();
+		return strings;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Menu createMenu() {
+		MenuImpl menu = new MenuImpl();
+		return menu;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Item createItem() {
+		ItemImpl item = new ItemImpl();
+		return item;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Permissions createPermissionsFromString(EDataType eDataType, String initialValue) {
 		Permissions result = Permissions.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -256,6 +301,66 @@ public class MandroidFactoryImpl extends EFactoryImpl implements MandroidFactory
 	 * @generated
 	 */
 	public String convertLengthToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TypeAction createTypeActionFromString(EDataType eDataType, String initialValue) {
+		TypeAction result = TypeAction.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertTypeActionToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InputType createInputTypeFromString(EDataType eDataType, String initialValue) {
+		InputType result = InputType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertInputTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ActionType createActionTypeFromString(EDataType eDataType, String initialValue) {
+		ActionType result = ActionType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertActionTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

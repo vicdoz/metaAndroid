@@ -6,6 +6,7 @@ import mandroid.Action;
 import mandroid.Button;
 import mandroid.Dialog;
 import mandroid.MandroidPackage;
+import mandroid.TypeAction;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -25,6 +26,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link mandroid.impl.ActionImpl#getShows <em>Shows</em>}</li>
  *   <li>{@link mandroid.impl.ActionImpl#getButtonOwner <em>Button Owner</em>}</li>
+ *   <li>{@link mandroid.impl.ActionImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -50,6 +52,26 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	 * @ordered
 	 */
 	protected Button buttonOwner;
+
+	/**
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final TypeAction TYPE_EDEFAULT = TypeAction.ALWAYS;
+
+	/**
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected TypeAction type = TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -156,6 +178,27 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public TypeAction getType() {
+		return type;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setType(TypeAction newType) {
+		TypeAction oldType = type;
+		type = newType == null ? TYPE_EDEFAULT : newType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MandroidPackage.ACTION__TYPE, oldType, type));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -194,6 +237,8 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 			case MandroidPackage.ACTION__BUTTON_OWNER:
 				if (resolve) return getButtonOwner();
 				return basicGetButtonOwner();
+			case MandroidPackage.ACTION__TYPE:
+				return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -211,6 +256,9 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 				return;
 			case MandroidPackage.ACTION__BUTTON_OWNER:
 				setButtonOwner((Button)newValue);
+				return;
+			case MandroidPackage.ACTION__TYPE:
+				setType((TypeAction)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -230,6 +278,9 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 			case MandroidPackage.ACTION__BUTTON_OWNER:
 				setButtonOwner((Button)null);
 				return;
+			case MandroidPackage.ACTION__TYPE:
+				setType(TYPE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -246,8 +297,26 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 				return shows != null;
 			case MandroidPackage.ACTION__BUTTON_OWNER:
 				return buttonOwner != null;
+			case MandroidPackage.ACTION__TYPE:
+				return type != TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (type: ");
+		result.append(type);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ActionImpl

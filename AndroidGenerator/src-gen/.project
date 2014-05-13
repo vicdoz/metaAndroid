@@ -1,11 +1,7 @@
-«IMPORT mandroid»
 
-«DEFINE Root FOR mandroid::Aplication»
-	
-	«FILE ".project"»
 <?xml version="1.0" encoding="utf-8"?>
 <projectDescription>
-	<name>«name»</name>
+	<name></name>
     <comment></comment>
 	<projects>
 	</projects>
@@ -37,5 +33,4 @@
 	</natures>
 </projectDescription>
 
-	«ENDFILE»
-«ENDDEFINE»
+	

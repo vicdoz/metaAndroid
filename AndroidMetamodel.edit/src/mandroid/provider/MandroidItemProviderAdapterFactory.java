@@ -279,6 +279,75 @@ public class MandroidItemProviderAdapterFactory extends MandroidAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link mandroid.Strings} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StringsItemProvider stringsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link mandroid.Strings}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStringsAdapter() {
+		if (stringsItemProvider == null) {
+			stringsItemProvider = new StringsItemProvider(this);
+		}
+
+		return stringsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link mandroid.Menu} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MenuItemProvider menuItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link mandroid.Menu}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMenuAdapter() {
+		if (menuItemProvider == null) {
+			menuItemProvider = new MenuItemProvider(this);
+		}
+
+		return menuItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link mandroid.Item} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ItemItemProvider itemItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link mandroid.Item}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createItemAdapter() {
+		if (itemItemProvider == null) {
+			itemItemProvider = new ItemItemProvider(this);
+		}
+
+		return itemItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -386,6 +455,9 @@ public class MandroidItemProviderAdapterFactory extends MandroidAdapterFactory i
 		if (textFieldItemProvider != null) textFieldItemProvider.dispose();
 		if (actionItemProvider != null) actionItemProvider.dispose();
 		if (dialogItemProvider != null) dialogItemProvider.dispose();
+		if (stringsItemProvider != null) stringsItemProvider.dispose();
+		if (menuItemProvider != null) menuItemProvider.dispose();
+		if (itemItemProvider != null) itemItemProvider.dispose();
 	}
 
 }

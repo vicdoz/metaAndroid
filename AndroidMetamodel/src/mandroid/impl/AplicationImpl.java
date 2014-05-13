@@ -11,6 +11,7 @@ import mandroid.Aplication;
 import mandroid.Layout;
 import mandroid.MandroidPackage;
 import mandroid.Permissions;
+import mandroid.Strings;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -23,7 +24,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -42,6 +45,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link mandroid.impl.AplicationImpl#getPermissions <em>Permissions</em>}</li>
  *   <li>{@link mandroid.impl.AplicationImpl#getRun <em>Run</em>}</li>
  *   <li>{@link mandroid.impl.AplicationImpl#getContains <em>Contains</em>}</li>
+ *   <li>{@link mandroid.impl.AplicationImpl#getHasStrings <em>Has Strings</em>}</li>
  * </ul>
  * </p>
  *
@@ -169,24 +173,14 @@ public class AplicationImpl extends MinimalEObjectImpl.Container implements Apli
 	protected String versionName = VERSION_NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getPermissions() <em>Permissions</em>}' attribute.
+	 * The cached value of the '{@link #getPermissions() <em>Permissions</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPermissions()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Permissions PERMISSIONS_EDEFAULT = Permissions.INTERNET;
-
-	/**
-	 * The cached value of the '{@link #getPermissions() <em>Permissions</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPermissions()
-	 * @generated
-	 * @ordered
-	 */
-	protected Permissions permissions = PERMISSIONS_EDEFAULT;
+	protected EList<Permissions> permissions;
 
 	/**
 	 * The cached value of the '{@link #getRun() <em>Run</em>}' containment reference list.
@@ -207,6 +201,16 @@ public class AplicationImpl extends MinimalEObjectImpl.Container implements Apli
 	 * @ordered
 	 */
 	protected EList<Layout> contains;
+
+	/**
+	 * The cached value of the '{@link #getHasStrings() <em>Has Strings</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHasStrings()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Strings> hasStrings;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -358,20 +362,11 @@ public class AplicationImpl extends MinimalEObjectImpl.Container implements Apli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Permissions getPermissions() {
+	public EList<Permissions> getPermissions() {
+		if (permissions == null) {
+			permissions = new EDataTypeUniqueEList<Permissions>(Permissions.class, this, MandroidPackage.APLICATION__PERMISSIONS);
+		}
 		return permissions;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPermissions(Permissions newPermissions) {
-		Permissions oldPermissions = permissions;
-		permissions = newPermissions == null ? PERMISSIONS_EDEFAULT : newPermissions;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MandroidPackage.APLICATION__PERMISSIONS, oldPermissions, permissions));
 	}
 
 	/**
@@ -396,6 +391,18 @@ public class AplicationImpl extends MinimalEObjectImpl.Container implements Apli
 			contains = new EObjectContainmentWithInverseEList<Layout>(Layout.class, this, MandroidPackage.APLICATION__CONTAINS, MandroidPackage.LAYOUT__LAY_ON);
 		}
 		return contains;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Strings> getHasStrings() {
+		if (hasStrings == null) {
+			hasStrings = new EObjectResolvingEList<Strings>(Strings.class, this, MandroidPackage.APLICATION__HAS_STRINGS);
+		}
+		return hasStrings;
 	}
 
 	/**
@@ -457,6 +464,8 @@ public class AplicationImpl extends MinimalEObjectImpl.Container implements Apli
 				return getRun();
 			case MandroidPackage.APLICATION__CONTAINS:
 				return getContains();
+			case MandroidPackage.APLICATION__HAS_STRINGS:
+				return getHasStrings();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -489,7 +498,8 @@ public class AplicationImpl extends MinimalEObjectImpl.Container implements Apli
 				setVersionName((String)newValue);
 				return;
 			case MandroidPackage.APLICATION__PERMISSIONS:
-				setPermissions((Permissions)newValue);
+				getPermissions().clear();
+				getPermissions().addAll((Collection<? extends Permissions>)newValue);
 				return;
 			case MandroidPackage.APLICATION__RUN:
 				getRun().clear();
@@ -498,6 +508,10 @@ public class AplicationImpl extends MinimalEObjectImpl.Container implements Apli
 			case MandroidPackage.APLICATION__CONTAINS:
 				getContains().clear();
 				getContains().addAll((Collection<? extends Layout>)newValue);
+				return;
+			case MandroidPackage.APLICATION__HAS_STRINGS:
+				getHasStrings().clear();
+				getHasStrings().addAll((Collection<? extends Strings>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -530,13 +544,16 @@ public class AplicationImpl extends MinimalEObjectImpl.Container implements Apli
 				setVersionName(VERSION_NAME_EDEFAULT);
 				return;
 			case MandroidPackage.APLICATION__PERMISSIONS:
-				setPermissions(PERMISSIONS_EDEFAULT);
+				getPermissions().clear();
 				return;
 			case MandroidPackage.APLICATION__RUN:
 				getRun().clear();
 				return;
 			case MandroidPackage.APLICATION__CONTAINS:
 				getContains().clear();
+				return;
+			case MandroidPackage.APLICATION__HAS_STRINGS:
+				getHasStrings().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -563,11 +580,13 @@ public class AplicationImpl extends MinimalEObjectImpl.Container implements Apli
 			case MandroidPackage.APLICATION__VERSION_NAME:
 				return VERSION_NAME_EDEFAULT == null ? versionName != null : !VERSION_NAME_EDEFAULT.equals(versionName);
 			case MandroidPackage.APLICATION__PERMISSIONS:
-				return permissions != PERMISSIONS_EDEFAULT;
+				return permissions != null && !permissions.isEmpty();
 			case MandroidPackage.APLICATION__RUN:
 				return run != null && !run.isEmpty();
 			case MandroidPackage.APLICATION__CONTAINS:
 				return contains != null && !contains.isEmpty();
+			case MandroidPackage.APLICATION__HAS_STRINGS:
+				return hasStrings != null && !hasStrings.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

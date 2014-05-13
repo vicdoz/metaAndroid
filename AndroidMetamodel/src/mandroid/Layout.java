@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link mandroid.Layout#getType <em>Type</em>}</li>
  *   <li>{@link mandroid.Layout#getContains <em>Contains</em>}</li>
  *   <li>{@link mandroid.Layout#getLayOn <em>Lay On</em>}</li>
+ *   <li>{@link mandroid.Layout#getEsMostrado <em>Es Mostrado</em>}</li>
  * </ul>
  * </p>
  *
@@ -99,5 +100,23 @@ public interface Layout extends EObject {
 	 * @generated
 	 */
 	void setLayOn(Aplication value);
+
+	/**
+	 * Returns the value of the '<em><b>Es Mostrado</b></em>' reference list.
+	 * The list contents are of type {@link mandroid.Activity}.
+	 * It is bidirectional and its opposite is '{@link mandroid.Activity#getMuestra <em>Muestra</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Es Mostrado</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Es Mostrado</em>' reference list.
+	 * @see mandroid.MandroidPackage#getLayout_EsMostrado()
+	 * @see mandroid.Activity#getMuestra
+	 * @model opposite="muestra"
+	 * @generated
+	 */
+	EList<Activity> getEsMostrado();
 
 } // Layout

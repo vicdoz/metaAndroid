@@ -65,6 +65,7 @@ public class LayoutItemProvider
 			super.getPropertyDescriptors(object);
 
 			addTypePropertyDescriptor(object);
+			addEsMostradoPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -87,6 +88,28 @@ public class LayoutItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Es Mostrado feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEsMostradoPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Layout_esMostrado_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Layout_esMostrado_feature", "_UI_Layout_type"),
+				 MandroidPackage.Literals.LAYOUT__ES_MOSTRADO,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

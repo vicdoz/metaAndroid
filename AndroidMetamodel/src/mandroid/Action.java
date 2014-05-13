@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link mandroid.Action#getShows <em>Shows</em>}</li>
  *   <li>{@link mandroid.Action#getButtonOwner <em>Button Owner</em>}</li>
+ *   <li>{@link mandroid.Action#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -75,5 +76,34 @@ public interface Action extends EObject {
 	 * @generated
 	 */
 	void setButtonOwner(Button value);
+
+	/**
+	 * Returns the value of the '<em><b>Type</b></em>' attribute.
+	 * The literals are from the enumeration {@link mandroid.TypeAction}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Type</em>' attribute.
+	 * @see mandroid.TypeAction
+	 * @see #setType(TypeAction)
+	 * @see mandroid.MandroidPackage#getAction_Type()
+	 * @model
+	 * @generated
+	 */
+	TypeAction getType();
+
+	/**
+	 * Sets the value of the '{@link mandroid.Action#getType <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Type</em>' attribute.
+	 * @see mandroid.TypeAction
+	 * @see #getType()
+	 * @generated
+	 */
+	void setType(TypeAction value);
 
 } // Action
