@@ -3,41 +3,40 @@
 «DEFINE Root FOR mandroid::Aplication»
 	
 	«FILE "manifest.xml"»
-		<?xml version="1.0" encoding="utf-8"?>
-		<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-		    package="«package»"
-		    android:versionCode="1"
-		    android:versionName="1.0" >
-		
-		    <uses-sdk
-		        android:minSdkVersion="«minSDK»"
-		        android:targetSdkVersion="«targetSDK»" />
-		
-		    <application
-		        android:allowBackup="true"
-		        android:icon="@drawable/ic_launcher"
-		        android:label="@string/"«name»
-		        android:theme="@style/AppTheme" >
-		        
-					«EXPAND GeneraActivtyEnManifest  FOREACH run.typeSelect(Activity)»
-			</application>
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="«package»"
+    android:versionCode="1"
+    android:versionName="1.0" >
 
-		</manifest>
+    <uses-sdk
+        android:minSdkVersion="«minSDK»"
+        android:targetSdkVersion="«targetSDK»" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/"«name»
+        android:theme="@style/AppTheme" >
+        
+			«EXPAND GeneraActivtyEnManifest  FOREACH run.typeSelect(Activity)»
+			</application>
+	
+
+</manifest>
 	«ENDFILE»
 «ENDDEFINE»
 
-
-
 «DEFINE GeneraActivtyEnManifest  FOR Activity»
-	<activity
-        android:name=«package».«name»
-        android:label=«name» >
-        «IF main == true»
+<activity
+    android:name=«package».«name»
+    android:label=«name» >
+    «IF main == true»
         	<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         «ENDIF»
-    </activity> 
+</activity> 
 «ENDDEFINE»

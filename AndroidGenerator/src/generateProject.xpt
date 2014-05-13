@@ -1,0 +1,33 @@
+«IMPORT mandroid»
+
+«DEFINE Root FOR mandroid::Aplication»
+	
+	«FILE "project"»
+<?xml version="1.0" encoding="utf-8"?>
+<projectDescription>
+	<name>«package»</name>
+    <projects>
+	</projects>
+	<buildSpec>
+		«EXPAND GeneraBuildCommands  FOREACH Command»
+	
+	</buildSpec>
+	
+	<natures>		
+		«EXPAND GeneraNatures  FOREACH Nature»
+	</natures>
+</projectDescription>
+	«ENDFILE»
+«ENDDEFINE»
+
+«DEFINE GeneraBuildCommands  FOR Command»
+<buildCommand>
+			<name>«»</name>
+			<arguments>
+			</arguments>
+</buildCommand>
+«ENDDEFINE»
+
+«DEFINE GeneraNatures  FOR Nature»
+			<nature>«»</nature>
+«ENDDEFINE»
