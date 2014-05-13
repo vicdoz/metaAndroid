@@ -45,7 +45,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="contains" upperBound="-1"
         eType="#//Layout" containment="true" eOpposite="#//Layout/layOn"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hasStrings" upperBound="-1"
+<<<<<<< HEAD
         eType="#//Strings"/>
+=======
+        eType="#//Strings" containment="true"/>
+>>>>>>> 17e78e0d9fa43eb7087f9c79fa221864b9513f93
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Permissions">
     <eLiterals name="INTERNET"/>

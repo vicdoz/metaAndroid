@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <mandroid:Aplication xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:mandroid="http://mandroid/1.0" name="MetaAndroid">
   <permissions>INTERNET</permissions>
   <permissions>FINE_LOCATION</permissions>
   <permissions>COARSE_LOCATION</permissions>
 </mandroid:Aplication>
+=======
+<mandroid:Aplication xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:mandroid="http://mandroid/1.0"/>
+>>>>>>> 17e78e0d9fa43eb7087f9c79fa221864b9513f93

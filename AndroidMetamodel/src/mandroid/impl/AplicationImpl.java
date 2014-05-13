@@ -3,30 +3,23 @@
 package mandroid.impl;
 
 import java.math.BigInteger;
-
 import java.util.Collection;
-
 import mandroid.Activity;
 import mandroid.Aplication;
 import mandroid.Layout;
 import mandroid.MandroidPackage;
 import mandroid.Permissions;
 import mandroid.Strings;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -203,7 +196,7 @@ public class AplicationImpl extends MinimalEObjectImpl.Container implements Apli
 	protected EList<Layout> contains;
 
 	/**
-	 * The cached value of the '{@link #getHasStrings() <em>Has Strings</em>}' reference list.
+	 * The cached value of the '{@link #getHasStrings() <em>Has Strings</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getHasStrings()
@@ -400,7 +393,7 @@ public class AplicationImpl extends MinimalEObjectImpl.Container implements Apli
 	 */
 	public EList<Strings> getHasStrings() {
 		if (hasStrings == null) {
-			hasStrings = new EObjectResolvingEList<Strings>(Strings.class, this, MandroidPackage.APLICATION__HAS_STRINGS);
+			hasStrings = new EObjectContainmentEList<Strings>(Strings.class, this, MandroidPackage.APLICATION__HAS_STRINGS);
 		}
 		return hasStrings;
 	}
@@ -434,6 +427,8 @@ public class AplicationImpl extends MinimalEObjectImpl.Container implements Apli
 				return ((InternalEList<?>)getRun()).basicRemove(otherEnd, msgs);
 			case MandroidPackage.APLICATION__CONTAINS:
 				return ((InternalEList<?>)getContains()).basicRemove(otherEnd, msgs);
+			case MandroidPackage.APLICATION__HAS_STRINGS:
+				return ((InternalEList<?>)getHasStrings()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
