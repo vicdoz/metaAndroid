@@ -29,7 +29,8 @@
 «ENDDEFINE»
 
 «DEFINE GeneraPermissions  FOR Permissions»
-<permision name=> «this.toString()»  </permision>
+<uses-permission
+     android:name="android.permission.«this.toString()»"  />
 «ENDDEFINE»
 
 «DEFINE GeneraActivtyEnManifest  FOR Activity»

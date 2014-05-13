@@ -1,19 +1,22 @@
 
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package=""
+    package="ytruyrtru"
     android:versionCode="1"
     android:versionName="1.0" >
 	
-<permision name=> INTERNET  </permision>
+<uses-permission
+     android:name="android.permission.INTERNET"  />
 
-<permision name=> FINE_LOCATION  </permision>
+<uses-permission
+     android:name="android.permission.FINE_LOCATION"  />
 
-<permision name=> COARSE_LOCATION  </permision>
+<uses-permission
+     android:name="android.permission.COARSE_LOCATION"  />
 
    
 	 <uses-sdk
-        android:minSdkVersion=""
+        android:minSdkVersion="17"
         android:targetSdkVersion="" />
 
     <application
@@ -23,6 +26,12 @@
         android:theme="@style/AppTheme" >
 		
 		
+<activity
+    android:name=xcvzc.
+    android:label= >
+    
+</activity> 
+
 	</application>
 	
 
