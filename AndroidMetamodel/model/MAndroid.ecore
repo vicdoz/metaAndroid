@@ -45,7 +45,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="contains" upperBound="-1"
         eType="#//Layout" containment="true" eOpposite="#//Layout/layOn"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hasStrings" upperBound="-1"
-        eType="#//Strings"/>
+        eType="#//Strings" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Permissions">
     <eLiterals name="INTERNET"/>

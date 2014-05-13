@@ -245,7 +245,7 @@ public interface Aplication extends EObject {
 	EList<Layout> getContains();
 
 	/**
-	 * Returns the value of the '<em><b>Has Strings</b></em>' reference list.
+	 * Returns the value of the '<em><b>Has Strings</b></em>' containment reference list.
 	 * The list contents are of type {@link mandroid.Strings}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -253,9 +253,9 @@ public interface Aplication extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Has Strings</em>' reference list.
+	 * @return the value of the '<em>Has Strings</em>' containment reference list.
 	 * @see mandroid.MandroidPackage#getAplication_HasStrings()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Strings> getHasStrings();

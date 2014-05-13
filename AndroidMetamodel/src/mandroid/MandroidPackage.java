@@ -496,7 +496,7 @@ public interface MandroidPackage extends EPackage {
 	int APLICATION__CONTAINS = 8;
 
 	/**
-	 * The feature id for the '<em><b>Has Strings</b></em>' reference list.
+	 * The feature id for the '<em><b>Has Strings</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1247,10 +1247,10 @@ public interface MandroidPackage extends EPackage {
 	EReference getAplication_Contains();
 
 	/**
-	 * Returns the meta object for the reference list '{@link mandroid.Aplication#getHasStrings <em>Has Strings</em>}'.
+	 * Returns the meta object for the containment reference list '{@link mandroid.Aplication#getHasStrings <em>Has Strings</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Has Strings</em>'.
+	 * @return the meta object for the containment reference list '<em>Has Strings</em>'.
 	 * @see mandroid.Aplication#getHasStrings()
 	 * @see #getAplication()
 	 * @generated
@@ -1818,7 +1818,7 @@ public interface MandroidPackage extends EPackage {
 		EReference APLICATION__CONTAINS = eINSTANCE.getAplication_Contains();
 
 		/**
-		 * The meta object literal for the '<em><b>Has Strings</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Has Strings</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
