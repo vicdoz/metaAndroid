@@ -229,6 +229,14 @@
   <children xmi:type="notation:Node" xmi:id="_tt6-ENbBEeO4OK6vauX4hA" type="1001">
     <children xmi:type="notation:Node" xmi:id="_tt8MMNbBEeO4OK6vauX4hA" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_tt8MMdbBEeO4OK6vauX4hA" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_Ts4UYNquEeOY3beW0km9Lw" type="2001">
+        <element xmi:type="ecore:EAttribute" href="MAndroid.ecore#//Dialog/time"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Ts4UYdquEeOY3beW0km9Lw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_p7gSsNquEeOY3beW0km9Lw" type="2001">
+        <element xmi:type="ecore:EAttribute" href="MAndroid.ecore#//Dialog/text"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_p7gSsdquEeOY3beW0km9Lw"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_tt8MMtbBEeO4OK6vauX4hA"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_tt8MM9bBEeO4OK6vauX4hA"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_tt8MNNbBEeO4OK6vauX4hA"/>
@@ -433,8 +441,8 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_-_PkUtqEEeOVCd6J_UEkgA" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="MAndroid.ecore#//Layout/esMostrado"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-_PkU9qEEeOVCd6J_UEkgA" points="[-6, -4, 59, 45]$[-63, -36, 2, 13]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__BMsINqEEeOVCd6J_UEkgA" id="(0.19548872180451127,0.09803921568627451)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__BMsIdqEEeOVCd6J_UEkgA" id="(0.8484848484848485,0.8470588235294118)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NGAuENquEeOY3beW0km9Lw" id="(0.19548872180451127,0.09803921568627451)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NGAuEdquEeOY3beW0km9Lw" id="(0.8484848484848485,0.8470588235294118)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_PT9wANqFEeOVCd6J_UEkgA" type="3002" source="_Vu2vINa8EeO4OK6vauX4hA" target="_WPsLUNa8EeO4OK6vauX4hA">
     <children xmi:type="notation:Node" xmi:id="_PT-XENqFEeOVCd6J_UEkgA" type="4011">
@@ -446,8 +454,8 @@
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_PT9wAdqFEeOVCd6J_UEkgA" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_PT9wAtqFEeOVCd6J_UEkgA" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="MAndroid.ecore#//Activity/muestra"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_PT9wA9qFEeOVCd6J_UEkgA" points="[14, 10, -48, -33]$[63, 42, 1, -1]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PUCBcNqFEeOVCd6J_UEkgA" id="(0.8636363636363636,0.8823529411764706)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PUCBcdqFEeOVCd6J_UEkgA" id="(0.18796992481203006,0.0392156862745098)"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_PT9wA9qFEeOVCd6J_UEkgA" points="[2, 13, -63, -36]$[59, 45, -6, -4]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NEdO4NquEeOY3beW0km9Lw" id="(0.8484848484848485,0.8470588235294118)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NEd18NquEeOY3beW0km9Lw" id="(0.19548872180451127,0.09803921568627451)"/>
   </edges>
 </notation:Diagram>

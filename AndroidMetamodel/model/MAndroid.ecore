@@ -7,7 +7,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="runsIn" lowerBound="1"
         eType="#//Aplication" eOpposite="#//Aplication/run"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="main" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="muestra" eType="#//Layout"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="muestra" eType="#//Layout"
+        eOpposite="#//Layout/esMostrado"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Widget">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -23,7 +24,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="layOn" eType="#//Aplication"
         eOpposite="#//Aplication/contains"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="esMostrado" upperBound="-1"
-        eType="#//Activity"/>
+        eType="#//Activity" eOpposite="#//Activity/muestra"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Button" eSuperTypes="#//Widget">
     <eStructuralFeatures xsi:type="ecore:EReference" name="triggers" eType="#//Action"/>
@@ -36,7 +37,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetSDK" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="versionCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="versionName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="permissions" eType="#//Permissions"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="permissions" upperBound="-1"
+        eType="#//Permissions"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="run" upperBound="-1" eType="#//Activity"
         containment="true" eOpposite="#//Activity/runsIn"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contains" upperBound="-1"
@@ -60,6 +62,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Dialog">
     <eStructuralFeatures xsi:type="ecore:EReference" name="actionOwner" lowerBound="1"
         eType="#//Action" eOpposite="#//Action/shows"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="#//Length"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Length">
     <eLiterals name="LONG"/>
