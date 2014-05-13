@@ -7,17 +7,17 @@
 <plugin>
 
    <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated Android -->
+      <!-- @generated MAndroid -->
       <category
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="Android.presentation.AndroidModelWizardID"
-            name="%_UI_AndroidModelWizard_label"
-            class="Android.presentation.AndroidModelWizard"
+            id="mandroid.presentation.MandroidModelWizardID"
+            name="%_UI_MandroidModelWizard_label"
+            class="mandroid.presentation.MandroidModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/AndroidModelFile.gif">
-         <description>%_UI_AndroidModelWizard_description</description>
+            icon="icons/full/obj16/MandroidModelFile.gif">
+         <description>%_UI_MandroidModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
@@ -31,18 +31,6 @@
             extensions="mandroid"
             class="mandroid.presentation.MandroidEditor"
             contributorClass="mandroid.presentation.MandroidActionBarContributor">
-      </editor>
-   </extension>
-
-   <extension point="org.eclipse.ui.editors">
-      <!-- @generated Android -->
-      <editor
-            id="Android.presentation.AndroidEditorID"
-            name="%_UI_AndroidEditor_label"
-            icon="icons/full/obj16/AndroidModelFile.gif"
-            extensions="android"
-            class="Android.presentation.AndroidEditor"
-            contributorClass="Android.presentation.AndroidActionBarContributor">
       </editor>
    </extension>
 

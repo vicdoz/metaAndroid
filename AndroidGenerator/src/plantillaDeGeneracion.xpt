@@ -51,6 +51,12 @@
 	<activity
         android:name=«package».«name»
         android:label=«name» >
-        
+        «IF main == true»
+        	<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        «ENDIF»
     </activity> 
 «ENDDEFINE»

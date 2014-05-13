@@ -7,10 +7,7 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Export-Package: Android,
- Android.impl,
- Android.util,
- mandroid,
+Export-Package: mandroid,
  mandroid.impl,
  mandroid.util
 Require-Bundle: org.eclipse.core.runtime,
