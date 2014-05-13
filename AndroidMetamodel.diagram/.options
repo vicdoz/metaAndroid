@@ -1,7 +1,0 @@
-# Tracing options for the AndroidMetamodel.diagram plug-in
-
-# Common issues
-AndroidMetamodel.diagram/debug=false
-
-# Visual IDs
-AndroidMetamodel.diagram/debug/visualID=false

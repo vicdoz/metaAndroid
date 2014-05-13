@@ -2,7 +2,7 @@
 
 «DEFINE Root FOR mandroid::Aplication»
 	
-	«FILE ".project"»
+	«FILE "project"»
 <?xml version="1.0" encoding="utf-8"?>
 <projectDescription>
 	<name>«name»</name>

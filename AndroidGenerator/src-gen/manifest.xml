@@ -1,75 +1,29 @@
 
-<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package=""
     android:versionCode="1"
     android:versionName="1.0" >
+	
+<permision name=> INTERNET  </permision>
 
-    <uses-sdk
+<permision name=> FINE_LOCATION  </permision>
+
+<permision name=> COARSE_LOCATION  </permision>
+
+   
+	 <uses-sdk
         android:minSdkVersion=""
         android:targetSdkVersion="" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/"
+        android:label="@string/"MetaAndroid
         android:theme="@style/AppTheme" >
-        
-			
-<activity
-    android:name=first.first
-    android:label=first >
-    
-        	<intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        
-</activity> 
-
-<activity
-    android:name=second.second
-    android:label=second >
-    
-</activity> 
-
-=======
-		<?xml version="1.0" encoding="utf-8"?>
-		<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-		    package=""
-		    android:versionCode="1"
-		    android:versionName="1.0" >
 		
-		    <uses-sdk
-		        android:minSdkVersion=""
-		        android:targetSdkVersion="" />
 		
-		    <application
-		        android:allowBackup="true"
-		        android:icon="@drawable/ic_launcher"
-		        android:label="@string/"
-		        android:theme="@style/AppTheme" >
-					
-<activity
-    android:name=first.first
-    android:label=first >
-    
-        	<intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        
-</activity> 
-
-<activity
-    android:name=second.second
-    android:label=second >
-    
-</activity> 
-
->>>>>>> 60d6031f0dfbf52b15a3e21d6816d33b15f0b1a7
-			</application>
+	</application>
 	
 
 </manifest>
