@@ -1,0 +1,41 @@
+«IMPORT mandroid»
+
+«DEFINE Root FOR mandroid::Aplication»
+	«EXPAND GeneraLayoutFichero  FOREACH contains.typeSelect(Layout)»
+«ENDDEFINE»
+
+«DEFINE GeneraLayoutFichero  FOR Layout»
+	«FILE "ejemplo.xml"»<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="«type»" >
+    «EXPAND GeneraBoton  FOREACH contains.typeSelect(Button)»
+   	«EXPAND GeneraTextView  FOREACH contains.typeSelect(TextView)»
+    «EXPAND GeneraTextField  FOREACH contains.typeSelect(TextField)»
+</LinearLayout>
+	«ENDFILE»
+«ENDDEFINE»
+
+«DEFINE GeneraBoton  FOR Button»
+    <Button
+        android:id="@+id/«id»"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="«text»" />
+«ENDDEFINE»
+«DEFINE GeneraTextView  FOR TextView»
+   <TextView
+        android:id="@+id/«id»"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="«text»" />
+«ENDDEFINE»
+«DEFINE GeneraTextField  FOR TextField»
+    <EditText
+        android:id="@+id/«id»"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" >
+        android:inputType="«input»"
+        <requestFocus />
+«ENDDEFINE»
