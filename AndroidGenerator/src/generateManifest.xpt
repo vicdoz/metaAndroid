@@ -1,6 +1,6 @@
-«IMPORT mandroid»
+«IMPORT android»
 
-«DEFINE Root FOR mandroid::Aplication»
+«DEFINE Root FOR android::Aplication»
 	
 	«FILE "manifest.xml"»<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"

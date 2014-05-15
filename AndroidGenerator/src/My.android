@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<android:Aplication xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:android="http://android/1.0" name="SuperApp" package="upv" minSDK="12" targetSDK="17" versionCode="1" versionName="1.0">
+  <permissions>INTERNET</permissions>
+  <permissions>FINE_LOCATION</permissions>
+  <permissions>COARSE_LOCATION</permissions>
+  <permissions>CAMERA</permissions>
+  <permissions>READ_SMS</permissions>
+  <contains name="MainActivity" type="HORIZONTAL" esMostrado="//@run.0"/>
+  <creates name="App_Name" value="SuperApp"/>
+  <run name="MainActivity" package="com" main="true" muestra="//@contains.0"/>
+  <run name="Second" package="com"/>
+</android:Aplication>

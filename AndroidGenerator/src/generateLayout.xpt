@@ -1,6 +1,6 @@
-«IMPORT mandroid»
+«IMPORT android»
 
-«DEFINE Root FOR mandroid::Aplication»
+«DEFINE Root FOR android::Aplication»
 	«EXPAND GeneraLayoutFichero  FOREACH contains.typeSelect(Layout)»
 «ENDDEFINE»
 
