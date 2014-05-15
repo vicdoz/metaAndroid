@@ -1,0 +1,22 @@
+«IMPORT android»
+
+«DEFINE Root FOR android::Aplication»
+	«EXPAND GeneraMenu  FOREACH run.show.typeSelect(Menu)»
+«ENDDEFINE»
+
+«DEFINE GeneraMenu  FOR Menu»
+
+	«FILE this.id+".xml"»<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+«EXPAND GeneraItem  FOREACH hasItem.typeSelect(Item)»
+</menu>«ENDFILE»
+
+«ENDDEFINE»
+
+«DEFINE GeneraItem  FOR Item»
+ <item
+        android:id="«id»"
+        android:orderInCategory="«order»"
+        android:showAsAction="«showAsAction»"
+        android:title="«tittle»"/>
+«ENDDEFINE»
+        

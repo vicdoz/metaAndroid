@@ -7,6 +7,10 @@
   <permissions>READ_SMS</permissions>
   <contains name="MainActivity" type="HORIZONTAL" esMostrado="//@run.0"/>
   <creates name="App_Name" value="SuperApp"/>
-  <run name="MainActivity" package="com" main="true" muestra="//@contains.0"/>
+  <run name="MainActivity" package="com" main="true" muestra="//@contains.0">
+    <show id="menuPrincipal">
+      <hasItem tittle="About" order="1" id="1"/>
+    </show>
+  </run>
   <run name="Second" package="com"/>
 </android:Aplication>

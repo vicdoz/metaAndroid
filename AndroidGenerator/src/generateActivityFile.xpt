@@ -18,11 +18,10 @@ public class «name» extends Activity {
 @Override
   protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-		setContentView(R.layout.«muestra.type»);
+		setContentView(R.layout.«muestra.name»);
   }
 
 }
 	«ENDFILE»
 «ENDDEFINE»
-
 

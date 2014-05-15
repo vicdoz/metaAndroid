@@ -53,6 +53,16 @@
 	<outlet path="${srcGenPath}/res/values"/> 
 </component>	
 
+<component id="generateMenu" 
+    class="org.eclipse.xpand2.Generator">
+	<metaModel id="mm" 
+      class="org.eclipse.xtend.typesystem.emf.EmfMetaModel"> 
+      <metaModelPackage value="${metaModelPackage}"/> 
+    </metaModel> 
+   	<expand value="src::generateMenu::Root FOR model"/>
+	<outlet path="${srcGenPath}/res/menu"/> 
+</component>	
+
 <component id="generateProjectYClassPath" 
     class="org.eclipse.xpand2.Generator">
 	<metaModel id="mm" 
