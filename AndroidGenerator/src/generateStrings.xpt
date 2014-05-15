@@ -1,0 +1,15 @@
+«IMPORT mandroid»
+
+«DEFINE Root FOR mandroid::Aplication»
+
+«FILE "manifest.xml"»
+
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    «EXPAND GeneraStrings FOREACH creates.typeSelect(CreateStrings) »
+</resources>
+	«ENDFILE»
+«ENDDEFINE»
+«DEFINE GeneraActivtyEnManifest  FOR Activity»
+<string name="«name»">«value»</string>
+«ENDDEFINE»

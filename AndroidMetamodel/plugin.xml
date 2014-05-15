@@ -7,19 +7,19 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated Android -->
-      <package
-            uri="Android"
-            class="Android.AndroidPackage"
-            genModel="src/Android.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated MAndroid -->
       <package
             uri="http://mandroid/1.0"
             class="mandroid.MandroidPackage"
             genModel="model/MAndroid.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Android -->
+      <package
+            uri="http://android/1.0"
+            class="android.AndroidPackage"
+            genModel="model/Android.genmodel"/>
    </extension>
 
 </plugin>

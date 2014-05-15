@@ -23,6 +23,18 @@
    </extension>
 
    <extension point="org.eclipse.ui.editors">
+      <!-- @generated Android -->
+      <editor
+            id="android.presentation.AndroidEditorID"
+            name="%_UI_AndroidEditor_label"
+            icon="icons/full/obj16/AndroidModelFile.gif"
+            extensions="android"
+            class="android.presentation.AndroidEditor"
+            contributorClass="android.presentation.AndroidActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
       <!-- @generated MAndroid -->
       <editor
             id="mandroid.presentation.MandroidEditorID"
