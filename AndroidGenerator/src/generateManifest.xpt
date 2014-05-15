@@ -2,7 +2,7 @@
 
 «DEFINE Root FOR android::Aplication»
 	
-	«FILE "manifest.xml"»<?xml version="1.0" encoding="utf-8"?>
+	«FILE this.name+"/manifest.xml"»<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="«package».«name»_project"
     android:versionCode="1"
@@ -24,7 +24,6 @@
 «DEFINE GeneraPermissions  FOR Permissions» 
 	<uses-permission android:name="android.permission.«this.toString()»"/> «ENDDEFINE»
 
-¡
 «DEFINE GeneraActivtyEnManifest  FOR Activity»<activity
     android:name=«package».«name»
     android:label=«name» >
@@ -33,6 +32,6 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        «ENDIF»
+    «ENDIF»
 </activity> 
 «ENDDEFINE»

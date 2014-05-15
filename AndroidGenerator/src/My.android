@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<android:Aplication xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:android="http://android/1.0" name="SuperApp" package="upv" minSDK="12" targetSDK="17" versionCode="1" versionName="1.0">
+<android:Aplication xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:android="http://android/1.0" name="SuperApp" package="upv" minSDK="12" targetSDK="17" versionCode="1" versionName="1.0">
   <permissions>INTERNET</permissions>
   <permissions>FINE_LOCATION</permissions>
   <permissions>COARSE_LOCATION</permissions>
   <permissions>CAMERA</permissions>
   <permissions>READ_SMS</permissions>
-  <contains name="MainActivity" type="HORIZONTAL" esMostrado="//@run.0"/>
+  <contains name="MainActivity" type="HORIZONTAL" esMostrado="//@run.0">
+    <contains xsi:type="android:Button" name="button" text="button" id="button"/>
+    <contains xsi:type="android:TextField" name="field" text="field" id="field"/>
+    <contains xsi:type="android:TextView" name="view" text="view" id="view"/>
+    <contains xsi:type="android:Button" name="add" text="Add component" id="add"/>
+  </contains>
   <creates name="App_Name" value="SuperApp"/>
   <run name="MainActivity" package="com" main="true" muestra="//@contains.0">
     <show id="menuPrincipal">

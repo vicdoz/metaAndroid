@@ -40,7 +40,7 @@
       <metaModelPackage value="${metaModelPackage}"/> 
     </metaModel> 
    	<expand value="src::generateLayout::Root FOR model"/>
-	<outlet path="${srcGenPath}/res/layout"/> 
+	<outlet path="${srcGenPath}"/> 
 </component>	
 
 <component id="generateStrings" 
@@ -50,7 +50,7 @@
       <metaModelPackage value="${metaModelPackage}"/> 
     </metaModel> 
    	<expand value="src::generateStrings::Root FOR model"/>
-	<outlet path="${srcGenPath}/res/values"/> 
+	<outlet path="${srcGenPath}"/> 
 </component>	
 
 <component id="generateMenu" 
@@ -60,7 +60,7 @@
       <metaModelPackage value="${metaModelPackage}"/> 
     </metaModel> 
    	<expand value="src::generateMenu::Root FOR model"/>
-	<outlet path="${srcGenPath}/res/menu"/> 
+	<outlet path="${srcGenPath}"/> 
 </component>	
 
 <component id="generateProjectYClassPath" 

@@ -2,7 +2,7 @@
 
 «DEFINE Root FOR Aplication»
 
-«FILE "strings.xml"»<?xml version="1.0" encoding="utf-8"?>
+«FILE name+"/res/values/strings.xml"»<?xml version="1.0" encoding="utf-8"?>
 <resources> «EXPAND GeneraStrings FOREACH creates.typeSelect(CreateString) »
 </resources>
 	«ENDFILE»

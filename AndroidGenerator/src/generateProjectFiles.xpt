@@ -2,7 +2,7 @@
 
 «DEFINE Root FOR android::Aplication»
 	
-	«FILE ".project"»<?xml version="1.0" encoding="utf-8"?>
+	«FILE name+"/.project"»<?xml version="1.0" encoding="utf-8"?>
 <projectDescription>
 	<name>«name»_project</name>
     <comment></comment>

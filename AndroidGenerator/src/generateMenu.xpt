@@ -6,7 +6,7 @@
 
 «DEFINE GeneraMenu  FOR Menu»
 
-	«FILE this.id+".xml"»<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+	«FILE this.isShowed.runsIn.name+"/res/menu/"+this.id+".xml"»<menu xmlns:android="http://schemas.android.com/apk/res/android" >
 «EXPAND GeneraItem  FOREACH hasItem.typeSelect(Item)»
 </menu>«ENDFILE»
 
