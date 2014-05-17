@@ -673,7 +673,7 @@
       <layoutConstraint xmi:type="notation:Location" xmi:id="_YPuvQduEEeOc8Ofwypv7-A" x="-12" y="-56"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_YPuvQtuEEeOc8Ofwypv7-A" type="4012">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_YPuvQ9uEEeOc8Ofwypv7-A" x="-24" y="-41"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_YPuvQ9uEEeOc8Ofwypv7-A" x="-37" y="-41"/>
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_YPuIMduEEeOc8Ofwypv7-A" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_YPuIMtuEEeOc8Ofwypv7-A" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>

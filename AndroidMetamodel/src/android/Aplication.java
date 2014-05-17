@@ -30,7 +30,8 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see android.AndroidPackage#getAplication()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='mainActivity'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot mainActivity='self.run -> select(C|C.main = true) -> size() = 1'"
  * @generated
  */
 public interface Aplication extends EObject {

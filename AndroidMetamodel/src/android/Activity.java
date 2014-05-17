@@ -22,7 +22,8 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see android.AndroidPackage#getActivity()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='nameActivity'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot nameActivity='self.runsIn.run -> select(c|c.package = self.package and c.name = self.name) -> size() = 1'"
  * @generated
  */
 public interface Activity extends EObject {

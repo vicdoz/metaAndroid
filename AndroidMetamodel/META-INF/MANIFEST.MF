@@ -7,6 +7,9 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Export-Package: android,android.impl,android.util
-Require-Bundle: org.eclipse.core.runtime, org.eclipse.emf.ecore
+Export-Package: android,
+ android.impl,
+ android.util
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore
 Bundle-ActivationPolicy: lazy

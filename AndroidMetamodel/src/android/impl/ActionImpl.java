@@ -3,20 +3,16 @@
 package android.impl;
 
 import android.Action;
+import android.ActionType;
 import android.AndroidPackage;
 import android.Button;
 import android.Dialog;
-import android.TypeAction;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
@@ -43,7 +39,7 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final TypeAction TYPE_EDEFAULT = TypeAction.ALWAYS;
+	protected static final ActionType TYPE_EDEFAULT = ActionType.CLICK;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -53,7 +49,7 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	 * @generated
 	 * @ordered
 	 */
-	protected TypeAction type = TYPE_EDEFAULT;
+	protected ActionType type = TYPE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getShows() <em>Shows</em>}' containment reference.
@@ -89,7 +85,7 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypeAction getType() {
+	public ActionType getType() {
 		return type;
 	}
 
@@ -98,8 +94,8 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(TypeAction newType) {
-		TypeAction oldType = type;
+	public void setType(ActionType newType) {
+		ActionType oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, AndroidPackage.ACTION__TYPE, oldType, type));
@@ -266,7 +262,7 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case AndroidPackage.ACTION__TYPE:
-				setType((TypeAction)newValue);
+				setType((ActionType)newValue);
 				return;
 			case AndroidPackage.ACTION__BUTTON_OWNER:
 				setButtonOwner((Button)newValue);

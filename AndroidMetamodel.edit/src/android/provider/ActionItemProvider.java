@@ -4,20 +4,15 @@ package android.provider;
 
 
 import android.Action;
+import android.ActionType;
 import android.AndroidFactory;
 import android.AndroidPackage;
-import android.TypeAction;
-
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -140,7 +135,7 @@ public class ActionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		TypeAction labelValue = ((Action)object).getType();
+		ActionType labelValue = ((Action)object).getType();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Action_type") :

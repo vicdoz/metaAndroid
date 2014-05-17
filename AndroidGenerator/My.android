@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<android:Aplication xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:android="http://android/1.0" name="SyperApp" package="com.first" minSDK="12" targetSDK="18" versionCode="1" versionName="1.0">
+  <permissions>INTERNET</permissions>
+  <permissions>FINE_LOCATION</permissions>
+  <permissions>CAMERA</permissions>
+  <contains name="activity_first" esMostrado="//@run.0">
+    <contains xsi:type="android:Button" name="boton" text="boton" id="boton">
+      <triggers>
+        <shows text="Prueba"/>
+      </triggers>
+    </contains>
+  </contains>
+  <contains name="activity_second" esMostrado="//@run.1"/>
+  <run name="First" package="com.first" main="true" muestra="//@contains.0"/>
+  <run name="Second" package="com.second" muestra="//@contains.1"/>
+</android:Aplication>

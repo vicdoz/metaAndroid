@@ -55,6 +55,7 @@ public interface Layout extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
+	 * The literals are from the enumeration {@link android.LayoutType}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
@@ -62,22 +63,24 @@ public interface Layout extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
-	 * @see #setType(String)
+	 * @see android.LayoutType
+	 * @see #setType(LayoutType)
 	 * @see android.AndroidPackage#getLayout_Type()
 	 * @model
 	 * @generated
 	 */
-	String getType();
+	LayoutType getType();
 
 	/**
 	 * Sets the value of the '{@link android.Layout#getType <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' attribute.
+	 * @see android.LayoutType
 	 * @see #getType()
 	 * @generated
 	 */
-	void setType(String value);
+	void setType(LayoutType value);
 
 	/**
 	 * Returns the value of the '<em><b>Contains</b></em>' containment reference list.

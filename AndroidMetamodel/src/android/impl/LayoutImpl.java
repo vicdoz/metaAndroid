@@ -6,6 +6,7 @@ import android.Activity;
 import android.AndroidPackage;
 import android.Aplication;
 import android.Layout;
+import android.LayoutType;
 import android.Widget;
 
 import java.util.Collection;
@@ -72,7 +73,7 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TYPE_EDEFAULT = null;
+	protected static final LayoutType TYPE_EDEFAULT = LayoutType.VERTICAL;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -82,7 +83,7 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 	 * @generated
 	 * @ordered
 	 */
-	protected String type = TYPE_EDEFAULT;
+	protected LayoutType type = TYPE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getContains() <em>Contains</em>}' containment reference list.
@@ -149,7 +150,7 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getType() {
+	public LayoutType getType() {
 		return type;
 	}
 
@@ -158,9 +159,9 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(String newType) {
-		String oldType = type;
-		type = newType;
+	public void setType(LayoutType newType) {
+		LayoutType oldType = type;
+		type = newType == null ? TYPE_EDEFAULT : newType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, AndroidPackage.LAYOUT__TYPE, oldType, type));
 	}
@@ -318,7 +319,7 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 				setName((String)newValue);
 				return;
 			case AndroidPackage.LAYOUT__TYPE:
-				setType((String)newValue);
+				setType((LayoutType)newValue);
 				return;
 			case AndroidPackage.LAYOUT__CONTAINS:
 				getContains().clear();
@@ -373,7 +374,7 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 			case AndroidPackage.LAYOUT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case AndroidPackage.LAYOUT__TYPE:
-				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+				return type != TYPE_EDEFAULT;
 			case AndroidPackage.LAYOUT__CONTAINS:
 				return contains != null && !contains.isEmpty();
 			case AndroidPackage.LAYOUT__LAY_ON:
