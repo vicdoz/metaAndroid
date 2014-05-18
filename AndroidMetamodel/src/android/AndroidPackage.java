@@ -242,7 +242,7 @@ public interface AndroidPackage extends EPackage {
 	int BUTTON__LAYOUT_OWNER = WIDGET__LAYOUT_OWNER;
 
 	/**
-	 * The feature id for the '<em><b>Triggers</b></em>' containment reference.
+	 * The feature id for the '<em><b>Triggers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1089,10 +1089,10 @@ public interface AndroidPackage extends EPackage {
 	EClass getButton();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link android.Button#getTriggers <em>Triggers</em>}'.
+	 * Returns the meta object for the containment reference list '{@link android.Button#getTriggers <em>Triggers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Triggers</em>'.
+	 * @return the meta object for the containment reference list '<em>Triggers</em>'.
 	 * @see android.Button#getTriggers()
 	 * @see #getButton()
 	 * @generated
@@ -1749,7 +1749,7 @@ public interface AndroidPackage extends EPackage {
 		EClass BUTTON = eINSTANCE.getButton();
 
 		/**
-		 * The meta object literal for the '<em><b>Triggers</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Triggers</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

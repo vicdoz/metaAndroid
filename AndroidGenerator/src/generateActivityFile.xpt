@@ -6,7 +6,7 @@
 
 «DEFINE GeneraActivtyFichero  FOR Activity»
 
-	«FILE this.runsIn.name+"/src//"+this.package+"/"+this.name+".java"»package «package»;
+	«FILE this.runsIn.name+"/src/"+this.package+"/"+this.name+".java"»package «package»;
 
 «IF main == true»import android.R;«ELSE»«EXPAND getR  FOREACH runsIn.run.select(e|e.main == true)»«ENDIF»
 import android.app.Activity;
@@ -16,10 +16,13 @@ import android.os.Bundle;
 «IF muestra.contains.typeSelect(Button).isEmpty == false»import android.widget.Button;«ENDIF»
 «IF muestra.contains.typeSelect(TextField).isEmpty == false == true»import android.widget.EditText;«ENDIF»
 «IF muestra.contains.typeSelect(TextView).isEmpty == false»import android.widget.TextView;«ENDIF»
-«IF muestra.contains.typeSelect(Button).triggers.shows.time»import android.view.View.OnClickListener;«ENDIF»
+«IF muestra.contains.typeSelect(Button).collect(e|e.triggers.type == 0).isEmpty == false»import android.view.View.OnClickListener;«ENDIF»
+«IF muestra.contains.typeSelect(Button).collect(e|e.triggers.type == 1).isEmpty == false»import android.view.View.OnLongClickListener;«ENDIF»
 
 public class «name» extends Activity {
-	«IF muestra.contains.typeSelect(Button).triggers.isEmpty == false»private OnClickListener mClickListener;«ENDIF»
+
+	«IF muestra.contains.typeSelect(Button).collect(e|e.triggers.type.toString() == "CLICK").isEmpty == false»private OnClickListener mClickListener;«ENDIF»
+	«IF muestra.contains.typeSelect(Button).collect(e|e.triggers.type.toString() == "LONGCLICK").isEmpty == false»private OnLongClickListener mLongClickListener;«ENDIF»
 	«EXPAND CreateButton  FOREACH muestra.contains.typeSelect(Button)»«EXPAND CreateTextField  FOREACH muestra.contains.typeSelect(TextField)»«EXPAND CreateTextView  FOREACH muestra.contains.typeSelect(TextView)»
 
 @Override
@@ -28,8 +31,8 @@ public class «name» extends Activity {
 		setContentView(R.layout.«muestra.name»);
 		
 		«EXPAND InitButon  FOREACH muestra.contains.typeSelect(Button)»«EXPAND InitTextField  FOREACH muestra.contains.typeSelect(TextField)»«EXPAND InitTextView  FOREACH muestra.contains.typeSelect(TextView)»
-		«IF muestra.contains.typeSelect(Button).triggers.isEmpty == false».setOnClickListener(mClickListener);«ENDIF»
 		«IF muestra.contains.typeSelect(Button).triggers.isEmpty == false»events();«ENDIF»
+		«EXPAND setOnClik FOREACH muestra.contains.typeSelect(Button).triggers»
   }
   
   @Override
@@ -39,7 +42,24 @@ public class «name» extends Activity {
 		return true;
 	}
 	
-	
+	«IF muestra.contains.typeSelect(Button).triggers.isEmpty == false»private void events(){
+			«IF muestra.contains.typeSelect(Button).collect(e|e.triggers.type.toString() == "CLICK").isEmpty == false»mClickListener = new View.OnClickListener(){
+				public void onClick(View view) {
+					switch(view.getId()){
+						«EXPAND defineAction FOREACH muestra.contains.typeSelect(Button).triggers.select(e|e.type.toString() == "CLICK").shows»
+					}
+				}
+			}«ENDIF»
+			«IF muestra.contains.typeSelect(Button).collect(e|e.triggers.type.toString() == "LONGCLICK").isEmpty == false»mLongClickListener = new View.OnLongClickListener(){
+				public boolean onLongClick(View arg0) {
+					switch(view.getId()){
+						«EXPAND defineAction FOREACH muestra.contains.typeSelect(Button).triggers.select(e|e.type.toString() == "LONGCLICK").shows»
+					}
+					return false;
+				}
+			}«ENDIF»
+	}
+	«ENDIF»
 
 }
 	«ENDFILE»
@@ -48,8 +68,18 @@ public class «name» extends Activity {
 «DEFINE getR  FOR Activity»import «package».R;«ENDDEFINE»
 
 «DEFINE CreateButton  FOR Button»private Button «name»;
-«ENDDEFINE»
+	«ENDDEFINE»
 
+«DEFINE setOnClik  FOR Action»«IF type.toString() == "LONGCLICK"» «buttonOwner.name».setOnLongClickListener(mLongClickListener);«ELSE»«buttonOwner.name».setOnClickListener(mClickListener);«ENDIF»
+		«ENDDEFINE»
+		
+«DEFINE defineAction  FOR Dialog»case R.id.«actionOwner.buttonOwner.id»:
+						AlertDialog.Builder builder = new AlertDialog.Builder(this);
+						builder.setMessage(«text»);
+						
+						AlertDialog dialog = builder.create();
+						break;
+						«ENDDEFINE»
 «DEFINE CreateTextField  FOR TextField»private EditText «name»;
 «ENDDEFINE»
 

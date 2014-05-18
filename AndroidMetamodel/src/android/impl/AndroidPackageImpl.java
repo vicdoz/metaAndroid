@@ -946,7 +946,7 @@ public class AndroidPackageImpl extends EPackageImpl implements AndroidPackage {
 		initEReference(getWidget_LayoutOwner(), this.getLayout(), this.getLayout_Contains(), "layoutOwner", null, 1, 1, Widget.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(buttonEClass, Button.class, "Button", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getButton_Triggers(), this.getAction(), this.getAction_ButtonOwner(), "triggers", null, 0, 1, Button.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getButton_Triggers(), this.getAction(), this.getAction_ButtonOwner(), "triggers", null, 0, -1, Button.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(textFieldEClass, TextField.class, "TextField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTextField_Input(), this.getTypeAction(), "input", null, 0, 1, TextField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1058,6 +1058,12 @@ public class AndroidPackageImpl extends EPackageImpl implements AndroidPackage {
 			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
 		   });		
 		addAnnotation
+		  (buttonEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "maxActions minActions"
+		   });			
+		addAnnotation
 		  (aplicationEClass, 
 		   source, 
 		   new String[] {
@@ -1079,6 +1085,13 @@ public class AndroidPackageImpl extends EPackageImpl implements AndroidPackage {
 	 */
 	protected void createPivotAnnotations() {
 		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";				
+		addAnnotation
+		  (buttonEClass, 
+		   source, 
+		   new String[] {
+			 "maxActions", "self.triggers -> size() <= 2",
+			 "minActions", "self.triggers -> size() > 1"
+		   });			
 		addAnnotation
 		  (aplicationEClass, 
 		   source, 

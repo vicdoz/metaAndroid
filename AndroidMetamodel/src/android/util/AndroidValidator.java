@@ -151,7 +151,76 @@ public class AndroidValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateButton(Button button, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(button, diagnostics, context);
+		if (!validate_NoCircularContainment(button, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(button, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(button, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(button, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(button, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(button, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(button, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(button, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(button, diagnostics, context);
+		if (result || diagnostics != null) result &= validateButton_maxActions(button, diagnostics, context);
+		if (result || diagnostics != null) result &= validateButton_minActions(button, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * The cached validation expression for the maxActions constraint of '<em>Button</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String BUTTON__MAX_ACTIONS__EEXPRESSION = "self.triggers -> size() <= 2";
+
+	/**
+	 * Validates the maxActions constraint of '<em>Button</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateButton_maxActions(Button button, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(AndroidPackage.Literals.BUTTON,
+				 button,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "maxActions",
+				 BUTTON__MAX_ACTIONS__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
+	 * The cached validation expression for the minActions constraint of '<em>Button</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String BUTTON__MIN_ACTIONS__EEXPRESSION = "self.triggers -> size() > 1";
+
+	/**
+	 * Validates the minActions constraint of '<em>Button</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateButton_minActions(Button button, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(AndroidPackage.Literals.BUTTON,
+				 button,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "minActions",
+				 BUTTON__MIN_ACTIONS__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
 	}
 
 	/**

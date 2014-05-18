@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<android:Aplication xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:android="http://android/1.0" name="SuperApp" package="com.superApp" minSDK="12" targetSDK="18" versionCode="1" versionName="1.0">
+<android:Aplication xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:android="http://android/1.0" name="SuperApp" package="com.superApp" minSDK="12" targetSDK="18" versionCode="1" versionName="1.0">
   <permissions>INTERNET</permissions>
-  <permissions>FINE_LOCATION</permissions>
+  <permissions>COARSE_LOCATION</permissions>
   <permissions>CAMERA</permissions>
-  <contains name="activity_first" esMostrado="//@run.0"/>
-  <run name="First" package="com.superApp" main="true" muestra="//@contains.0"/>
+  <contains name="activity" esMostrado="//@run.0">
+    <contains xsi:type="android:Button" name="boton" text="boton" id="boton">
+      <triggers>
+        <shows text="Prueba"/>
+      </triggers>
+      <triggers type="LONGCLICK">
+        <shows text="Prueba2"/>
+      </triggers>
+    </contains>
+  </contains>
+  <run name="Activity" package="com.superApp" main="true" muestra="//@contains.0"/>
 </android:Aplication>

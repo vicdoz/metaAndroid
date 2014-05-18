@@ -2,6 +2,8 @@
  */
 package android;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -16,12 +18,14 @@ package android;
  * </p>
  *
  * @see android.AndroidPackage#getButton()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='maxActions minActions'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot maxActions='self.triggers -> size() <= 2' minActions='self.triggers -> size() > 1'"
  * @generated
  */
 public interface Button extends Widget {
 	/**
-	 * Returns the value of the '<em><b>Triggers</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Triggers</b></em>' containment reference list.
+	 * The list contents are of type {@link android.Action}.
 	 * It is bidirectional and its opposite is '{@link android.Action#getButtonOwner <em>Button Owner</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -29,23 +33,12 @@ public interface Button extends Widget {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Triggers</em>' containment reference.
-	 * @see #setTriggers(Action)
+	 * @return the value of the '<em>Triggers</em>' containment reference list.
 	 * @see android.AndroidPackage#getButton_Triggers()
 	 * @see android.Action#getButtonOwner
 	 * @model opposite="buttonOwner" containment="true"
 	 * @generated
 	 */
-	Action getTriggers();
-
-	/**
-	 * Sets the value of the '{@link android.Button#getTriggers <em>Triggers</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Triggers</em>' containment reference.
-	 * @see #getTriggers()
-	 * @generated
-	 */
-	void setTriggers(Action value);
+	EList<Action> getTriggers();
 
 } // Button

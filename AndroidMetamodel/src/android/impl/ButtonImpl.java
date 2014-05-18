@@ -5,14 +5,13 @@ package android.impl;
 import android.Action;
 import android.AndroidPackage;
 import android.Button;
-
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,14 +28,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class ButtonImpl extends WidgetImpl implements Button {
 	/**
-	 * The cached value of the '{@link #getTriggers() <em>Triggers</em>}' containment reference.
+	 * The cached value of the '{@link #getTriggers() <em>Triggers</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTriggers()
 	 * @generated
 	 * @ordered
 	 */
-	protected Action triggers;
+	protected EList<Action> triggers;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -62,7 +61,10 @@ public class ButtonImpl extends WidgetImpl implements Button {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Action getTriggers() {
+	public EList<Action> getTriggers() {
+		if (triggers == null) {
+			triggers = new EObjectContainmentWithInverseEList<Action>(Action.class, this, AndroidPackage.BUTTON__TRIGGERS, AndroidPackage.ACTION__BUTTON_OWNER);
+		}
 		return triggers;
 	}
 
@@ -71,47 +73,12 @@ public class ButtonImpl extends WidgetImpl implements Button {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTriggers(Action newTriggers, NotificationChain msgs) {
-		Action oldTriggers = triggers;
-		triggers = newTriggers;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AndroidPackage.BUTTON__TRIGGERS, oldTriggers, newTriggers);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTriggers(Action newTriggers) {
-		if (newTriggers != triggers) {
-			NotificationChain msgs = null;
-			if (triggers != null)
-				msgs = ((InternalEObject)triggers).eInverseRemove(this, AndroidPackage.ACTION__BUTTON_OWNER, Action.class, msgs);
-			if (newTriggers != null)
-				msgs = ((InternalEObject)newTriggers).eInverseAdd(this, AndroidPackage.ACTION__BUTTON_OWNER, Action.class, msgs);
-			msgs = basicSetTriggers(newTriggers, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AndroidPackage.BUTTON__TRIGGERS, newTriggers, newTriggers));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case AndroidPackage.BUTTON__TRIGGERS:
-				if (triggers != null)
-					msgs = ((InternalEObject)triggers).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AndroidPackage.BUTTON__TRIGGERS, null, msgs);
-				return basicSetTriggers((Action)otherEnd, msgs);
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTriggers()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -125,7 +92,7 @@ public class ButtonImpl extends WidgetImpl implements Button {
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case AndroidPackage.BUTTON__TRIGGERS:
-				return basicSetTriggers(null, msgs);
+				return ((InternalEList<?>)getTriggers()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -149,11 +116,13 @@ public class ButtonImpl extends WidgetImpl implements Button {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case AndroidPackage.BUTTON__TRIGGERS:
-				setTriggers((Action)newValue);
+				getTriggers().clear();
+				getTriggers().addAll((Collection<? extends Action>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -168,7 +137,7 @@ public class ButtonImpl extends WidgetImpl implements Button {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case AndroidPackage.BUTTON__TRIGGERS:
-				setTriggers((Action)null);
+				getTriggers().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -183,7 +152,7 @@ public class ButtonImpl extends WidgetImpl implements Button {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case AndroidPackage.BUTTON__TRIGGERS:
-				return triggers != null;
+				return triggers != null && !triggers.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
