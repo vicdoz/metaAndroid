@@ -52,7 +52,7 @@ public interface Menu extends EObject {
 	void setId(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Is Showed</b></em>' container reference.
+	 * Returns the value of the '<em><b>Is Showed</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link android.Activity#getShow <em>Show</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -60,27 +60,27 @@ public interface Menu extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is Showed</em>' container reference.
+	 * @return the value of the '<em>Is Showed</em>' reference.
 	 * @see #setIsShowed(Activity)
 	 * @see android.AndroidPackage#getMenu_IsShowed()
 	 * @see android.Activity#getShow
-	 * @model opposite="show" required="true" transient="false"
+	 * @model opposite="show" required="true"
 	 * @generated
 	 */
 	Activity getIsShowed();
 
 	/**
-	 * Sets the value of the '{@link android.Menu#getIsShowed <em>Is Showed</em>}' container reference.
+	 * Sets the value of the '{@link android.Menu#getIsShowed <em>Is Showed</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is Showed</em>' container reference.
+	 * @param value the new value of the '<em>Is Showed</em>' reference.
 	 * @see #getIsShowed()
 	 * @generated
 	 */
 	void setIsShowed(Activity value);
 
 	/**
-	 * Returns the value of the '<em><b>Has Item</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Has Item</b></em>' reference list.
 	 * The list contents are of type {@link android.Item}.
 	 * It is bidirectional and its opposite is '{@link android.Item#getMenuOwner <em>Menu Owner</em>}'.
 	 * <!-- begin-user-doc -->
@@ -89,10 +89,10 @@ public interface Menu extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Has Item</em>' containment reference list.
+	 * @return the value of the '<em>Has Item</em>' reference list.
 	 * @see android.AndroidPackage#getMenu_HasItem()
 	 * @see android.Item#getMenuOwner
-	 * @model opposite="menuOwner" containment="true"
+	 * @model opposite="menuOwner"
 	 * @generated
 	 */
 	EList<Item> getHasItem();

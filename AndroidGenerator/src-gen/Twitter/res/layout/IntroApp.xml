@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     android:orientation="HORIZONTAL" >
+    
+   
+    
+    <Button
+        android:id="@+id/"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+   	
+   <TextView
+        android:id="@+id/idLoginPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password" />
+
+   <TextView
+        android:id="@+id/idLoginLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User" />
+
+    
+    <EditText
+        android:id="@+id/idLoginUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" >
+        android:inputType="PASSWORD"
+        <requestFocus />
+
+    <EditText
+        android:id="@+id/idLoginPassText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" >
+        android:inputType="PASSWORD"
+        <requestFocus />
+
+</LinearLayout>
+	

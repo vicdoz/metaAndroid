@@ -3,13 +3,10 @@
 package android.impl;
 
 import android.AndroidPackage;
+import android.InputType;
 import android.TextField;
-import android.TypeAction;
-
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -34,7 +31,7 @@ public class TextFieldImpl extends WidgetImpl implements TextField {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final TypeAction INPUT_EDEFAULT = TypeAction.ALWAYS;
+	protected static final InputType INPUT_EDEFAULT = InputType.PASSWORD;
 
 	/**
 	 * The cached value of the '{@link #getInput() <em>Input</em>}' attribute.
@@ -44,7 +41,7 @@ public class TextFieldImpl extends WidgetImpl implements TextField {
 	 * @generated
 	 * @ordered
 	 */
-	protected TypeAction input = INPUT_EDEFAULT;
+	protected InputType input = INPUT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,7 +67,7 @@ public class TextFieldImpl extends WidgetImpl implements TextField {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TypeAction getInput() {
+	public InputType getInput() {
 		return input;
 	}
 
@@ -79,8 +76,8 @@ public class TextFieldImpl extends WidgetImpl implements TextField {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInput(TypeAction newInput) {
-		TypeAction oldInput = input;
+	public void setInput(InputType newInput) {
+		InputType oldInput = input;
 		input = newInput == null ? INPUT_EDEFAULT : newInput;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, AndroidPackage.TEXT_FIELD__INPUT, oldInput, input));
@@ -109,7 +106,7 @@ public class TextFieldImpl extends WidgetImpl implements TextField {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case AndroidPackage.TEXT_FIELD__INPUT:
-				setInput((TypeAction)newValue);
+				setInput((InputType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

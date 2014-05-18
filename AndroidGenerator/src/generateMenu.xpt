@@ -1,7 +1,7 @@
 «IMPORT android»
 
-«DEFINE Root FOR android::Aplication»
-	«EXPAND GeneraMenu  FOREACH run.show.typeSelect(Menu)»
+«DEFINE Root FOR MetaApp»
+	«EXPAND GeneraMenu  FOREACH  createApp.run.show.typeSelect(Menu)»
 «ENDDEFINE»
 
 «DEFINE GeneraMenu  FOR Menu»

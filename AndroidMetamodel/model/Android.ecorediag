@@ -434,6 +434,22 @@
     <element xmi:type="ecore:EClass" href="Android.ecore#//Dialog"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wBIH4tuEEeOc8Ofwypv7-A" x="544" y="682"/>
   </children>
+  <children xmi:type="notation:Node" xmi:id="_tVgukN6XEeOVVJ4jcp9m6A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_tVqfkN6XEeOVVJ4jcp9m6A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_tVrGoN6XEeOVVJ4jcp9m6A" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_tVrGod6XEeOVVJ4jcp9m6A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_tVrGot6XEeOVVJ4jcp9m6A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_tVrGo96XEeOVVJ4jcp9m6A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_tVs70N6XEeOVVJ4jcp9m6A" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_tVs70d6XEeOVVJ4jcp9m6A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_tVs70t6XEeOVVJ4jcp9m6A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_tVs7096XEeOVVJ4jcp9m6A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_tVgukd6XEeOVVJ4jcp9m6A" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="Android.ecore#//MetaApp"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tVgukt6XEeOVVJ4jcp9m6A" x="30" y="420"/>
+  </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_4OD70Nt-EeOc8Ofwypv7-A"/>
   <element xmi:type="ecore:EPackage" href="Android.ecore#/"/>
   <edges xmi:type="notation:Edge" xmi:id="_S3obcNt_EeOc8Ofwypv7-A" type="3003" source="_Mfhp4Nt_EeOc8Ofwypv7-A" target="_FeAH4Nt_EeOc8Ofwypv7-A">
@@ -709,5 +725,117 @@
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5GkCY9uEEeOc8Ofwypv7-A" points="[-8, -9, 195, 1]$[-201, -30, 2, -20]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_67PFANuEEeOc8Ofwypv7-A" id="(0.08411214953271028,0.5147058823529411)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_67PFAduEEeOc8Ofwypv7-A" id="(0.9166666666666666,0.4117647058823529)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_vt5iQN6XEeOVVJ4jcp9m6A" type="3002" source="_tVgukN6XEeOVVJ4jcp9m6A" target="_2I9loNuAEeOc8Ofwypv7-A">
+    <children xmi:type="notation:Node" xmi:id="_vuRVsN6XEeOVVJ4jcp9m6A" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vuRVsd6XEeOVVJ4jcp9m6A" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_vuSj0N6XEeOVVJ4jcp9m6A" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vuSj0d6XEeOVVJ4jcp9m6A" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_vt5iQd6XEeOVVJ4jcp9m6A" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_vt5iQt6XEeOVVJ4jcp9m6A" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Android.ecore#//MetaApp/createApp"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_vt5iQ96XEeOVVJ4jcp9m6A" points="[-3, 1, 391, -25]$[-392, -10, 2, -36]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vuYqcN6XEeOVVJ4jcp9m6A" id="(0.0392156862745098,0.5116279069767442)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vuYqcd6XEeOVVJ4jcp9m6A" id="(0.585635359116022,0.24183006535947713)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_yfxM8N6XEeOVVJ4jcp9m6A" type="3002" source="_tVgukN6XEeOVVJ4jcp9m6A" target="_FxZdoNuCEeOc8Ofwypv7-A">
+    <children xmi:type="notation:Node" xmi:id="_yfx0AN6XEeOVVJ4jcp9m6A" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_yfx0Ad6XEeOVVJ4jcp9m6A" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_yfybEN6XEeOVVJ4jcp9m6A" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_yfybEd6XEeOVVJ4jcp9m6A" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_yfxM8d6XEeOVVJ4jcp9m6A" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_yfxM8t6XEeOVVJ4jcp9m6A" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Android.ecore#//MetaApp/createActivity"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yfxM896XEeOVVJ4jcp9m6A" points="[-35, 21, 125, -85]$[-162, 65, -2, -41]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_0rgEsN6XEeOVVJ4jcp9m6A" type="3002" source="_tVgukN6XEeOVVJ4jcp9m6A" target="_eVv9MNuCEeOc8Ofwypv7-A">
+    <children xmi:type="notation:Node" xmi:id="_0rhS0N6XEeOVVJ4jcp9m6A" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_0rhS0d6XEeOVVJ4jcp9m6A" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_0rh54N6XEeOVVJ4jcp9m6A" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_0rh54d6XEeOVVJ4jcp9m6A" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_0rgEsd6XEeOVVJ4jcp9m6A" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_0rgEst6XEeOVVJ4jcp9m6A" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Android.ecore#//MetaApp/createMenu"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0rgEs96XEeOVVJ4jcp9m6A" points="[4, 21, -48, -243]$[59, 240, 7, -24]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_2sByAN6XEeOVVJ4jcp9m6A" type="3002" source="_tVgukN6XEeOVVJ4jcp9m6A" target="_up_dMNuBEeOc8Ofwypv7-A">
+    <children xmi:type="notation:Node" xmi:id="_2sCZEN6XEeOVVJ4jcp9m6A" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_2sCZEd6XEeOVVJ4jcp9m6A" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_2sDAIN6XEeOVVJ4jcp9m6A" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_2sDAId6XEeOVVJ4jcp9m6A" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_2sByAd6XEeOVVJ4jcp9m6A" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_2sByAt6XEeOVVJ4jcp9m6A" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Android.ecore#//MetaApp/create_String"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2sByA96XEeOVVJ4jcp9m6A" points="[-41, 21, 443, -242]$[-507, 230, -23, -33]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_9-QpgN6XEeOVVJ4jcp9m6A" type="3002" source="_tVgukN6XEeOVVJ4jcp9m6A" target="_8XOwoNt-EeOc8Ofwypv7-A">
+    <children xmi:type="notation:Node" xmi:id="_9-RQkN6XEeOVVJ4jcp9m6A" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9-RQkd6XEeOVVJ4jcp9m6A" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_9-R3oN6XEeOVVJ4jcp9m6A" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9-R3od6XEeOVVJ4jcp9m6A" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_9-Qpgd6XEeOVVJ4jcp9m6A" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_9-Qpgt6XEeOVVJ4jcp9m6A" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Android.ecore#//MetaApp/createLayout"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9-Qpg96XEeOVVJ4jcp9m6A" points="[-20, 21, 239, -247]$[-257, 240, 2, -28]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9-WJEN6XEeOVVJ4jcp9m6A" id="(0.849624060150376,0.4264705882352941)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_DWi80N6YEeOVVJ4jcp9m6A" type="3002" source="_tVgukN6XEeOVVJ4jcp9m6A" target="_qUg_0NuDEeOc8Ofwypv7-A">
+    <children xmi:type="notation:Node" xmi:id="_DWkK8N6YEeOVVJ4jcp9m6A" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_DWkK8d6YEeOVVJ4jcp9m6A" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_DWkyAN6YEeOVVJ4jcp9m6A" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_DWkyAd6YEeOVVJ4jcp9m6A" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_DWi80d6YEeOVVJ4jcp9m6A" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_DWi80t6YEeOVVJ4jcp9m6A" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Android.ecore#//MetaApp/createItem"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DWi8096YEeOVVJ4jcp9m6A" points="[-4, 21, 69, -384]$[-64, 355, 9, -50]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_IgUTAN6YEeOVVJ4jcp9m6A" type="3002" source="_tVgukN6XEeOVVJ4jcp9m6A" target="_FeAH4Nt_EeOc8Ofwypv7-A">
+    <children xmi:type="notation:Node" xmi:id="_IgU6EN6YEeOVVJ4jcp9m6A" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_IgU6Ed6YEeOVVJ4jcp9m6A" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_IgVhIN6YEeOVVJ4jcp9m6A" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_IgVhId6YEeOVVJ4jcp9m6A" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_IgUTAd6YEeOVVJ4jcp9m6A" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_IgUTAt6YEeOVVJ4jcp9m6A" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Android.ecore#//MetaApp/createWidget"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IgUTA96YEeOVVJ4jcp9m6A" points="[-16, 21, 271, -359]$[-285, 370, 2, -10]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Igmm4N6YEeOVVJ4jcp9m6A" id="(0.782608695652174,0.12941176470588237)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_NiqykN6YEeOVVJ4jcp9m6A" type="3002" source="_tVgukN6XEeOVVJ4jcp9m6A" target="_FzVscNuEEeOc8Ofwypv7-A">
+    <children xmi:type="notation:Node" xmi:id="_NirZoN6YEeOVVJ4jcp9m6A" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_NirZod6YEeOVVJ4jcp9m6A" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_NisAsN6YEeOVVJ4jcp9m6A" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_NisAsd6YEeOVVJ4jcp9m6A" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_Niqykd6YEeOVVJ4jcp9m6A" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Niqykt6YEeOVVJ4jcp9m6A" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Android.ecore#//MetaApp/createAction"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Niqyk96YEeOVVJ4jcp9m6A" points="[-15, 21, 271, -378]$[-268, 375, 18, -24]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_QIb68N6YEeOVVJ4jcp9m6A" type="3002" source="_tVgukN6XEeOVVJ4jcp9m6A" target="_wBIH4NuEEeOc8Ofwypv7-A">
+    <children xmi:type="notation:Node" xmi:id="_QIciAN6YEeOVVJ4jcp9m6A" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_QIciAd6YEeOVVJ4jcp9m6A" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_QIdJEN6YEeOVVJ4jcp9m6A" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_QIdJEd6YEeOVVJ4jcp9m6A" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_QIb68d6YEeOVVJ4jcp9m6A" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_QIb68t6YEeOVVJ4jcp9m6A" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Android.ecore#//MetaApp/createDialog"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_QIb6896YEeOVVJ4jcp9m6A" points="[0, 21, -16, -384]$[15, 372, -1, -33]"/>
   </edges>
 </notation:Diagram>

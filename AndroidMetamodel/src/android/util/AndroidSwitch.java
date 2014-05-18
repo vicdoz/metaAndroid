@@ -141,6 +141,12 @@ public class AndroidSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case AndroidPackage.META_APP: {
+				MetaApp metaApp = (MetaApp)theEObject;
+				T result = caseMetaApp(metaApp);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -322,6 +328,21 @@ public class AndroidSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDialog(Dialog object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Meta App</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Meta App</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMetaApp(MetaApp object) {
 		return null;
 	}
 

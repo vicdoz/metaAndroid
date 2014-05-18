@@ -7,17 +7,12 @@ import android.AndroidPackage;
 import android.Aplication;
 import android.Layout;
 import android.Menu;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -99,7 +94,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	protected boolean main = MAIN_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getShow() <em>Show</em>}' containment reference.
+	 * The cached value of the '{@link #getShow() <em>Show</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getShow()
@@ -107,6 +102,16 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * @ordered
 	 */
 	protected Menu show;
+
+	/**
+	 * The cached value of the '{@link #getRunsIn() <em>Runs In</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRunsIn()
+	 * @generated
+	 * @ordered
+	 */
+	protected Aplication runsIn;
 
 	/**
 	 * The cached value of the '{@link #getMuestra() <em>Muestra</em>}' reference.
@@ -206,6 +211,23 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * @generated
 	 */
 	public Menu getShow() {
+		if (show != null && show.eIsProxy()) {
+			InternalEObject oldShow = (InternalEObject)show;
+			show = (Menu)eResolveProxy(oldShow);
+			if (show != oldShow) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AndroidPackage.ACTIVITY__SHOW, oldShow, show));
+			}
+		}
+		return show;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Menu basicGetShow() {
 		return show;
 	}
 
@@ -249,8 +271,24 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * @generated
 	 */
 	public Aplication getRunsIn() {
-		if (eContainerFeatureID() != AndroidPackage.ACTIVITY__RUNS_IN) return null;
-		return (Aplication)eInternalContainer();
+		if (runsIn != null && runsIn.eIsProxy()) {
+			InternalEObject oldRunsIn = (InternalEObject)runsIn;
+			runsIn = (Aplication)eResolveProxy(oldRunsIn);
+			if (runsIn != oldRunsIn) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AndroidPackage.ACTIVITY__RUNS_IN, oldRunsIn, runsIn));
+			}
+		}
+		return runsIn;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Aplication basicGetRunsIn() {
+		return runsIn;
 	}
 
 	/**
@@ -259,7 +297,12 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * @generated
 	 */
 	public NotificationChain basicSetRunsIn(Aplication newRunsIn, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newRunsIn, AndroidPackage.ACTIVITY__RUNS_IN, msgs);
+		Aplication oldRunsIn = runsIn;
+		runsIn = newRunsIn;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AndroidPackage.ACTIVITY__RUNS_IN, oldRunsIn, newRunsIn);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
 		return msgs;
 	}
 
@@ -269,12 +312,10 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * @generated
 	 */
 	public void setRunsIn(Aplication newRunsIn) {
-		if (newRunsIn != eInternalContainer() || (eContainerFeatureID() != AndroidPackage.ACTIVITY__RUNS_IN && newRunsIn != null)) {
-			if (EcoreUtil.isAncestor(this, newRunsIn))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+		if (newRunsIn != runsIn) {
 			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
+			if (runsIn != null)
+				msgs = ((InternalEObject)runsIn).eInverseRemove(this, AndroidPackage.APLICATION__RUN, Aplication.class, msgs);
 			if (newRunsIn != null)
 				msgs = ((InternalEObject)newRunsIn).eInverseAdd(this, AndroidPackage.APLICATION__RUN, Aplication.class, msgs);
 			msgs = basicSetRunsIn(newRunsIn, msgs);
@@ -354,11 +395,11 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 		switch (featureID) {
 			case AndroidPackage.ACTIVITY__SHOW:
 				if (show != null)
-					msgs = ((InternalEObject)show).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AndroidPackage.ACTIVITY__SHOW, null, msgs);
+					msgs = ((InternalEObject)show).eInverseRemove(this, AndroidPackage.MENU__IS_SHOWED, Menu.class, msgs);
 				return basicSetShow((Menu)otherEnd, msgs);
 			case AndroidPackage.ACTIVITY__RUNS_IN:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
+				if (runsIn != null)
+					msgs = ((InternalEObject)runsIn).eInverseRemove(this, AndroidPackage.APLICATION__RUN, Aplication.class, msgs);
 				return basicSetRunsIn((Aplication)otherEnd, msgs);
 			case AndroidPackage.ACTIVITY__MUESTRA:
 				if (muestra != null)
@@ -392,20 +433,6 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case AndroidPackage.ACTIVITY__RUNS_IN:
-				return eInternalContainer().eInverseRemove(this, AndroidPackage.APLICATION__RUN, Aplication.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case AndroidPackage.ACTIVITY__NAME:
@@ -415,9 +442,11 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 			case AndroidPackage.ACTIVITY__MAIN:
 				return isMain();
 			case AndroidPackage.ACTIVITY__SHOW:
-				return getShow();
+				if (resolve) return getShow();
+				return basicGetShow();
 			case AndroidPackage.ACTIVITY__RUNS_IN:
-				return getRunsIn();
+				if (resolve) return getRunsIn();
+				return basicGetRunsIn();
 			case AndroidPackage.ACTIVITY__MUESTRA:
 				if (resolve) return getMuestra();
 				return basicGetMuestra();
@@ -502,7 +531,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 			case AndroidPackage.ACTIVITY__SHOW:
 				return show != null;
 			case AndroidPackage.ACTIVITY__RUNS_IN:
-				return getRunsIn() != null;
+				return runsIn != null;
 			case AndroidPackage.ACTIVITY__MUESTRA:
 				return muestra != null;
 		}

@@ -110,6 +110,8 @@ public class AndroidValidator extends EObjectValidator {
 				return validateAction((Action)value, diagnostics, context);
 			case AndroidPackage.DIALOG:
 				return validateDialog((Dialog)value, diagnostics, context);
+			case AndroidPackage.META_APP:
+				return validateMetaApp((MetaApp)value, diagnostics, context);
 			case AndroidPackage.LAYOUT_TYPE:
 				return validateLayoutType((LayoutType)value, diagnostics, context);
 			case AndroidPackage.INPUT_TYPE:
@@ -479,6 +481,15 @@ public class AndroidValidator extends EObjectValidator {
 	 */
 	public boolean validateDialog(Dialog dialog, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(dialog, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateMetaApp(MetaApp metaApp, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(metaApp, diagnostics, context);
 	}
 
 	/**

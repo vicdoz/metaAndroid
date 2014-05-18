@@ -130,6 +130,15 @@ public interface AndroidFactory extends EFactory {
 	Dialog createDialog();
 
 	/**
+	 * Returns a new object of class '<em>Meta App</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Meta App</em>'.
+	 * @generated
+	 */
+	MetaApp createMetaApp();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+ <item
+        android:id="idlistas"
+        android:orderInCategory="1"
+        android:showAsAction="ALWAYS"
+        android:title="Listas"/>
+
+ <item
+        android:id="idconfig"
+        android:orderInCategory="6"
+        android:showAsAction="ALWAYS"
+        android:title="Configuracion"/>
+
+ <item
+        android:id="idCuentas"
+        android:orderInCategory="2"
+        android:showAsAction="ALWAYS"
+        android:title="Cuentas"/>
+
+ <item
+        android:id="idborradores"
+        android:orderInCategory="3"
+        android:showAsAction="ALWAYS"
+        android:title="Borradores"/>
+
+</menu>

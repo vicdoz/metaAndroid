@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+gmf_dashboard/domainGenerationModel=platform\:/resource/AndroidMetamodel/model/Android.genmodel
+gmf_dashboard/domainModel=platform\:/resource/AndroidMetamodel/model/Android.ecore
+gmf_dashboard/graphicalDefinitionModel=platform\:/resource/AndroidMetamodel/model/Android.gmfgraph
+gmf_dashboard/mappingModel=platform\:/resource/AndroidMetamodel/model/Android.gmfmap
+gmf_dashboard/toolingDefinitionModel=platform\:/resource/AndroidMetamodel/model/Android.gmftool

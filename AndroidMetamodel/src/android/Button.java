@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Button extends Widget {
 	/**
-	 * Returns the value of the '<em><b>Triggers</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Triggers</b></em>' reference list.
 	 * The list contents are of type {@link android.Action}.
 	 * It is bidirectional and its opposite is '{@link android.Action#getButtonOwner <em>Button Owner</em>}'.
 	 * <!-- begin-user-doc -->
@@ -33,10 +33,10 @@ public interface Button extends Widget {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Triggers</em>' containment reference list.
+	 * @return the value of the '<em>Triggers</em>' reference list.
 	 * @see android.AndroidPackage#getButton_Triggers()
 	 * @see android.Action#getButtonOwner
-	 * @model opposite="buttonOwner" containment="true"
+	 * @model opposite="buttonOwner"
 	 * @generated
 	 */
 	EList<Action> getTriggers();

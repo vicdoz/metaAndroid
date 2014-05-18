@@ -116,6 +116,10 @@ public class AndroidAdapterFactory extends AdapterFactoryImpl {
 				return createDialogAdapter();
 			}
 			@Override
+			public Adapter caseMetaApp(MetaApp object) {
+				return createMetaAppAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -300,6 +304,20 @@ public class AndroidAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDialogAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link android.MetaApp <em>Meta App</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see android.MetaApp
+	 * @generated
+	 */
+	public Adapter createMetaAppAdapter() {
 		return null;
 	}
 

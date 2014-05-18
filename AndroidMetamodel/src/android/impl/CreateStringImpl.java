@@ -5,17 +5,12 @@ package android.impl;
 import android.AndroidPackage;
 import android.Aplication;
 import android.CreateString;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,6 +28,16 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * @generated
  */
 public class CreateStringImpl extends MinimalEObjectImpl.Container implements CreateString {
+	/**
+	 * The cached value of the '{@link #getStored() <em>Stored</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStored()
+	 * @generated
+	 * @ordered
+	 */
+	protected Aplication stored;
+
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -98,8 +103,24 @@ public class CreateStringImpl extends MinimalEObjectImpl.Container implements Cr
 	 * @generated
 	 */
 	public Aplication getStored() {
-		if (eContainerFeatureID() != AndroidPackage.CREATE_STRING__STORED) return null;
-		return (Aplication)eInternalContainer();
+		if (stored != null && stored.eIsProxy()) {
+			InternalEObject oldStored = (InternalEObject)stored;
+			stored = (Aplication)eResolveProxy(oldStored);
+			if (stored != oldStored) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AndroidPackage.CREATE_STRING__STORED, oldStored, stored));
+			}
+		}
+		return stored;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Aplication basicGetStored() {
+		return stored;
 	}
 
 	/**
@@ -108,7 +129,12 @@ public class CreateStringImpl extends MinimalEObjectImpl.Container implements Cr
 	 * @generated
 	 */
 	public NotificationChain basicSetStored(Aplication newStored, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newStored, AndroidPackage.CREATE_STRING__STORED, msgs);
+		Aplication oldStored = stored;
+		stored = newStored;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AndroidPackage.CREATE_STRING__STORED, oldStored, newStored);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
 		return msgs;
 	}
 
@@ -118,12 +144,10 @@ public class CreateStringImpl extends MinimalEObjectImpl.Container implements Cr
 	 * @generated
 	 */
 	public void setStored(Aplication newStored) {
-		if (newStored != eInternalContainer() || (eContainerFeatureID() != AndroidPackage.CREATE_STRING__STORED && newStored != null)) {
-			if (EcoreUtil.isAncestor(this, newStored))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+		if (newStored != stored) {
 			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
+			if (stored != null)
+				msgs = ((InternalEObject)stored).eInverseRemove(this, AndroidPackage.APLICATION__CREATES, Aplication.class, msgs);
 			if (newStored != null)
 				msgs = ((InternalEObject)newStored).eInverseAdd(this, AndroidPackage.APLICATION__CREATES, Aplication.class, msgs);
 			msgs = basicSetStored(newStored, msgs);
@@ -184,8 +208,8 @@ public class CreateStringImpl extends MinimalEObjectImpl.Container implements Cr
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case AndroidPackage.CREATE_STRING__STORED:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
+				if (stored != null)
+					msgs = ((InternalEObject)stored).eInverseRemove(this, AndroidPackage.APLICATION__CREATES, Aplication.class, msgs);
 				return basicSetStored((Aplication)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -211,24 +235,11 @@ public class CreateStringImpl extends MinimalEObjectImpl.Container implements Cr
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case AndroidPackage.CREATE_STRING__STORED:
-				return eInternalContainer().eInverseRemove(this, AndroidPackage.APLICATION__CREATES, Aplication.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case AndroidPackage.CREATE_STRING__STORED:
-				return getStored();
+				if (resolve) return getStored();
+				return basicGetStored();
 			case AndroidPackage.CREATE_STRING__NAME:
 				return getName();
 			case AndroidPackage.CREATE_STRING__VALUE:
@@ -288,7 +299,7 @@ public class CreateStringImpl extends MinimalEObjectImpl.Container implements Cr
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case AndroidPackage.CREATE_STRING__STORED:
-				return getStored() != null;
+				return stored != null;
 			case AndroidPackage.CREATE_STRING__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case AndroidPackage.CREATE_STRING__VALUE:

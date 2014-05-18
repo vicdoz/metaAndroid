@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     android:orientation="HORIZONTAL" >
+    
+   
+    
+    <Button
+        android:id="@+id/id1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ir a mensajes" />
+
+   	
+    
+    <EditText
+        android:id="@+id/idBusqueda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" >
+        android:inputType="TEXT"
+        <requestFocus />
+
+</LinearLayout>
+	

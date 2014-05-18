@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="android">
+  <figures name="Default">
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="LayoutContainsTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="ButtonTriggersTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="AplicationContainsTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="AplicationCreatesTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="AplicationRunTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="ActivityShowTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="ActivityMuestraTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="MenuHasItemTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="ActionShowsTargetDecoration"/>
+    <descriptors name="LayoutFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="LayoutFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <backgroundColor xsi:type="gmfgraph:ConstantColor" value="red"/>
+        <children xsi:type="gmfgraph:Label" name="LayoutNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="LayoutTypeFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.0/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="LayoutContainsFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="LayoutContainsFigure" targetDecoration="//@figures.0/@figures.0"/>
+    </descriptors>
+    <descriptors name="ButtonFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="ButtonFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <backgroundColor xsi:type="gmfgraph:ConstantColor" value="gray"/>
+        <children xsi:type="gmfgraph:Label" name="ButtonNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="ButtonTextFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="ButtonIdFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.2/@actualFigure/@children.1"/>
+      <accessors figure="//@figures.0/@descriptors.2/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="ButtonTriggersFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ButtonTriggersFigure" targetDecoration="//@figures.0/@figures.1"/>
+    </descriptors>
+    <descriptors name="TextFieldFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="TextFieldFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <foregroundColor xsi:type="gmfgraph:ConstantColor" value="red"/>
+        <children xsi:type="gmfgraph:Label" name="TextFieldNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="TextFieldTextFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="TextFieldIdFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="TextFieldInputFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.4/@actualFigure/@children.1"/>
+      <accessors figure="//@figures.0/@descriptors.4/@actualFigure/@children.2"/>
+      <accessors figure="//@figures.0/@descriptors.4/@actualFigure/@children.3"/>
+    </descriptors>
+    <descriptors name="TextViewFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="TextViewFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <foregroundColor xsi:type="gmfgraph:ConstantColor" value="red"/>
+        <children xsi:type="gmfgraph:Label" name="TextViewNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="TextViewTextFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="TextViewIdFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.5/@actualFigure/@children.1"/>
+      <accessors figure="//@figures.0/@descriptors.5/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="AplicationFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="AplicationFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <foregroundColor xsi:type="gmfgraph:ConstantColor" value="blue"/>
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="154" green="204" blue="255"/>
+        <children xsi:type="gmfgraph:Label" name="AplicationNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="AplicationPackageFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="AplicationMinSDKFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="AplicationTargetSDKFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="AplicationVersionCodeFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="AplicationVersionNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="AplicationPermissionsFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.6/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.6/@actualFigure/@children.1"/>
+      <accessors figure="//@figures.0/@descriptors.6/@actualFigure/@children.2"/>
+      <accessors figure="//@figures.0/@descriptors.6/@actualFigure/@children.3"/>
+      <accessors figure="//@figures.0/@descriptors.6/@actualFigure/@children.4"/>
+      <accessors figure="//@figures.0/@descriptors.6/@actualFigure/@children.5"/>
+      <accessors figure="//@figures.0/@descriptors.6/@actualFigure/@children.6"/>
+    </descriptors>
+    <descriptors name="AplicationContainsFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="AplicationContainsFigure" targetDecoration="//@figures.0/@figures.2"/>
+    </descriptors>
+    <descriptors name="AplicationCreatesFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="AplicationCreatesFigure" targetDecoration="//@figures.0/@figures.3"/>
+    </descriptors>
+    <descriptors name="AplicationRunFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="AplicationRunFigure" targetDecoration="//@figures.0/@figures.4"/>
+    </descriptors>
+    <descriptors name="CreateStringFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="CreateStringFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <backgroundColor xsi:type="gmfgraph:ConstantColor" value="orange"/>
+        <children xsi:type="gmfgraph:Label" name="CreateStringNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="CreateStringValueFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.10/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.10/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="ActivityFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="ActivityFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="102" green="102" blue="255"/>
+        <children xsi:type="gmfgraph:Label" name="ActivityNameFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="ActivityPackageFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="ActivityMainFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.11/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.11/@actualFigure/@children.1"/>
+      <accessors figure="//@figures.0/@descriptors.11/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="ActivityShowFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ActivityShowFigure" targetDecoration="//@figures.0/@figures.5"/>
+    </descriptors>
+    <descriptors name="ActivityMuestraFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ActivityMuestraFigure" targetDecoration="//@figures.0/@figures.6"/>
+    </descriptors>
+    <descriptors name="MenuFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="MenuFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="153" green="255" blue="153"/>
+        <children xsi:type="gmfgraph:Label" name="MenuIdFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.14/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="MenuHasItemFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MenuHasItemFigure" targetDecoration="//@figures.0/@figures.7"/>
+    </descriptors>
+    <descriptors name="ItemFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="ItemFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <foregroundColor xsi:type="gmfgraph:ConstantColor" value="green"/>
+        <children xsi:type="gmfgraph:Label" name="ItemTittleFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="ItemOrderFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="ItemShowAsActionFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="ItemIdFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.16/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.16/@actualFigure/@children.1"/>
+      <accessors figure="//@figures.0/@descriptors.16/@actualFigure/@children.2"/>
+      <accessors figure="//@figures.0/@descriptors.16/@actualFigure/@children.3"/>
+    </descriptors>
+    <descriptors name="ActionFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="ActionFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="255" green="153" blue="255"/>
+        <children xsi:type="gmfgraph:Label" name="ActionTypeFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.17/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="ActionShowsFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ActionShowsFigure" targetDecoration="//@figures.0/@figures.8"/>
+    </descriptors>
+    <descriptors name="DialogFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="DialogFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <foregroundColor xsi:type="gmfgraph:RGBColor" red="204" green="153" blue="255"/>
+        <children xsi:type="gmfgraph:Label" name="DialogTimeFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="DialogTextFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.19/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.19/@actualFigure/@children.1"/>
+    </descriptors>
+  </figures>
+  <nodes name="Layout" figure="LayoutFigure"/>
+  <nodes name="Button" figure="ButtonFigure"/>
+  <nodes name="TextField" figure="TextFieldFigure"/>
+  <nodes name="TextView" figure="TextViewFigure"/>
+  <nodes name="Aplication" figure="AplicationFigure"/>
+  <nodes name="CreateString" figure="CreateStringFigure"/>
+  <nodes name="Activity" figure="ActivityFigure"/>
+  <nodes name="Menu" figure="MenuFigure"/>
+  <nodes name="Item" figure="ItemFigure"/>
+  <nodes name="Action" figure="ActionFigure"/>
+  <nodes name="Dialog" figure="DialogFigure"/>
+  <connections name="LayoutContains" figure="LayoutContainsFigure"/>
+  <connections name="ButtonTriggers" figure="ButtonTriggersFigure"/>
+  <connections name="AplicationContains" figure="AplicationContainsFigure"/>
+  <connections name="AplicationCreates" figure="AplicationCreatesFigure"/>
+  <connections name="AplicationRun" figure="AplicationRunFigure"/>
+  <connections name="ActivityShow" figure="ActivityShowFigure"/>
+  <connections name="ActivityMuestra" figure="ActivityMuestraFigure"/>
+  <connections name="MenuHasItem" figure="MenuHasItemFigure"/>
+  <connections name="ActionShows" figure="ActionShowsFigure"/>
+  <labels name="LayoutName" figure="LayoutFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="LayoutType" figure="LayoutFigure" accessor="//@figures.0/@descriptors.0/@accessors.1"/>
+  <labels name="ButtonName" figure="ButtonFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+  <labels name="ButtonText" figure="ButtonFigure" accessor="//@figures.0/@descriptors.2/@accessors.1"/>
+  <labels name="ButtonId" figure="ButtonFigure" accessor="//@figures.0/@descriptors.2/@accessors.2"/>
+  <labels name="TextFieldName" figure="TextFieldFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+  <labels name="TextFieldText" figure="TextFieldFigure" accessor="//@figures.0/@descriptors.4/@accessors.1"/>
+  <labels name="TextFieldId" figure="TextFieldFigure" accessor="//@figures.0/@descriptors.4/@accessors.2"/>
+  <labels name="TextFieldInput" figure="TextFieldFigure" accessor="//@figures.0/@descriptors.4/@accessors.3"/>
+  <labels name="TextViewName" figure="TextViewFigure" accessor="//@figures.0/@descriptors.5/@accessors.0"/>
+  <labels name="TextViewText" figure="TextViewFigure" accessor="//@figures.0/@descriptors.5/@accessors.1"/>
+  <labels name="TextViewId" figure="TextViewFigure" accessor="//@figures.0/@descriptors.5/@accessors.2"/>
+  <labels name="AplicationName" figure="AplicationFigure" accessor="//@figures.0/@descriptors.6/@accessors.0"/>
+  <labels name="AplicationPackage" figure="AplicationFigure" accessor="//@figures.0/@descriptors.6/@accessors.1"/>
+  <labels name="AplicationMinSDK" figure="AplicationFigure" accessor="//@figures.0/@descriptors.6/@accessors.2"/>
+  <labels name="AplicationTargetSDK" figure="AplicationFigure" accessor="//@figures.0/@descriptors.6/@accessors.3"/>
+  <labels name="AplicationVersionCode" figure="AplicationFigure" accessor="//@figures.0/@descriptors.6/@accessors.4"/>
+  <labels name="AplicationVersionName" figure="AplicationFigure" accessor="//@figures.0/@descriptors.6/@accessors.5"/>
+  <labels name="AplicationPermissions" figure="AplicationFigure" accessor="//@figures.0/@descriptors.6/@accessors.6"/>
+  <labels name="CreateStringName" figure="CreateStringFigure" accessor="//@figures.0/@descriptors.10/@accessors.0"/>
+  <labels name="CreateStringValue" figure="CreateStringFigure" accessor="//@figures.0/@descriptors.10/@accessors.1"/>
+  <labels name="ActivityName" figure="ActivityFigure" accessor="//@figures.0/@descriptors.11/@accessors.0"/>
+  <labels name="ActivityPackage" figure="ActivityFigure" accessor="//@figures.0/@descriptors.11/@accessors.1"/>
+  <labels name="ActivityMain" figure="ActivityFigure" accessor="//@figures.0/@descriptors.11/@accessors.2"/>
+  <labels name="MenuId" figure="MenuFigure" accessor="//@figures.0/@descriptors.14/@accessors.0"/>
+  <labels name="ItemTittle" figure="ItemFigure" accessor="//@figures.0/@descriptors.16/@accessors.0"/>
+  <labels name="ItemOrder" figure="ItemFigure" accessor="//@figures.0/@descriptors.16/@accessors.1"/>
+  <labels name="ItemShowAsAction" figure="ItemFigure" accessor="//@figures.0/@descriptors.16/@accessors.2"/>
+  <labels name="ItemId" figure="ItemFigure" accessor="//@figures.0/@descriptors.16/@accessors.3"/>
+  <labels name="ActionType" figure="ActionFigure" accessor="//@figures.0/@descriptors.17/@accessors.0"/>
+  <labels name="DialogTime" figure="DialogFigure" accessor="//@figures.0/@descriptors.19/@accessors.0"/>
+  <labels name="DialogText" figure="DialogFigure" accessor="//@figures.0/@descriptors.19/@accessors.1"/>
+</gmfgraph:Canvas>

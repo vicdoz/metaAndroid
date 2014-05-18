@@ -348,6 +348,29 @@ public class AndroidItemProviderAdapterFactory extends AndroidAdapterFactory imp
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link android.MetaApp} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MetaAppItemProvider metaAppItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link android.MetaApp}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMetaAppAdapter() {
+		if (metaAppItemProvider == null) {
+			metaAppItemProvider = new MetaAppItemProvider(this);
+		}
+
+		return metaAppItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -458,6 +481,7 @@ public class AndroidItemProviderAdapterFactory extends AndroidAdapterFactory imp
 		if (itemItemProvider != null) itemItemProvider.dispose();
 		if (actionItemProvider != null) actionItemProvider.dispose();
 		if (dialogItemProvider != null) dialogItemProvider.dispose();
+		if (metaAppItemProvider != null) metaAppItemProvider.dispose();
 	}
 
 }

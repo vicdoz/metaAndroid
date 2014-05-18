@@ -210,7 +210,7 @@ public interface Aplication extends EObject {
 	EList<Permissions> getPermissions();
 
 	/**
-	 * Returns the value of the '<em><b>Contains</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Contains</b></em>' reference list.
 	 * The list contents are of type {@link android.Layout}.
 	 * It is bidirectional and its opposite is '{@link android.Layout#getLayOn <em>Lay On</em>}'.
 	 * <!-- begin-user-doc -->
@@ -219,16 +219,16 @@ public interface Aplication extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Contains</em>' containment reference list.
+	 * @return the value of the '<em>Contains</em>' reference list.
 	 * @see android.AndroidPackage#getAplication_Contains()
 	 * @see android.Layout#getLayOn
-	 * @model opposite="layOn" containment="true"
+	 * @model opposite="layOn"
 	 * @generated
 	 */
 	EList<Layout> getContains();
 
 	/**
-	 * Returns the value of the '<em><b>Creates</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Creates</b></em>' reference list.
 	 * The list contents are of type {@link android.CreateString}.
 	 * It is bidirectional and its opposite is '{@link android.CreateString#getStored <em>Stored</em>}'.
 	 * <!-- begin-user-doc -->
@@ -237,16 +237,16 @@ public interface Aplication extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Creates</em>' containment reference list.
+	 * @return the value of the '<em>Creates</em>' reference list.
 	 * @see android.AndroidPackage#getAplication_Creates()
 	 * @see android.CreateString#getStored
-	 * @model opposite="stored" containment="true"
+	 * @model opposite="stored"
 	 * @generated
 	 */
 	EList<CreateString> getCreates();
 
 	/**
-	 * Returns the value of the '<em><b>Run</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Run</b></em>' reference list.
 	 * The list contents are of type {@link android.Activity}.
 	 * It is bidirectional and its opposite is '{@link android.Activity#getRunsIn <em>Runs In</em>}'.
 	 * <!-- begin-user-doc -->
@@ -255,10 +255,10 @@ public interface Aplication extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Run</em>' containment reference list.
+	 * @return the value of the '<em>Run</em>' reference list.
 	 * @see android.AndroidPackage#getAplication_Run()
 	 * @see android.Activity#getRunsIn
-	 * @model opposite="runsIn" containment="true"
+	 * @model opposite="runsIn"
 	 * @generated
 	 */
 	EList<Activity> getRun();

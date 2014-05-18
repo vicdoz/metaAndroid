@@ -135,7 +135,7 @@ public interface Item extends EObject {
 	void setId(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Menu Owner</b></em>' container reference.
+	 * Returns the value of the '<em><b>Menu Owner</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link android.Menu#getHasItem <em>Has Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -143,20 +143,20 @@ public interface Item extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Menu Owner</em>' container reference.
+	 * @return the value of the '<em>Menu Owner</em>' reference.
 	 * @see #setMenuOwner(Menu)
 	 * @see android.AndroidPackage#getItem_MenuOwner()
 	 * @see android.Menu#getHasItem
-	 * @model opposite="hasItem" required="true" transient="false"
+	 * @model opposite="hasItem" required="true"
 	 * @generated
 	 */
 	Menu getMenuOwner();
 
 	/**
-	 * Sets the value of the '{@link android.Item#getMenuOwner <em>Menu Owner</em>}' container reference.
+	 * Sets the value of the '{@link android.Item#getMenuOwner <em>Menu Owner</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Menu Owner</em>' container reference.
+	 * @param value the new value of the '<em>Menu Owner</em>' reference.
 	 * @see #getMenuOwner()
 	 * @generated
 	 */

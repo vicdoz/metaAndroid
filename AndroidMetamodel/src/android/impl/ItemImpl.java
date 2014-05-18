@@ -6,19 +6,13 @@ import android.AndroidPackage;
 import android.Item;
 import android.Menu;
 import android.TypeAction;
-
 import java.math.BigInteger;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -117,6 +111,16 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	 * @ordered
 	 */
 	protected String id = ID_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getMenuOwner() <em>Menu Owner</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMenuOwner()
+	 * @generated
+	 * @ordered
+	 */
+	protected Menu menuOwner;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -227,8 +231,24 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	 * @generated
 	 */
 	public Menu getMenuOwner() {
-		if (eContainerFeatureID() != AndroidPackage.ITEM__MENU_OWNER) return null;
-		return (Menu)eInternalContainer();
+		if (menuOwner != null && menuOwner.eIsProxy()) {
+			InternalEObject oldMenuOwner = (InternalEObject)menuOwner;
+			menuOwner = (Menu)eResolveProxy(oldMenuOwner);
+			if (menuOwner != oldMenuOwner) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AndroidPackage.ITEM__MENU_OWNER, oldMenuOwner, menuOwner));
+			}
+		}
+		return menuOwner;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Menu basicGetMenuOwner() {
+		return menuOwner;
 	}
 
 	/**
@@ -237,7 +257,12 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	 * @generated
 	 */
 	public NotificationChain basicSetMenuOwner(Menu newMenuOwner, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newMenuOwner, AndroidPackage.ITEM__MENU_OWNER, msgs);
+		Menu oldMenuOwner = menuOwner;
+		menuOwner = newMenuOwner;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AndroidPackage.ITEM__MENU_OWNER, oldMenuOwner, newMenuOwner);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
 		return msgs;
 	}
 
@@ -247,12 +272,10 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	 * @generated
 	 */
 	public void setMenuOwner(Menu newMenuOwner) {
-		if (newMenuOwner != eInternalContainer() || (eContainerFeatureID() != AndroidPackage.ITEM__MENU_OWNER && newMenuOwner != null)) {
-			if (EcoreUtil.isAncestor(this, newMenuOwner))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+		if (newMenuOwner != menuOwner) {
 			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
+			if (menuOwner != null)
+				msgs = ((InternalEObject)menuOwner).eInverseRemove(this, AndroidPackage.MENU__HAS_ITEM, Menu.class, msgs);
 			if (newMenuOwner != null)
 				msgs = ((InternalEObject)newMenuOwner).eInverseAdd(this, AndroidPackage.MENU__HAS_ITEM, Menu.class, msgs);
 			msgs = basicSetMenuOwner(newMenuOwner, msgs);
@@ -271,8 +294,8 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case AndroidPackage.ITEM__MENU_OWNER:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
+				if (menuOwner != null)
+					msgs = ((InternalEObject)menuOwner).eInverseRemove(this, AndroidPackage.MENU__HAS_ITEM, Menu.class, msgs);
 				return basicSetMenuOwner((Menu)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -298,20 +321,6 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case AndroidPackage.ITEM__MENU_OWNER:
-				return eInternalContainer().eInverseRemove(this, AndroidPackage.MENU__HAS_ITEM, Menu.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case AndroidPackage.ITEM__TITTLE:
@@ -323,7 +332,8 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 			case AndroidPackage.ITEM__ID:
 				return getId();
 			case AndroidPackage.ITEM__MENU_OWNER:
-				return getMenuOwner();
+				if (resolve) return getMenuOwner();
+				return basicGetMenuOwner();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -399,7 +409,7 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 			case AndroidPackage.ITEM__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case AndroidPackage.ITEM__MENU_OWNER:
-				return getMenuOwner() != null;
+				return menuOwner != null;
 		}
 		return super.eIsSet(featureID);
 	}

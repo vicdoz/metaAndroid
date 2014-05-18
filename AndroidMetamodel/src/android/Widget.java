@@ -103,7 +103,7 @@ public interface Widget extends EObject {
 	void setId(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Layout Owner</b></em>' container reference.
+	 * Returns the value of the '<em><b>Layout Owner</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link android.Layout#getContains <em>Contains</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -111,20 +111,20 @@ public interface Widget extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Layout Owner</em>' container reference.
+	 * @return the value of the '<em>Layout Owner</em>' reference.
 	 * @see #setLayoutOwner(Layout)
 	 * @see android.AndroidPackage#getWidget_LayoutOwner()
 	 * @see android.Layout#getContains
-	 * @model opposite="contains" required="true" transient="false"
+	 * @model opposite="contains" required="true"
 	 * @generated
 	 */
 	Layout getLayoutOwner();
 
 	/**
-	 * Sets the value of the '{@link android.Widget#getLayoutOwner <em>Layout Owner</em>}' container reference.
+	 * Sets the value of the '{@link android.Widget#getLayoutOwner <em>Layout Owner</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Layout Owner</em>' container reference.
+	 * @param value the new value of the '<em>Layout Owner</em>' reference.
 	 * @see #getLayoutOwner()
 	 * @generated
 	 */

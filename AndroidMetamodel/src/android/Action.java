@@ -54,7 +54,7 @@ public interface Action extends EObject {
 	void setType(ActionType value);
 
 	/**
-	 * Returns the value of the '<em><b>Button Owner</b></em>' container reference.
+	 * Returns the value of the '<em><b>Button Owner</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link android.Button#getTriggers <em>Triggers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -62,27 +62,27 @@ public interface Action extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Button Owner</em>' container reference.
+	 * @return the value of the '<em>Button Owner</em>' reference.
 	 * @see #setButtonOwner(Button)
 	 * @see android.AndroidPackage#getAction_ButtonOwner()
 	 * @see android.Button#getTriggers
-	 * @model opposite="triggers" required="true" transient="false"
+	 * @model opposite="triggers" required="true"
 	 * @generated
 	 */
 	Button getButtonOwner();
 
 	/**
-	 * Sets the value of the '{@link android.Action#getButtonOwner <em>Button Owner</em>}' container reference.
+	 * Sets the value of the '{@link android.Action#getButtonOwner <em>Button Owner</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Button Owner</em>' container reference.
+	 * @param value the new value of the '<em>Button Owner</em>' reference.
 	 * @see #getButtonOwner()
 	 * @generated
 	 */
 	void setButtonOwner(Button value);
 
 	/**
-	 * Returns the value of the '<em><b>Shows</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Shows</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link android.Dialog#getActionOwner <em>Action Owner</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -90,20 +90,20 @@ public interface Action extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Shows</em>' containment reference.
+	 * @return the value of the '<em>Shows</em>' reference.
 	 * @see #setShows(Dialog)
 	 * @see android.AndroidPackage#getAction_Shows()
 	 * @see android.Dialog#getActionOwner
-	 * @model opposite="actionOwner" containment="true" required="true"
+	 * @model opposite="actionOwner" required="true"
 	 * @generated
 	 */
 	Dialog getShows();
 
 	/**
-	 * Sets the value of the '{@link android.Action#getShows <em>Shows</em>}' containment reference.
+	 * Sets the value of the '{@link android.Action#getShows <em>Shows</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Shows</em>' containment reference.
+	 * @param value the new value of the '<em>Shows</em>' reference.
 	 * @see #getShows()
 	 * @generated
 	 */

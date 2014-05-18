@@ -6,22 +6,15 @@ import android.Activity;
 import android.AndroidPackage;
 import android.Item;
 import android.Menu;
-
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
-import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -61,7 +54,17 @@ public class MenuImpl extends MinimalEObjectImpl.Container implements Menu {
 	protected String id = ID_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getHasItem() <em>Has Item</em>}' containment reference list.
+	 * The cached value of the '{@link #getIsShowed() <em>Is Showed</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsShowed()
+	 * @generated
+	 * @ordered
+	 */
+	protected Activity isShowed;
+
+	/**
+	 * The cached value of the '{@link #getHasItem() <em>Has Item</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getHasItem()
@@ -116,8 +119,24 @@ public class MenuImpl extends MinimalEObjectImpl.Container implements Menu {
 	 * @generated
 	 */
 	public Activity getIsShowed() {
-		if (eContainerFeatureID() != AndroidPackage.MENU__IS_SHOWED) return null;
-		return (Activity)eInternalContainer();
+		if (isShowed != null && isShowed.eIsProxy()) {
+			InternalEObject oldIsShowed = (InternalEObject)isShowed;
+			isShowed = (Activity)eResolveProxy(oldIsShowed);
+			if (isShowed != oldIsShowed) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AndroidPackage.MENU__IS_SHOWED, oldIsShowed, isShowed));
+			}
+		}
+		return isShowed;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Activity basicGetIsShowed() {
+		return isShowed;
 	}
 
 	/**
@@ -126,7 +145,12 @@ public class MenuImpl extends MinimalEObjectImpl.Container implements Menu {
 	 * @generated
 	 */
 	public NotificationChain basicSetIsShowed(Activity newIsShowed, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newIsShowed, AndroidPackage.MENU__IS_SHOWED, msgs);
+		Activity oldIsShowed = isShowed;
+		isShowed = newIsShowed;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AndroidPackage.MENU__IS_SHOWED, oldIsShowed, newIsShowed);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
 		return msgs;
 	}
 
@@ -136,12 +160,10 @@ public class MenuImpl extends MinimalEObjectImpl.Container implements Menu {
 	 * @generated
 	 */
 	public void setIsShowed(Activity newIsShowed) {
-		if (newIsShowed != eInternalContainer() || (eContainerFeatureID() != AndroidPackage.MENU__IS_SHOWED && newIsShowed != null)) {
-			if (EcoreUtil.isAncestor(this, newIsShowed))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+		if (newIsShowed != isShowed) {
 			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
+			if (isShowed != null)
+				msgs = ((InternalEObject)isShowed).eInverseRemove(this, AndroidPackage.ACTIVITY__SHOW, Activity.class, msgs);
 			if (newIsShowed != null)
 				msgs = ((InternalEObject)newIsShowed).eInverseAdd(this, AndroidPackage.ACTIVITY__SHOW, Activity.class, msgs);
 			msgs = basicSetIsShowed(newIsShowed, msgs);
@@ -158,7 +180,7 @@ public class MenuImpl extends MinimalEObjectImpl.Container implements Menu {
 	 */
 	public EList<Item> getHasItem() {
 		if (hasItem == null) {
-			hasItem = new EObjectContainmentWithInverseEList<Item>(Item.class, this, AndroidPackage.MENU__HAS_ITEM, AndroidPackage.ITEM__MENU_OWNER);
+			hasItem = new EObjectWithInverseResolvingEList<Item>(Item.class, this, AndroidPackage.MENU__HAS_ITEM, AndroidPackage.ITEM__MENU_OWNER);
 		}
 		return hasItem;
 	}
@@ -173,8 +195,8 @@ public class MenuImpl extends MinimalEObjectImpl.Container implements Menu {
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case AndroidPackage.MENU__IS_SHOWED:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
+				if (isShowed != null)
+					msgs = ((InternalEObject)isShowed).eInverseRemove(this, AndroidPackage.ACTIVITY__SHOW, Activity.class, msgs);
 				return basicSetIsShowed((Activity)otherEnd, msgs);
 			case AndroidPackage.MENU__HAS_ITEM:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getHasItem()).basicAdd(otherEnd, msgs);
@@ -204,26 +226,13 @@ public class MenuImpl extends MinimalEObjectImpl.Container implements Menu {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case AndroidPackage.MENU__IS_SHOWED:
-				return eInternalContainer().eInverseRemove(this, AndroidPackage.ACTIVITY__SHOW, Activity.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case AndroidPackage.MENU__ID:
 				return getId();
 			case AndroidPackage.MENU__IS_SHOWED:
-				return getIsShowed();
+				if (resolve) return getIsShowed();
+				return basicGetIsShowed();
 			case AndroidPackage.MENU__HAS_ITEM:
 				return getHasItem();
 		}
@@ -285,7 +294,7 @@ public class MenuImpl extends MinimalEObjectImpl.Container implements Menu {
 			case AndroidPackage.MENU__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case AndroidPackage.MENU__IS_SHOWED:
-				return getIsShowed() != null;
+				return isShowed != null;
 			case AndroidPackage.MENU__HAS_ITEM:
 				return hasItem != null && !hasItem.isEmpty();
 		}

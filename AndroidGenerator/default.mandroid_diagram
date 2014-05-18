@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:mandroid="http://mandroid/1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_m1sHQNm8EeOdYsR-qr0Zqg" type="MAndroid" name="default.mandroid_diagram" measurementUnit="Pixel">
-  <styles xmi:type="notation:DiagramStyle" xmi:id="_m1sHQdm8EeOdYsR-qr0Zqg"/>
-  <element xmi:type="mandroid:Aplication" href="src/default.mandroid#/"/>
-</notation:Diagram>

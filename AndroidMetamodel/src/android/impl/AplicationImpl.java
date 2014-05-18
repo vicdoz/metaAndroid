@@ -8,24 +8,17 @@ import android.Aplication;
 import android.CreateString;
 import android.Layout;
 import android.Permissions;
-
 import java.math.BigInteger;
-
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
-import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -182,7 +175,7 @@ public class AplicationImpl extends MinimalEObjectImpl.Container implements Apli
 	protected EList<Permissions> permissions;
 
 	/**
-	 * The cached value of the '{@link #getContains() <em>Contains</em>}' containment reference list.
+	 * The cached value of the '{@link #getContains() <em>Contains</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getContains()
@@ -192,7 +185,7 @@ public class AplicationImpl extends MinimalEObjectImpl.Container implements Apli
 	protected EList<Layout> contains;
 
 	/**
-	 * The cached value of the '{@link #getCreates() <em>Creates</em>}' containment reference list.
+	 * The cached value of the '{@link #getCreates() <em>Creates</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCreates()
@@ -202,7 +195,7 @@ public class AplicationImpl extends MinimalEObjectImpl.Container implements Apli
 	protected EList<CreateString> creates;
 
 	/**
-	 * The cached value of the '{@link #getRun() <em>Run</em>}' containment reference list.
+	 * The cached value of the '{@link #getRun() <em>Run</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRun()
@@ -375,7 +368,7 @@ public class AplicationImpl extends MinimalEObjectImpl.Container implements Apli
 	 */
 	public EList<Layout> getContains() {
 		if (contains == null) {
-			contains = new EObjectContainmentWithInverseEList<Layout>(Layout.class, this, AndroidPackage.APLICATION__CONTAINS, AndroidPackage.LAYOUT__LAY_ON);
+			contains = new EObjectWithInverseResolvingEList<Layout>(Layout.class, this, AndroidPackage.APLICATION__CONTAINS, AndroidPackage.LAYOUT__LAY_ON);
 		}
 		return contains;
 	}
@@ -387,7 +380,7 @@ public class AplicationImpl extends MinimalEObjectImpl.Container implements Apli
 	 */
 	public EList<CreateString> getCreates() {
 		if (creates == null) {
-			creates = new EObjectContainmentWithInverseEList<CreateString>(CreateString.class, this, AndroidPackage.APLICATION__CREATES, AndroidPackage.CREATE_STRING__STORED);
+			creates = new EObjectWithInverseResolvingEList<CreateString>(CreateString.class, this, AndroidPackage.APLICATION__CREATES, AndroidPackage.CREATE_STRING__STORED);
 		}
 		return creates;
 	}
@@ -399,7 +392,7 @@ public class AplicationImpl extends MinimalEObjectImpl.Container implements Apli
 	 */
 	public EList<Activity> getRun() {
 		if (run == null) {
-			run = new EObjectContainmentWithInverseEList<Activity>(Activity.class, this, AndroidPackage.APLICATION__RUN, AndroidPackage.ACTIVITY__RUNS_IN);
+			run = new EObjectWithInverseResolvingEList<Activity>(Activity.class, this, AndroidPackage.APLICATION__RUN, AndroidPackage.ACTIVITY__RUNS_IN);
 		}
 		return run;
 	}

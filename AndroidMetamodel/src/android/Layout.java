@@ -83,7 +83,7 @@ public interface Layout extends EObject {
 	void setType(LayoutType value);
 
 	/**
-	 * Returns the value of the '<em><b>Contains</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Contains</b></em>' reference list.
 	 * The list contents are of type {@link android.Widget}.
 	 * It is bidirectional and its opposite is '{@link android.Widget#getLayoutOwner <em>Layout Owner</em>}'.
 	 * <!-- begin-user-doc -->
@@ -92,16 +92,16 @@ public interface Layout extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Contains</em>' containment reference list.
+	 * @return the value of the '<em>Contains</em>' reference list.
 	 * @see android.AndroidPackage#getLayout_Contains()
 	 * @see android.Widget#getLayoutOwner
-	 * @model opposite="layoutOwner" containment="true"
+	 * @model opposite="layoutOwner"
 	 * @generated
 	 */
 	EList<Widget> getContains();
 
 	/**
-	 * Returns the value of the '<em><b>Lay On</b></em>' container reference.
+	 * Returns the value of the '<em><b>Lay On</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link android.Aplication#getContains <em>Contains</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -109,20 +109,20 @@ public interface Layout extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Lay On</em>' container reference.
+	 * @return the value of the '<em>Lay On</em>' reference.
 	 * @see #setLayOn(Aplication)
 	 * @see android.AndroidPackage#getLayout_LayOn()
 	 * @see android.Aplication#getContains
-	 * @model opposite="contains" required="true" transient="false"
+	 * @model opposite="contains" required="true"
 	 * @generated
 	 */
 	Aplication getLayOn();
 
 	/**
-	 * Sets the value of the '{@link android.Layout#getLayOn <em>Lay On</em>}' container reference.
+	 * Sets the value of the '{@link android.Layout#getLayOn <em>Lay On</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Lay On</em>' container reference.
+	 * @param value the new value of the '<em>Lay On</em>' reference.
 	 * @see #getLayOn()
 	 * @generated
 	 */

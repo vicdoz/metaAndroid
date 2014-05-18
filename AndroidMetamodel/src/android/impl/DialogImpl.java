@@ -6,17 +6,12 @@ import android.Action;
 import android.AndroidPackage;
 import android.Dialog;
 import android.Length;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -73,6 +68,16 @@ public class DialogImpl extends MinimalEObjectImpl.Container implements Dialog {
 	 * @ordered
 	 */
 	protected String text = TEXT_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getActionOwner() <em>Action Owner</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActionOwner()
+	 * @generated
+	 * @ordered
+	 */
+	protected Action actionOwner;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -141,8 +146,24 @@ public class DialogImpl extends MinimalEObjectImpl.Container implements Dialog {
 	 * @generated
 	 */
 	public Action getActionOwner() {
-		if (eContainerFeatureID() != AndroidPackage.DIALOG__ACTION_OWNER) return null;
-		return (Action)eInternalContainer();
+		if (actionOwner != null && actionOwner.eIsProxy()) {
+			InternalEObject oldActionOwner = (InternalEObject)actionOwner;
+			actionOwner = (Action)eResolveProxy(oldActionOwner);
+			if (actionOwner != oldActionOwner) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AndroidPackage.DIALOG__ACTION_OWNER, oldActionOwner, actionOwner));
+			}
+		}
+		return actionOwner;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Action basicGetActionOwner() {
+		return actionOwner;
 	}
 
 	/**
@@ -151,7 +172,12 @@ public class DialogImpl extends MinimalEObjectImpl.Container implements Dialog {
 	 * @generated
 	 */
 	public NotificationChain basicSetActionOwner(Action newActionOwner, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newActionOwner, AndroidPackage.DIALOG__ACTION_OWNER, msgs);
+		Action oldActionOwner = actionOwner;
+		actionOwner = newActionOwner;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AndroidPackage.DIALOG__ACTION_OWNER, oldActionOwner, newActionOwner);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
 		return msgs;
 	}
 
@@ -161,12 +187,10 @@ public class DialogImpl extends MinimalEObjectImpl.Container implements Dialog {
 	 * @generated
 	 */
 	public void setActionOwner(Action newActionOwner) {
-		if (newActionOwner != eInternalContainer() || (eContainerFeatureID() != AndroidPackage.DIALOG__ACTION_OWNER && newActionOwner != null)) {
-			if (EcoreUtil.isAncestor(this, newActionOwner))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+		if (newActionOwner != actionOwner) {
 			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
+			if (actionOwner != null)
+				msgs = ((InternalEObject)actionOwner).eInverseRemove(this, AndroidPackage.ACTION__SHOWS, Action.class, msgs);
 			if (newActionOwner != null)
 				msgs = ((InternalEObject)newActionOwner).eInverseAdd(this, AndroidPackage.ACTION__SHOWS, Action.class, msgs);
 			msgs = basicSetActionOwner(newActionOwner, msgs);
@@ -185,8 +209,8 @@ public class DialogImpl extends MinimalEObjectImpl.Container implements Dialog {
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case AndroidPackage.DIALOG__ACTION_OWNER:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
+				if (actionOwner != null)
+					msgs = ((InternalEObject)actionOwner).eInverseRemove(this, AndroidPackage.ACTION__SHOWS, Action.class, msgs);
 				return basicSetActionOwner((Action)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -212,20 +236,6 @@ public class DialogImpl extends MinimalEObjectImpl.Container implements Dialog {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case AndroidPackage.DIALOG__ACTION_OWNER:
-				return eInternalContainer().eInverseRemove(this, AndroidPackage.ACTION__SHOWS, Action.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case AndroidPackage.DIALOG__TIME:
@@ -233,7 +243,8 @@ public class DialogImpl extends MinimalEObjectImpl.Container implements Dialog {
 			case AndroidPackage.DIALOG__TEXT:
 				return getText();
 			case AndroidPackage.DIALOG__ACTION_OWNER:
-				return getActionOwner();
+				if (resolve) return getActionOwner();
+				return basicGetActionOwner();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -293,7 +304,7 @@ public class DialogImpl extends MinimalEObjectImpl.Container implements Dialog {
 			case AndroidPackage.DIALOG__TEXT:
 				return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
 			case AndroidPackage.DIALOG__ACTION_OWNER:
-				return getActionOwner() != null;
+				return actionOwner != null;
 		}
 		return super.eIsSet(featureID);
 	}

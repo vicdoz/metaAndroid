@@ -87,7 +87,7 @@ public interface AndroidPackage extends EPackage {
 	int LAYOUT__TYPE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Contains</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Contains</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -96,7 +96,7 @@ public interface AndroidPackage extends EPackage {
 	int LAYOUT__CONTAINS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Lay On</b></em>' container reference.
+	 * The feature id for the '<em><b>Lay On</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -169,7 +169,7 @@ public interface AndroidPackage extends EPackage {
 	int WIDGET__ID = 2;
 
 	/**
-	 * The feature id for the '<em><b>Layout Owner</b></em>' container reference.
+	 * The feature id for the '<em><b>Layout Owner</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -233,7 +233,7 @@ public interface AndroidPackage extends EPackage {
 	int BUTTON__ID = WIDGET__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout Owner</b></em>' container reference.
+	 * The feature id for the '<em><b>Layout Owner</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -242,7 +242,7 @@ public interface AndroidPackage extends EPackage {
 	int BUTTON__LAYOUT_OWNER = WIDGET__LAYOUT_OWNER;
 
 	/**
-	 * The feature id for the '<em><b>Triggers</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Triggers</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -306,7 +306,7 @@ public interface AndroidPackage extends EPackage {
 	int TEXT_FIELD__ID = WIDGET__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout Owner</b></em>' container reference.
+	 * The feature id for the '<em><b>Layout Owner</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -379,7 +379,7 @@ public interface AndroidPackage extends EPackage {
 	int TEXT_VIEW__ID = WIDGET__ID;
 
 	/**
-	 * The feature id for the '<em><b>Layout Owner</b></em>' container reference.
+	 * The feature id for the '<em><b>Layout Owner</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -479,7 +479,7 @@ public interface AndroidPackage extends EPackage {
 	int APLICATION__PERMISSIONS = 6;
 
 	/**
-	 * The feature id for the '<em><b>Contains</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Contains</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -488,7 +488,7 @@ public interface AndroidPackage extends EPackage {
 	int APLICATION__CONTAINS = 7;
 
 	/**
-	 * The feature id for the '<em><b>Creates</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Creates</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -497,7 +497,7 @@ public interface AndroidPackage extends EPackage {
 	int APLICATION__CREATES = 8;
 
 	/**
-	 * The feature id for the '<em><b>Run</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Run</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -534,7 +534,7 @@ public interface AndroidPackage extends EPackage {
 	int CREATE_STRING = 6;
 
 	/**
-	 * The feature id for the '<em><b>Stored</b></em>' container reference.
+	 * The feature id for the '<em><b>Stored</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -616,7 +616,7 @@ public interface AndroidPackage extends EPackage {
 	int ACTIVITY__MAIN = 2;
 
 	/**
-	 * The feature id for the '<em><b>Show</b></em>' containment reference.
+	 * The feature id for the '<em><b>Show</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -625,7 +625,7 @@ public interface AndroidPackage extends EPackage {
 	int ACTIVITY__SHOW = 3;
 
 	/**
-	 * The feature id for the '<em><b>Runs In</b></em>' container reference.
+	 * The feature id for the '<em><b>Runs In</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -680,7 +680,7 @@ public interface AndroidPackage extends EPackage {
 	int MENU__ID = 0;
 
 	/**
-	 * The feature id for the '<em><b>Is Showed</b></em>' container reference.
+	 * The feature id for the '<em><b>Is Showed</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -689,7 +689,7 @@ public interface AndroidPackage extends EPackage {
 	int MENU__IS_SHOWED = 1;
 
 	/**
-	 * The feature id for the '<em><b>Has Item</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Has Item</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -762,7 +762,7 @@ public interface AndroidPackage extends EPackage {
 	int ITEM__ID = 3;
 
 	/**
-	 * The feature id for the '<em><b>Menu Owner</b></em>' container reference.
+	 * The feature id for the '<em><b>Menu Owner</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -808,7 +808,7 @@ public interface AndroidPackage extends EPackage {
 	int ACTION__TYPE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Button Owner</b></em>' container reference.
+	 * The feature id for the '<em><b>Button Owner</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -817,7 +817,7 @@ public interface AndroidPackage extends EPackage {
 	int ACTION__BUTTON_OWNER = 1;
 
 	/**
-	 * The feature id for the '<em><b>Shows</b></em>' containment reference.
+	 * The feature id for the '<em><b>Shows</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -872,7 +872,7 @@ public interface AndroidPackage extends EPackage {
 	int DIALOG__TEXT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Action Owner</b></em>' container reference.
+	 * The feature id for the '<em><b>Action Owner</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -899,6 +899,115 @@ public interface AndroidPackage extends EPackage {
 	int DIALOG_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link android.impl.MetaAppImpl <em>Meta App</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see android.impl.MetaAppImpl
+	 * @see android.impl.AndroidPackageImpl#getMetaApp()
+	 * @generated
+	 */
+	int META_APP = 12;
+
+	/**
+	 * The feature id for the '<em><b>Create App</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int META_APP__CREATE_APP = 0;
+
+	/**
+	 * The feature id for the '<em><b>Create Activity</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int META_APP__CREATE_ACTIVITY = 1;
+
+	/**
+	 * The feature id for the '<em><b>Create Menu</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int META_APP__CREATE_MENU = 2;
+
+	/**
+	 * The feature id for the '<em><b>Create String</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int META_APP__CREATE_STRING = 3;
+
+	/**
+	 * The feature id for the '<em><b>Create Layout</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int META_APP__CREATE_LAYOUT = 4;
+
+	/**
+	 * The feature id for the '<em><b>Create Item</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int META_APP__CREATE_ITEM = 5;
+
+	/**
+	 * The feature id for the '<em><b>Create Widget</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int META_APP__CREATE_WIDGET = 6;
+
+	/**
+	 * The feature id for the '<em><b>Create Action</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int META_APP__CREATE_ACTION = 7;
+
+	/**
+	 * The feature id for the '<em><b>Create Dialog</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int META_APP__CREATE_DIALOG = 8;
+
+	/**
+	 * The number of structural features of the '<em>Meta App</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int META_APP_FEATURE_COUNT = 9;
+
+	/**
+	 * The number of operations of the '<em>Meta App</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int META_APP_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link android.LayoutType <em>Layout Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -906,7 +1015,7 @@ public interface AndroidPackage extends EPackage {
 	 * @see android.impl.AndroidPackageImpl#getLayoutType()
 	 * @generated
 	 */
-	int LAYOUT_TYPE = 12;
+	int LAYOUT_TYPE = 13;
 
 	/**
 	 * The meta object id for the '{@link android.InputType <em>Input Type</em>}' enum.
@@ -916,7 +1025,7 @@ public interface AndroidPackage extends EPackage {
 	 * @see android.impl.AndroidPackageImpl#getInputType()
 	 * @generated
 	 */
-	int INPUT_TYPE = 13;
+	int INPUT_TYPE = 14;
 
 	/**
 	 * The meta object id for the '{@link android.ActionType <em>Action Type</em>}' enum.
@@ -926,7 +1035,7 @@ public interface AndroidPackage extends EPackage {
 	 * @see android.impl.AndroidPackageImpl#getActionType()
 	 * @generated
 	 */
-	int ACTION_TYPE = 14;
+	int ACTION_TYPE = 15;
 
 	/**
 	 * The meta object id for the '{@link android.Length <em>Length</em>}' enum.
@@ -936,7 +1045,7 @@ public interface AndroidPackage extends EPackage {
 	 * @see android.impl.AndroidPackageImpl#getLength()
 	 * @generated
 	 */
-	int LENGTH = 15;
+	int LENGTH = 16;
 
 	/**
 	 * The meta object id for the '{@link android.Permissions <em>Permissions</em>}' enum.
@@ -946,7 +1055,7 @@ public interface AndroidPackage extends EPackage {
 	 * @see android.impl.AndroidPackageImpl#getPermissions()
 	 * @generated
 	 */
-	int PERMISSIONS = 16;
+	int PERMISSIONS = 17;
 
 	/**
 	 * The meta object id for the '{@link android.TypeAction <em>Type Action</em>}' enum.
@@ -956,7 +1065,7 @@ public interface AndroidPackage extends EPackage {
 	 * @see android.impl.AndroidPackageImpl#getTypeAction()
 	 * @generated
 	 */
-	int TYPE_ACTION = 17;
+	int TYPE_ACTION = 18;
 
 
 	/**
@@ -992,10 +1101,10 @@ public interface AndroidPackage extends EPackage {
 	EAttribute getLayout_Type();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link android.Layout#getContains <em>Contains</em>}'.
+	 * Returns the meta object for the reference list '{@link android.Layout#getContains <em>Contains</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Contains</em>'.
+	 * @return the meta object for the reference list '<em>Contains</em>'.
 	 * @see android.Layout#getContains()
 	 * @see #getLayout()
 	 * @generated
@@ -1003,10 +1112,10 @@ public interface AndroidPackage extends EPackage {
 	EReference getLayout_Contains();
 
 	/**
-	 * Returns the meta object for the container reference '{@link android.Layout#getLayOn <em>Lay On</em>}'.
+	 * Returns the meta object for the reference '{@link android.Layout#getLayOn <em>Lay On</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Lay On</em>'.
+	 * @return the meta object for the reference '<em>Lay On</em>'.
 	 * @see android.Layout#getLayOn()
 	 * @see #getLayout()
 	 * @generated
@@ -1068,10 +1177,10 @@ public interface AndroidPackage extends EPackage {
 	EAttribute getWidget_Id();
 
 	/**
-	 * Returns the meta object for the container reference '{@link android.Widget#getLayoutOwner <em>Layout Owner</em>}'.
+	 * Returns the meta object for the reference '{@link android.Widget#getLayoutOwner <em>Layout Owner</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Layout Owner</em>'.
+	 * @return the meta object for the reference '<em>Layout Owner</em>'.
 	 * @see android.Widget#getLayoutOwner()
 	 * @see #getWidget()
 	 * @generated
@@ -1089,10 +1198,10 @@ public interface AndroidPackage extends EPackage {
 	EClass getButton();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link android.Button#getTriggers <em>Triggers</em>}'.
+	 * Returns the meta object for the reference list '{@link android.Button#getTriggers <em>Triggers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Triggers</em>'.
+	 * @return the meta object for the reference list '<em>Triggers</em>'.
 	 * @see android.Button#getTriggers()
 	 * @see #getButton()
 	 * @generated
@@ -1218,10 +1327,10 @@ public interface AndroidPackage extends EPackage {
 	EAttribute getAplication_Permissions();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link android.Aplication#getContains <em>Contains</em>}'.
+	 * Returns the meta object for the reference list '{@link android.Aplication#getContains <em>Contains</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Contains</em>'.
+	 * @return the meta object for the reference list '<em>Contains</em>'.
 	 * @see android.Aplication#getContains()
 	 * @see #getAplication()
 	 * @generated
@@ -1229,10 +1338,10 @@ public interface AndroidPackage extends EPackage {
 	EReference getAplication_Contains();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link android.Aplication#getCreates <em>Creates</em>}'.
+	 * Returns the meta object for the reference list '{@link android.Aplication#getCreates <em>Creates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Creates</em>'.
+	 * @return the meta object for the reference list '<em>Creates</em>'.
 	 * @see android.Aplication#getCreates()
 	 * @see #getAplication()
 	 * @generated
@@ -1240,10 +1349,10 @@ public interface AndroidPackage extends EPackage {
 	EReference getAplication_Creates();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link android.Aplication#getRun <em>Run</em>}'.
+	 * Returns the meta object for the reference list '{@link android.Aplication#getRun <em>Run</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Run</em>'.
+	 * @return the meta object for the reference list '<em>Run</em>'.
 	 * @see android.Aplication#getRun()
 	 * @see #getAplication()
 	 * @generated
@@ -1261,10 +1370,10 @@ public interface AndroidPackage extends EPackage {
 	EClass getCreateString();
 
 	/**
-	 * Returns the meta object for the container reference '{@link android.CreateString#getStored <em>Stored</em>}'.
+	 * Returns the meta object for the reference '{@link android.CreateString#getStored <em>Stored</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Stored</em>'.
+	 * @return the meta object for the reference '<em>Stored</em>'.
 	 * @see android.CreateString#getStored()
 	 * @see #getCreateString()
 	 * @generated
@@ -1337,10 +1446,10 @@ public interface AndroidPackage extends EPackage {
 	EAttribute getActivity_Main();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link android.Activity#getShow <em>Show</em>}'.
+	 * Returns the meta object for the reference '{@link android.Activity#getShow <em>Show</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Show</em>'.
+	 * @return the meta object for the reference '<em>Show</em>'.
 	 * @see android.Activity#getShow()
 	 * @see #getActivity()
 	 * @generated
@@ -1348,10 +1457,10 @@ public interface AndroidPackage extends EPackage {
 	EReference getActivity_Show();
 
 	/**
-	 * Returns the meta object for the container reference '{@link android.Activity#getRunsIn <em>Runs In</em>}'.
+	 * Returns the meta object for the reference '{@link android.Activity#getRunsIn <em>Runs In</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Runs In</em>'.
+	 * @return the meta object for the reference '<em>Runs In</em>'.
 	 * @see android.Activity#getRunsIn()
 	 * @see #getActivity()
 	 * @generated
@@ -1391,10 +1500,10 @@ public interface AndroidPackage extends EPackage {
 	EAttribute getMenu_Id();
 
 	/**
-	 * Returns the meta object for the container reference '{@link android.Menu#getIsShowed <em>Is Showed</em>}'.
+	 * Returns the meta object for the reference '{@link android.Menu#getIsShowed <em>Is Showed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Is Showed</em>'.
+	 * @return the meta object for the reference '<em>Is Showed</em>'.
 	 * @see android.Menu#getIsShowed()
 	 * @see #getMenu()
 	 * @generated
@@ -1402,10 +1511,10 @@ public interface AndroidPackage extends EPackage {
 	EReference getMenu_IsShowed();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link android.Menu#getHasItem <em>Has Item</em>}'.
+	 * Returns the meta object for the reference list '{@link android.Menu#getHasItem <em>Has Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Has Item</em>'.
+	 * @return the meta object for the reference list '<em>Has Item</em>'.
 	 * @see android.Menu#getHasItem()
 	 * @see #getMenu()
 	 * @generated
@@ -1467,10 +1576,10 @@ public interface AndroidPackage extends EPackage {
 	EAttribute getItem_Id();
 
 	/**
-	 * Returns the meta object for the container reference '{@link android.Item#getMenuOwner <em>Menu Owner</em>}'.
+	 * Returns the meta object for the reference '{@link android.Item#getMenuOwner <em>Menu Owner</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Menu Owner</em>'.
+	 * @return the meta object for the reference '<em>Menu Owner</em>'.
 	 * @see android.Item#getMenuOwner()
 	 * @see #getItem()
 	 * @generated
@@ -1499,10 +1608,10 @@ public interface AndroidPackage extends EPackage {
 	EAttribute getAction_Type();
 
 	/**
-	 * Returns the meta object for the container reference '{@link android.Action#getButtonOwner <em>Button Owner</em>}'.
+	 * Returns the meta object for the reference '{@link android.Action#getButtonOwner <em>Button Owner</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Button Owner</em>'.
+	 * @return the meta object for the reference '<em>Button Owner</em>'.
 	 * @see android.Action#getButtonOwner()
 	 * @see #getAction()
 	 * @generated
@@ -1510,10 +1619,10 @@ public interface AndroidPackage extends EPackage {
 	EReference getAction_ButtonOwner();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link android.Action#getShows <em>Shows</em>}'.
+	 * Returns the meta object for the reference '{@link android.Action#getShows <em>Shows</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Shows</em>'.
+	 * @return the meta object for the reference '<em>Shows</em>'.
 	 * @see android.Action#getShows()
 	 * @see #getAction()
 	 * @generated
@@ -1553,15 +1662,124 @@ public interface AndroidPackage extends EPackage {
 	EAttribute getDialog_Text();
 
 	/**
-	 * Returns the meta object for the container reference '{@link android.Dialog#getActionOwner <em>Action Owner</em>}'.
+	 * Returns the meta object for the reference '{@link android.Dialog#getActionOwner <em>Action Owner</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Action Owner</em>'.
+	 * @return the meta object for the reference '<em>Action Owner</em>'.
 	 * @see android.Dialog#getActionOwner()
 	 * @see #getDialog()
 	 * @generated
 	 */
 	EReference getDialog_ActionOwner();
+
+	/**
+	 * Returns the meta object for class '{@link android.MetaApp <em>Meta App</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Meta App</em>'.
+	 * @see android.MetaApp
+	 * @generated
+	 */
+	EClass getMetaApp();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link android.MetaApp#getCreateApp <em>Create App</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Create App</em>'.
+	 * @see android.MetaApp#getCreateApp()
+	 * @see #getMetaApp()
+	 * @generated
+	 */
+	EReference getMetaApp_CreateApp();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link android.MetaApp#getCreateActivity <em>Create Activity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Create Activity</em>'.
+	 * @see android.MetaApp#getCreateActivity()
+	 * @see #getMetaApp()
+	 * @generated
+	 */
+	EReference getMetaApp_CreateActivity();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link android.MetaApp#getCreateMenu <em>Create Menu</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Create Menu</em>'.
+	 * @see android.MetaApp#getCreateMenu()
+	 * @see #getMetaApp()
+	 * @generated
+	 */
+	EReference getMetaApp_CreateMenu();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link android.MetaApp#getCreate_String <em>Create String</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Create String</em>'.
+	 * @see android.MetaApp#getCreate_String()
+	 * @see #getMetaApp()
+	 * @generated
+	 */
+	EReference getMetaApp_Create_String();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link android.MetaApp#getCreateLayout <em>Create Layout</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Create Layout</em>'.
+	 * @see android.MetaApp#getCreateLayout()
+	 * @see #getMetaApp()
+	 * @generated
+	 */
+	EReference getMetaApp_CreateLayout();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link android.MetaApp#getCreateItem <em>Create Item</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Create Item</em>'.
+	 * @see android.MetaApp#getCreateItem()
+	 * @see #getMetaApp()
+	 * @generated
+	 */
+	EReference getMetaApp_CreateItem();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link android.MetaApp#getCreateWidget <em>Create Widget</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Create Widget</em>'.
+	 * @see android.MetaApp#getCreateWidget()
+	 * @see #getMetaApp()
+	 * @generated
+	 */
+	EReference getMetaApp_CreateWidget();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link android.MetaApp#getCreateAction <em>Create Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Create Action</em>'.
+	 * @see android.MetaApp#getCreateAction()
+	 * @see #getMetaApp()
+	 * @generated
+	 */
+	EReference getMetaApp_CreateAction();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link android.MetaApp#getCreateDialog <em>Create Dialog</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Create Dialog</em>'.
+	 * @see android.MetaApp#getCreateDialog()
+	 * @see #getMetaApp()
+	 * @generated
+	 */
+	EReference getMetaApp_CreateDialog();
 
 	/**
 	 * Returns the meta object for enum '{@link android.LayoutType <em>Layout Type</em>}'.
@@ -1673,7 +1891,7 @@ public interface AndroidPackage extends EPackage {
 		EAttribute LAYOUT__TYPE = eINSTANCE.getLayout_Type();
 
 		/**
-		 * The meta object literal for the '<em><b>Contains</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Contains</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1681,7 +1899,7 @@ public interface AndroidPackage extends EPackage {
 		EReference LAYOUT__CONTAINS = eINSTANCE.getLayout_Contains();
 
 		/**
-		 * The meta object literal for the '<em><b>Lay On</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Lay On</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1731,7 +1949,7 @@ public interface AndroidPackage extends EPackage {
 		EAttribute WIDGET__ID = eINSTANCE.getWidget_Id();
 
 		/**
-		 * The meta object literal for the '<em><b>Layout Owner</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Layout Owner</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1749,7 +1967,7 @@ public interface AndroidPackage extends EPackage {
 		EClass BUTTON = eINSTANCE.getButton();
 
 		/**
-		 * The meta object literal for the '<em><b>Triggers</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Triggers</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1851,7 +2069,7 @@ public interface AndroidPackage extends EPackage {
 		EAttribute APLICATION__PERMISSIONS = eINSTANCE.getAplication_Permissions();
 
 		/**
-		 * The meta object literal for the '<em><b>Contains</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Contains</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1859,7 +2077,7 @@ public interface AndroidPackage extends EPackage {
 		EReference APLICATION__CONTAINS = eINSTANCE.getAplication_Contains();
 
 		/**
-		 * The meta object literal for the '<em><b>Creates</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Creates</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1867,7 +2085,7 @@ public interface AndroidPackage extends EPackage {
 		EReference APLICATION__CREATES = eINSTANCE.getAplication_Creates();
 
 		/**
-		 * The meta object literal for the '<em><b>Run</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Run</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1885,7 +2103,7 @@ public interface AndroidPackage extends EPackage {
 		EClass CREATE_STRING = eINSTANCE.getCreateString();
 
 		/**
-		 * The meta object literal for the '<em><b>Stored</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Stored</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1943,7 +2161,7 @@ public interface AndroidPackage extends EPackage {
 		EAttribute ACTIVITY__MAIN = eINSTANCE.getActivity_Main();
 
 		/**
-		 * The meta object literal for the '<em><b>Show</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Show</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1951,7 +2169,7 @@ public interface AndroidPackage extends EPackage {
 		EReference ACTIVITY__SHOW = eINSTANCE.getActivity_Show();
 
 		/**
-		 * The meta object literal for the '<em><b>Runs In</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Runs In</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1985,7 +2203,7 @@ public interface AndroidPackage extends EPackage {
 		EAttribute MENU__ID = eINSTANCE.getMenu_Id();
 
 		/**
-		 * The meta object literal for the '<em><b>Is Showed</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Is Showed</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1993,7 +2211,7 @@ public interface AndroidPackage extends EPackage {
 		EReference MENU__IS_SHOWED = eINSTANCE.getMenu_IsShowed();
 
 		/**
-		 * The meta object literal for the '<em><b>Has Item</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Has Item</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2043,7 +2261,7 @@ public interface AndroidPackage extends EPackage {
 		EAttribute ITEM__ID = eINSTANCE.getItem_Id();
 
 		/**
-		 * The meta object literal for the '<em><b>Menu Owner</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Menu Owner</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2069,7 +2287,7 @@ public interface AndroidPackage extends EPackage {
 		EAttribute ACTION__TYPE = eINSTANCE.getAction_Type();
 
 		/**
-		 * The meta object literal for the '<em><b>Button Owner</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Button Owner</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2077,7 +2295,7 @@ public interface AndroidPackage extends EPackage {
 		EReference ACTION__BUTTON_OWNER = eINSTANCE.getAction_ButtonOwner();
 
 		/**
-		 * The meta object literal for the '<em><b>Shows</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Shows</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2111,12 +2329,94 @@ public interface AndroidPackage extends EPackage {
 		EAttribute DIALOG__TEXT = eINSTANCE.getDialog_Text();
 
 		/**
-		 * The meta object literal for the '<em><b>Action Owner</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Action Owner</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference DIALOG__ACTION_OWNER = eINSTANCE.getDialog_ActionOwner();
+
+		/**
+		 * The meta object literal for the '{@link android.impl.MetaAppImpl <em>Meta App</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see android.impl.MetaAppImpl
+		 * @see android.impl.AndroidPackageImpl#getMetaApp()
+		 * @generated
+		 */
+		EClass META_APP = eINSTANCE.getMetaApp();
+
+		/**
+		 * The meta object literal for the '<em><b>Create App</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference META_APP__CREATE_APP = eINSTANCE.getMetaApp_CreateApp();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Activity</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference META_APP__CREATE_ACTIVITY = eINSTANCE.getMetaApp_CreateActivity();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Menu</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference META_APP__CREATE_MENU = eINSTANCE.getMetaApp_CreateMenu();
+
+		/**
+		 * The meta object literal for the '<em><b>Create String</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference META_APP__CREATE_STRING = eINSTANCE.getMetaApp_Create_String();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Layout</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference META_APP__CREATE_LAYOUT = eINSTANCE.getMetaApp_CreateLayout();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Item</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference META_APP__CREATE_ITEM = eINSTANCE.getMetaApp_CreateItem();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Widget</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference META_APP__CREATE_WIDGET = eINSTANCE.getMetaApp_CreateWidget();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Action</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference META_APP__CREATE_ACTION = eINSTANCE.getMetaApp_CreateAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Dialog</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference META_APP__CREATE_DIALOG = eINSTANCE.getMetaApp_CreateDialog();
 
 		/**
 		 * The meta object literal for the '{@link android.LayoutType <em>Layout Type</em>}' enum.

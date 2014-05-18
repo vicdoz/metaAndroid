@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -52,7 +51,17 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	protected ActionType type = TYPE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getShows() <em>Shows</em>}' containment reference.
+	 * The cached value of the '{@link #getButtonOwner() <em>Button Owner</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getButtonOwner()
+	 * @generated
+	 * @ordered
+	 */
+	protected Button buttonOwner;
+
+	/**
+	 * The cached value of the '{@link #getShows() <em>Shows</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getShows()
@@ -107,8 +116,24 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	 * @generated
 	 */
 	public Button getButtonOwner() {
-		if (eContainerFeatureID() != AndroidPackage.ACTION__BUTTON_OWNER) return null;
-		return (Button)eInternalContainer();
+		if (buttonOwner != null && buttonOwner.eIsProxy()) {
+			InternalEObject oldButtonOwner = (InternalEObject)buttonOwner;
+			buttonOwner = (Button)eResolveProxy(oldButtonOwner);
+			if (buttonOwner != oldButtonOwner) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AndroidPackage.ACTION__BUTTON_OWNER, oldButtonOwner, buttonOwner));
+			}
+		}
+		return buttonOwner;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Button basicGetButtonOwner() {
+		return buttonOwner;
 	}
 
 	/**
@@ -117,7 +142,12 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	 * @generated
 	 */
 	public NotificationChain basicSetButtonOwner(Button newButtonOwner, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newButtonOwner, AndroidPackage.ACTION__BUTTON_OWNER, msgs);
+		Button oldButtonOwner = buttonOwner;
+		buttonOwner = newButtonOwner;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AndroidPackage.ACTION__BUTTON_OWNER, oldButtonOwner, newButtonOwner);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
 		return msgs;
 	}
 
@@ -127,12 +157,10 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	 * @generated
 	 */
 	public void setButtonOwner(Button newButtonOwner) {
-		if (newButtonOwner != eInternalContainer() || (eContainerFeatureID() != AndroidPackage.ACTION__BUTTON_OWNER && newButtonOwner != null)) {
-			if (EcoreUtil.isAncestor(this, newButtonOwner))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+		if (newButtonOwner != buttonOwner) {
 			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
+			if (buttonOwner != null)
+				msgs = ((InternalEObject)buttonOwner).eInverseRemove(this, AndroidPackage.BUTTON__TRIGGERS, Button.class, msgs);
 			if (newButtonOwner != null)
 				msgs = ((InternalEObject)newButtonOwner).eInverseAdd(this, AndroidPackage.BUTTON__TRIGGERS, Button.class, msgs);
 			msgs = basicSetButtonOwner(newButtonOwner, msgs);
@@ -148,6 +176,23 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	 * @generated
 	 */
 	public Dialog getShows() {
+		if (shows != null && shows.eIsProxy()) {
+			InternalEObject oldShows = (InternalEObject)shows;
+			shows = (Dialog)eResolveProxy(oldShows);
+			if (shows != oldShows) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AndroidPackage.ACTION__SHOWS, oldShows, shows));
+			}
+		}
+		return shows;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Dialog basicGetShows() {
 		return shows;
 	}
 
@@ -195,12 +240,12 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case AndroidPackage.ACTION__BUTTON_OWNER:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
+				if (buttonOwner != null)
+					msgs = ((InternalEObject)buttonOwner).eInverseRemove(this, AndroidPackage.BUTTON__TRIGGERS, Button.class, msgs);
 				return basicSetButtonOwner((Button)otherEnd, msgs);
 			case AndroidPackage.ACTION__SHOWS:
 				if (shows != null)
-					msgs = ((InternalEObject)shows).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AndroidPackage.ACTION__SHOWS, null, msgs);
+					msgs = ((InternalEObject)shows).eInverseRemove(this, AndroidPackage.DIALOG__ACTION_OWNER, Dialog.class, msgs);
 				return basicSetShows((Dialog)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -228,28 +273,16 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case AndroidPackage.ACTION__BUTTON_OWNER:
-				return eInternalContainer().eInverseRemove(this, AndroidPackage.BUTTON__TRIGGERS, Button.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case AndroidPackage.ACTION__TYPE:
 				return getType();
 			case AndroidPackage.ACTION__BUTTON_OWNER:
-				return getButtonOwner();
+				if (resolve) return getButtonOwner();
+				return basicGetButtonOwner();
 			case AndroidPackage.ACTION__SHOWS:
-				return getShows();
+				if (resolve) return getShows();
+				return basicGetShows();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -308,7 +341,7 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 			case AndroidPackage.ACTION__TYPE:
 				return type != TYPE_EDEFAULT;
 			case AndroidPackage.ACTION__BUTTON_OWNER:
-				return getButtonOwner() != null;
+				return buttonOwner != null;
 			case AndroidPackage.ACTION__SHOWS:
 				return shows != null;
 		}

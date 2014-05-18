@@ -1,10 +1,10 @@
 «IMPORT android»
 
-«DEFINE Root FOR android::Aplication»
+«DEFINE Root FOR MetaApp»
 	
-	«FILE name+"/.project"»<?xml version="1.0" encoding="utf-8"?>
+	«FILE  createApp.name+"/.project"»<?xml version="1.0" encoding="utf-8"?>
 <projectDescription>
-	<name>«name»_project</name>
+	<name>« createApp.name»_project</name>
     <comment></comment>
 	<projects>
 	</projects>
@@ -60,7 +60,7 @@
 #proguard.config=${sdk.dir}/tools/proguard/proguard-android.txt:proguard-project.txt
 
 # Project target.
-target=«targetSDK»«ENDFILE»
+target=« createApp.targetSDK»«ENDFILE»
 	
 «FILE "proguard-project.txt"»# To enable ProGuard in your project, edit project.properties
 # to define the proguard.config property as described in that file.

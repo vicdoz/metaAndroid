@@ -10,7 +10,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class ButtonImpl extends WidgetImpl implements Button {
 	/**
-	 * The cached value of the '{@link #getTriggers() <em>Triggers</em>}' containment reference list.
+	 * The cached value of the '{@link #getTriggers() <em>Triggers</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTriggers()
@@ -63,7 +63,7 @@ public class ButtonImpl extends WidgetImpl implements Button {
 	 */
 	public EList<Action> getTriggers() {
 		if (triggers == null) {
-			triggers = new EObjectContainmentWithInverseEList<Action>(Action.class, this, AndroidPackage.BUTTON__TRIGGERS, AndroidPackage.ACTION__BUTTON_OWNER);
+			triggers = new EObjectWithInverseResolvingEList<Action>(Action.class, this, AndroidPackage.BUTTON__TRIGGERS, AndroidPackage.ACTION__BUTTON_OWNER);
 		}
 		return triggers;
 	}

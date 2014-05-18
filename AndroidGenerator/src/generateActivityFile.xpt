@@ -1,7 +1,7 @@
 «IMPORT android»
 
-«DEFINE Root FOR android::Aplication»
-	«EXPAND GeneraActivtyFichero  FOREACH run.typeSelect(Activity)»
+«DEFINE Root FOR MetaApp»
+	«EXPAND GeneraActivtyFichero  FOREACH  createApp.run.typeSelect(Activity)»
 «ENDDEFINE»
 
 «DEFINE GeneraActivtyFichero  FOR Activity»

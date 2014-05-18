@@ -69,6 +69,7 @@ public class AndroidFactoryImpl extends EFactoryImpl implements AndroidFactory {
 			case AndroidPackage.ITEM: return createItem();
 			case AndroidPackage.ACTION: return createAction();
 			case AndroidPackage.DIALOG: return createDialog();
+			case AndroidPackage.META_APP: return createMetaApp();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -242,6 +243,16 @@ public class AndroidFactoryImpl extends EFactoryImpl implements AndroidFactory {
 	public Dialog createDialog() {
 		DialogImpl dialog = new DialogImpl();
 		return dialog;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MetaApp createMetaApp() {
+		MetaAppImpl metaApp = new MetaAppImpl();
+		return metaApp;
 	}
 
 	/**

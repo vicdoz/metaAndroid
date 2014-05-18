@@ -1,9 +1,9 @@
 «IMPORT android»
 
-«DEFINE Root FOR Aplication»
+«DEFINE Root FOR MetaApp»
 
-«FILE name+"/res/values/strings.xml"»<?xml version="1.0" encoding="utf-8"?>
-<resources> «EXPAND GeneraStrings FOREACH creates.typeSelect(CreateString) »
+«FILE  createApp.name+"/res/values/strings.xml"»<?xml version="1.0" encoding="utf-8"?>
+<resources> «EXPAND GeneraStrings FOREACH  createApp.creates.typeSelect(CreateString) »
 </resources>
 	«ENDFILE»
 «ENDDEFINE»

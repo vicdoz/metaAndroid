@@ -5,17 +5,12 @@ package android.impl;
 import android.AndroidPackage;
 import android.Layout;
 import android.Widget;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -93,6 +88,16 @@ public class WidgetImpl extends MinimalEObjectImpl.Container implements Widget {
 	 * @ordered
 	 */
 	protected String id = ID_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getLayoutOwner() <em>Layout Owner</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLayoutOwner()
+	 * @generated
+	 * @ordered
+	 */
+	protected Layout layoutOwner;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -182,8 +187,24 @@ public class WidgetImpl extends MinimalEObjectImpl.Container implements Widget {
 	 * @generated
 	 */
 	public Layout getLayoutOwner() {
-		if (eContainerFeatureID() != AndroidPackage.WIDGET__LAYOUT_OWNER) return null;
-		return (Layout)eInternalContainer();
+		if (layoutOwner != null && layoutOwner.eIsProxy()) {
+			InternalEObject oldLayoutOwner = (InternalEObject)layoutOwner;
+			layoutOwner = (Layout)eResolveProxy(oldLayoutOwner);
+			if (layoutOwner != oldLayoutOwner) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AndroidPackage.WIDGET__LAYOUT_OWNER, oldLayoutOwner, layoutOwner));
+			}
+		}
+		return layoutOwner;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Layout basicGetLayoutOwner() {
+		return layoutOwner;
 	}
 
 	/**
@@ -192,7 +213,12 @@ public class WidgetImpl extends MinimalEObjectImpl.Container implements Widget {
 	 * @generated
 	 */
 	public NotificationChain basicSetLayoutOwner(Layout newLayoutOwner, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newLayoutOwner, AndroidPackage.WIDGET__LAYOUT_OWNER, msgs);
+		Layout oldLayoutOwner = layoutOwner;
+		layoutOwner = newLayoutOwner;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AndroidPackage.WIDGET__LAYOUT_OWNER, oldLayoutOwner, newLayoutOwner);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
 		return msgs;
 	}
 
@@ -202,12 +228,10 @@ public class WidgetImpl extends MinimalEObjectImpl.Container implements Widget {
 	 * @generated
 	 */
 	public void setLayoutOwner(Layout newLayoutOwner) {
-		if (newLayoutOwner != eInternalContainer() || (eContainerFeatureID() != AndroidPackage.WIDGET__LAYOUT_OWNER && newLayoutOwner != null)) {
-			if (EcoreUtil.isAncestor(this, newLayoutOwner))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+		if (newLayoutOwner != layoutOwner) {
 			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
+			if (layoutOwner != null)
+				msgs = ((InternalEObject)layoutOwner).eInverseRemove(this, AndroidPackage.LAYOUT__CONTAINS, Layout.class, msgs);
 			if (newLayoutOwner != null)
 				msgs = ((InternalEObject)newLayoutOwner).eInverseAdd(this, AndroidPackage.LAYOUT__CONTAINS, Layout.class, msgs);
 			msgs = basicSetLayoutOwner(newLayoutOwner, msgs);
@@ -226,8 +250,8 @@ public class WidgetImpl extends MinimalEObjectImpl.Container implements Widget {
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case AndroidPackage.WIDGET__LAYOUT_OWNER:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
+				if (layoutOwner != null)
+					msgs = ((InternalEObject)layoutOwner).eInverseRemove(this, AndroidPackage.LAYOUT__CONTAINS, Layout.class, msgs);
 				return basicSetLayoutOwner((Layout)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -253,20 +277,6 @@ public class WidgetImpl extends MinimalEObjectImpl.Container implements Widget {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case AndroidPackage.WIDGET__LAYOUT_OWNER:
-				return eInternalContainer().eInverseRemove(this, AndroidPackage.LAYOUT__CONTAINS, Layout.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case AndroidPackage.WIDGET__NAME:
@@ -276,7 +286,8 @@ public class WidgetImpl extends MinimalEObjectImpl.Container implements Widget {
 			case AndroidPackage.WIDGET__ID:
 				return getId();
 			case AndroidPackage.WIDGET__LAYOUT_OWNER:
-				return getLayoutOwner();
+				if (resolve) return getLayoutOwner();
+				return basicGetLayoutOwner();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -344,7 +355,7 @@ public class WidgetImpl extends MinimalEObjectImpl.Container implements Widget {
 			case AndroidPackage.WIDGET__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case AndroidPackage.WIDGET__LAYOUT_OWNER:
-				return getLayoutOwner() != null;
+				return layoutOwner != null;
 		}
 		return super.eIsSet(featureID);
 	}

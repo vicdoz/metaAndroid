@@ -1,14 +1,16 @@
 «IMPORT android»
 
-«DEFINE Root FOR android::Aplication»
-	«EXPAND GeneraLayoutFichero  FOREACH contains.typeSelect(Layout)»
+«DEFINE Root FOR MetaApp»
+	«EXPAND GeneraLayoutFichero  FOREACH  createApp.contains.typeSelect(Layout)»
 «ENDDEFINE»
 
 «DEFINE GeneraLayoutFichero  FOR Layout»
 	«FILE this.layOn.name+"/res/layout/"+this.name+".xml"»<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="«type»" >
+    «IF type.toString() == 'LAND'» android:orientation="HORIZONTAL" >
+    «ELSE» android:orientation="VERTICAL"«ENDIF»
+   
     «EXPAND GeneraBoton  FOREACH contains.typeSelect(Button)»
    	«EXPAND GeneraTextView  FOREACH contains.typeSelect(TextView)»
     «EXPAND GeneraTextField  FOREACH contains.typeSelect(TextField)»

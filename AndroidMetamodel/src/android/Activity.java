@@ -106,7 +106,7 @@ public interface Activity extends EObject {
 	void setMain(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Show</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Show</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link android.Menu#getIsShowed <em>Is Showed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -114,27 +114,27 @@ public interface Activity extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Show</em>' containment reference.
+	 * @return the value of the '<em>Show</em>' reference.
 	 * @see #setShow(Menu)
 	 * @see android.AndroidPackage#getActivity_Show()
 	 * @see android.Menu#getIsShowed
-	 * @model opposite="isShowed" containment="true"
+	 * @model opposite="isShowed"
 	 * @generated
 	 */
 	Menu getShow();
 
 	/**
-	 * Sets the value of the '{@link android.Activity#getShow <em>Show</em>}' containment reference.
+	 * Sets the value of the '{@link android.Activity#getShow <em>Show</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Show</em>' containment reference.
+	 * @param value the new value of the '<em>Show</em>' reference.
 	 * @see #getShow()
 	 * @generated
 	 */
 	void setShow(Menu value);
 
 	/**
-	 * Returns the value of the '<em><b>Runs In</b></em>' container reference.
+	 * Returns the value of the '<em><b>Runs In</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link android.Aplication#getRun <em>Run</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -142,20 +142,20 @@ public interface Activity extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Runs In</em>' container reference.
+	 * @return the value of the '<em>Runs In</em>' reference.
 	 * @see #setRunsIn(Aplication)
 	 * @see android.AndroidPackage#getActivity_RunsIn()
 	 * @see android.Aplication#getRun
-	 * @model opposite="run" required="true" transient="false"
+	 * @model opposite="run" required="true"
 	 * @generated
 	 */
 	Aplication getRunsIn();
 
 	/**
-	 * Sets the value of the '{@link android.Activity#getRunsIn <em>Runs In</em>}' container reference.
+	 * Sets the value of the '{@link android.Activity#getRunsIn <em>Runs In</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Runs In</em>' container reference.
+	 * @param value the new value of the '<em>Runs In</em>' reference.
 	 * @see #getRunsIn()
 	 * @generated
 	 */

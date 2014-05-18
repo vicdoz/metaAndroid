@@ -103,5 +103,16 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Android.ecore#//Dialog/text"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Android.ecore#//Dialog/actionOwner"/>
     </genClasses>
+    <genClasses ecoreClass="Android.ecore#//MetaApp">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Android.ecore#//MetaApp/createApp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Android.ecore#//MetaApp/createActivity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Android.ecore#//MetaApp/createMenu"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Android.ecore#//MetaApp/create_String"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Android.ecore#//MetaApp/createLayout"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Android.ecore#//MetaApp/createItem"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Android.ecore#//MetaApp/createWidget"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Android.ecore#//MetaApp/createAction"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Android.ecore#//MetaApp/createDialog"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

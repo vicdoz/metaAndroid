@@ -79,7 +79,7 @@ public interface Dialog extends EObject {
 	void setText(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Action Owner</b></em>' container reference.
+	 * Returns the value of the '<em><b>Action Owner</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link android.Action#getShows <em>Shows</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -87,20 +87,20 @@ public interface Dialog extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Action Owner</em>' container reference.
+	 * @return the value of the '<em>Action Owner</em>' reference.
 	 * @see #setActionOwner(Action)
 	 * @see android.AndroidPackage#getDialog_ActionOwner()
 	 * @see android.Action#getShows
-	 * @model opposite="shows" required="true" transient="false"
+	 * @model opposite="shows" required="true"
 	 * @generated
 	 */
 	Action getActionOwner();
 
 	/**
-	 * Sets the value of the '{@link android.Dialog#getActionOwner <em>Action Owner</em>}' container reference.
+	 * Sets the value of the '{@link android.Dialog#getActionOwner <em>Action Owner</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Action Owner</em>' container reference.
+	 * @param value the new value of the '<em>Action Owner</em>' reference.
 	 * @see #getActionOwner()
 	 * @generated
 	 */

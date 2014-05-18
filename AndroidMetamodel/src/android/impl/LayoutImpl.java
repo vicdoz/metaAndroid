@@ -8,23 +8,15 @@ import android.Aplication;
 import android.Layout;
 import android.LayoutType;
 import android.Widget;
-
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -86,7 +78,7 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 	protected LayoutType type = TYPE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getContains() <em>Contains</em>}' containment reference list.
+	 * The cached value of the '{@link #getContains() <em>Contains</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getContains()
@@ -94,6 +86,16 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 	 * @ordered
 	 */
 	protected EList<Widget> contains;
+
+	/**
+	 * The cached value of the '{@link #getLayOn() <em>Lay On</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLayOn()
+	 * @generated
+	 * @ordered
+	 */
+	protected Aplication layOn;
 
 	/**
 	 * The cached value of the '{@link #getEsMostrado() <em>Es Mostrado</em>}' reference list.
@@ -173,7 +175,7 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 	 */
 	public EList<Widget> getContains() {
 		if (contains == null) {
-			contains = new EObjectContainmentWithInverseEList<Widget>(Widget.class, this, AndroidPackage.LAYOUT__CONTAINS, AndroidPackage.WIDGET__LAYOUT_OWNER);
+			contains = new EObjectWithInverseResolvingEList<Widget>(Widget.class, this, AndroidPackage.LAYOUT__CONTAINS, AndroidPackage.WIDGET__LAYOUT_OWNER);
 		}
 		return contains;
 	}
@@ -184,8 +186,24 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 	 * @generated
 	 */
 	public Aplication getLayOn() {
-		if (eContainerFeatureID() != AndroidPackage.LAYOUT__LAY_ON) return null;
-		return (Aplication)eInternalContainer();
+		if (layOn != null && layOn.eIsProxy()) {
+			InternalEObject oldLayOn = (InternalEObject)layOn;
+			layOn = (Aplication)eResolveProxy(oldLayOn);
+			if (layOn != oldLayOn) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AndroidPackage.LAYOUT__LAY_ON, oldLayOn, layOn));
+			}
+		}
+		return layOn;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Aplication basicGetLayOn() {
+		return layOn;
 	}
 
 	/**
@@ -194,7 +212,12 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 	 * @generated
 	 */
 	public NotificationChain basicSetLayOn(Aplication newLayOn, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newLayOn, AndroidPackage.LAYOUT__LAY_ON, msgs);
+		Aplication oldLayOn = layOn;
+		layOn = newLayOn;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AndroidPackage.LAYOUT__LAY_ON, oldLayOn, newLayOn);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
 		return msgs;
 	}
 
@@ -204,12 +227,10 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 	 * @generated
 	 */
 	public void setLayOn(Aplication newLayOn) {
-		if (newLayOn != eInternalContainer() || (eContainerFeatureID() != AndroidPackage.LAYOUT__LAY_ON && newLayOn != null)) {
-			if (EcoreUtil.isAncestor(this, newLayOn))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+		if (newLayOn != layOn) {
 			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
+			if (layOn != null)
+				msgs = ((InternalEObject)layOn).eInverseRemove(this, AndroidPackage.APLICATION__CONTAINS, Aplication.class, msgs);
 			if (newLayOn != null)
 				msgs = ((InternalEObject)newLayOn).eInverseAdd(this, AndroidPackage.APLICATION__CONTAINS, Aplication.class, msgs);
 			msgs = basicSetLayOn(newLayOn, msgs);
@@ -243,8 +264,8 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 			case AndroidPackage.LAYOUT__CONTAINS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getContains()).basicAdd(otherEnd, msgs);
 			case AndroidPackage.LAYOUT__LAY_ON:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
+				if (layOn != null)
+					msgs = ((InternalEObject)layOn).eInverseRemove(this, AndroidPackage.APLICATION__CONTAINS, Aplication.class, msgs);
 				return basicSetLayOn((Aplication)otherEnd, msgs);
 			case AndroidPackage.LAYOUT__ES_MOSTRADO:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getEsMostrado()).basicAdd(otherEnd, msgs);
@@ -276,20 +297,6 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case AndroidPackage.LAYOUT__LAY_ON:
-				return eInternalContainer().eInverseRemove(this, AndroidPackage.APLICATION__CONTAINS, Aplication.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case AndroidPackage.LAYOUT__NAME:
@@ -299,7 +306,8 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 			case AndroidPackage.LAYOUT__CONTAINS:
 				return getContains();
 			case AndroidPackage.LAYOUT__LAY_ON:
-				return getLayOn();
+				if (resolve) return getLayOn();
+				return basicGetLayOn();
 			case AndroidPackage.LAYOUT__ES_MOSTRADO:
 				return getEsMostrado();
 		}
@@ -378,7 +386,7 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 			case AndroidPackage.LAYOUT__CONTAINS:
 				return contains != null && !contains.isEmpty();
 			case AndroidPackage.LAYOUT__LAY_ON:
-				return getLayOn() != null;
+				return layOn != null;
 			case AndroidPackage.LAYOUT__ES_MOSTRADO:
 				return esMostrado != null && !esMostrado.isEmpty();
 		}

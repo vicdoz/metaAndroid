@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface CreateString extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Stored</b></em>' container reference.
+	 * Returns the value of the '<em><b>Stored</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link android.Aplication#getCreates <em>Creates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -32,20 +32,20 @@ public interface CreateString extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Stored</em>' container reference.
+	 * @return the value of the '<em>Stored</em>' reference.
 	 * @see #setStored(Aplication)
 	 * @see android.AndroidPackage#getCreateString_Stored()
 	 * @see android.Aplication#getCreates
-	 * @model opposite="creates" required="true" transient="false"
+	 * @model opposite="creates" required="true"
 	 * @generated
 	 */
 	Aplication getStored();
 
 	/**
-	 * Sets the value of the '{@link android.CreateString#getStored <em>Stored</em>}' container reference.
+	 * Sets the value of the '{@link android.CreateString#getStored <em>Stored</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Stored</em>' container reference.
+	 * @param value the new value of the '<em>Stored</em>' reference.
 	 * @see #getStored()
 	 * @generated
 	 */

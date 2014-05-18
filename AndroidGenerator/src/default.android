@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<android:MetaApp xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:android="http://android/1.0">
+  <createApp name="Twitter" package="upv" minSDK="12" targetSDK="18" versionCode="1" versionName="1.0" contains="//@createLayout.0 //@createLayout.1 //@createLayout.2" creates="//@create_String.0 //@create_String.1 //@create_String.2" run="//@createActivity.1 //@createActivity.0">
+    <permissions>INTERNET</permissions>
+    <permissions>FINE_LOCATION</permissions>
+    <permissions>COARSE_LOCATION</permissions>
+    <permissions>CAMERA</permissions>
+    <permissions>READ_SMS</permissions>
+  </createApp>
+  <createActivity name="Login" package="upv" main="true" runsIn="//@createApp" muestra="//@createLayout.0"/>
+  <createActivity name="TimeLine" package="upv" show="//@createMenu.0" runsIn="//@createApp" muestra="//@createLayout.1"/>
+  <createMenu id="Menu1" isShowed="//@createActivity.1" hasItem="//@createItem.0 //@createItem.1 //@createItem.2 //@createItem.3"/>
+  <create_String stored="//@createApp" name="User" value="Usuario"/>
+  <create_String stored="//@createApp" name="Password" value="Contraseña"/>
+  <create_String stored="//@createApp" name="AppName" value="Twitter"/>
+  <createLayout name="IntroApp" type="LAND" contains="//@createWidget.5 //@createWidget.7 //@createWidget.6 //@createWidget.4 //@createWidget.3" layOn="//@createApp" esMostrado="//@createActivity.0"/>
+  <createLayout name="Principal" type="LAND" contains="//@createWidget.0 //@createWidget.1" layOn="//@createApp" esMostrado="//@createActivity.1"/>
+  <createLayout name="Mensajes" contains="//@createWidget.2" layOn="//@createApp"/>
+  <createItem tittle="Listas" order="1" id="idlistas" menuOwner="//@createMenu.0"/>
+  <createItem tittle="Configuracion" order="6" id="idconfig" menuOwner="//@createMenu.0"/>
+  <createItem tittle="Cuentas" order="2" id="idCuentas" menuOwner="//@createMenu.0"/>
+  <createItem tittle="Borradores" order="3" id="idborradores" menuOwner="//@createMenu.0"/>
+  <createWidget xsi:type="android:Button" name="Compartir" text="Ir a mensajes" id="id1" layoutOwner="//@createLayout.1" triggers="//@createAction.0"/>
+  <createWidget xsi:type="android:TextField" name="Busqueda" text="Buscar" id="idBusqueda" layoutOwner="//@createLayout.1" input="TEXT"/>
+  <createWidget xsi:type="android:TextView" name="Mensajes privados" text="Messajes privados" id="idPrivateMessages" layoutOwner="//@createLayout.2"/>
+  <createWidget xsi:type="android:TextView" name="User" text="User" id="idLoginLabel" layoutOwner="//@createLayout.0"/>
+  <createWidget xsi:type="android:TextView" name="Password" text="Password" id="idLoginPass" layoutOwner="//@createLayout.0"/>
+  <createWidget xsi:type="android:TextField" name="User" text="User" id="idLoginUser" layoutOwner="//@createLayout.0"/>
+  <createWidget xsi:type="android:TextField" name="Password" text="password" id="idLoginPassText" layoutOwner="//@createLayout.0"/>
+  <createWidget xsi:type="android:Button" name="Login" layoutOwner="//@createLayout.0"/>
+  <createAction buttonOwner="//@createWidget.0" shows="//@createDialog.0"/>
+  <createDialog time="SHORT" text="¿Está seguro de compartirlo?" actionOwner="//@createAction.0"/>
+</android:MetaApp>
