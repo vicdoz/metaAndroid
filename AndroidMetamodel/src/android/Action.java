@@ -19,7 +19,8 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see android.AndroidPackage#getAction()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='onlyOneByType'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot onlyOneByType='self.buttonOwner.triggers -> select(c|c.type = self.type) -> size() = 1'"
  * @generated
  */
 public interface Action extends EObject {

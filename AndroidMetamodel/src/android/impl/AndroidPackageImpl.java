@@ -1067,13 +1067,19 @@ public class AndroidPackageImpl extends EPackageImpl implements AndroidPackage {
 		  (aplicationEClass, 
 		   source, 
 		   new String[] {
-			 "constraints", "mainActivity"
+			 "constraints", "nameLayout mainActivity SDKSize"
 		   });			
 		addAnnotation
 		  (activityEClass, 
 		   source, 
 		   new String[] {
 			 "constraints", "nameActivity"
+		   });			
+		addAnnotation
+		  (actionEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "onlyOneByType"
 		   });	
 	}
 
@@ -1096,13 +1102,21 @@ public class AndroidPackageImpl extends EPackageImpl implements AndroidPackage {
 		  (aplicationEClass, 
 		   source, 
 		   new String[] {
-			 "mainActivity", "self.run -> select(C|C.main = true) -> size() = 1"
+			 "nameLayout", "self.contains -> isUnique(name)",
+			 "mainActivity", "self.run -> select(C|C.main = true) -> size() = 1",
+			 "SDKSize", "if (not self.minSDK -> oclIsUndefined()) then self.minSDK < self.targetSDK else not self.targetSDK ->oclIsUndefined() endif"
 		   });			
 		addAnnotation
 		  (activityEClass, 
 		   source, 
 		   new String[] {
 			 "nameActivity", "self.runsIn.run -> select(c|c.package = self.package and c.name = self.name) -> size() = 1"
+		   });			
+		addAnnotation
+		  (actionEClass, 
+		   source, 
+		   new String[] {
+			 "onlyOneByType", "self.buttonOwner.triggers -> select(c|c.type = self.type) -> size() = 1"
 		   });
 	}
 

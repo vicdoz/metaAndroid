@@ -256,8 +256,39 @@ public class AndroidValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(aplication, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(aplication, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(aplication, diagnostics, context);
+		if (result || diagnostics != null) result &= validateAplication_nameLayout(aplication, diagnostics, context);
 		if (result || diagnostics != null) result &= validateAplication_mainActivity(aplication, diagnostics, context);
+		if (result || diagnostics != null) result &= validateAplication_SDKSize(aplication, diagnostics, context);
 		return result;
+	}
+
+	/**
+	 * The cached validation expression for the nameLayout constraint of '<em>Aplication</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String APLICATION__NAME_LAYOUT__EEXPRESSION = "self.contains -> isUnique(name)";
+
+	/**
+	 * Validates the nameLayout constraint of '<em>Aplication</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateAplication_nameLayout(Aplication aplication, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(AndroidPackage.Literals.APLICATION,
+				 aplication,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "nameLayout",
+				 APLICATION__NAME_LAYOUT__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
 	}
 
 	/**
@@ -284,6 +315,35 @@ public class AndroidValidator extends EObjectValidator {
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "mainActivity",
 				 APLICATION__MAIN_ACTIVITY__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
+	 * The cached validation expression for the SDKSize constraint of '<em>Aplication</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String APLICATION__SDK_SIZE__EEXPRESSION = "if (not self.minSDK -> oclIsUndefined()) then self.minSDK < self.targetSDK else not self.targetSDK ->oclIsUndefined() endif";
+
+	/**
+	 * Validates the SDKSize constraint of '<em>Aplication</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateAplication_SDKSize(Aplication aplication, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(AndroidPackage.Literals.APLICATION,
+				 aplication,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "SDKSize",
+				 APLICATION__SDK_SIZE__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
@@ -370,7 +430,46 @@ public class AndroidValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateAction(Action action, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(action, diagnostics, context);
+		if (!validate_NoCircularContainment(action, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(action, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(action, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(action, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(action, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(action, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(action, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(action, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(action, diagnostics, context);
+		if (result || diagnostics != null) result &= validateAction_onlyOneByType(action, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * The cached validation expression for the onlyOneByType constraint of '<em>Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String ACTION__ONLY_ONE_BY_TYPE__EEXPRESSION = "self.buttonOwner.triggers -> select(c|c.type = self.type) -> size() = 1";
+
+	/**
+	 * Validates the onlyOneByType constraint of '<em>Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateAction_onlyOneByType(Action action, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(AndroidPackage.Literals.ACTION,
+				 action,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "onlyOneByType",
+				 ACTION__ONLY_ONE_BY_TYPE__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
 	}
 
 	/**

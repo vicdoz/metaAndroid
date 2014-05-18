@@ -30,8 +30,8 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see android.AndroidPackage#getAplication()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='mainActivity'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot mainActivity='self.run -> select(C|C.main = true) -> size() = 1'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='nameLayout mainActivity SDKSize'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot nameLayout='self.contains -> isUnique(name)' mainActivity='self.run -> select(C|C.main = true) -> size() = 1' SDKSize='if (not self.minSDK -> oclIsUndefined()) then self.minSDK < self.targetSDK else not self.targetSDK ->oclIsUndefined() endif'"
  * @generated
  */
 public interface Aplication extends EObject {

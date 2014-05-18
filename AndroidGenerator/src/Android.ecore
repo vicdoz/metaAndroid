@@ -65,10 +65,12 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Aplication">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="mainActivity"/>
+      <details key="constraints" value="nameLayout mainActivity SDKSize"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="nameLayout" value="self.contains -> isUnique(name)"/>
       <details key="mainActivity" value="self.run -> select(C|C.main = true) -> size() = 1"/>
+      <details key="SDKSize" value="if (not self.minSDK -> oclIsUndefined()) then self.minSDK &lt; self.targetSDK else not self.targetSDK ->oclIsUndefined() endif"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="package" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -129,6 +131,12 @@
         eType="#//Menu" eOpposite="#//Menu/hasItem"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Action">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="onlyOneByType"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="onlyOneByType" value="self.buttonOwner.triggers -> select(c|c.type = self.type) -> size() = 1"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ActionType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="buttonOwner" lowerBound="1"
         eType="#//Button" eOpposite="#//Button/triggers"/>
