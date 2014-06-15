@@ -1,7 +1,5 @@
-MetaAndroid
-=============
 code generator for android.Designs your application and get the code.
-
+=============
 
 
 
