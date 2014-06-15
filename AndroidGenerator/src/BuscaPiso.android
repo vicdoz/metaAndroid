@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<android:MetaApp xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:android="http://android/1.0">
+  <createApp name="BuscadorDePisos" package="tcp" minSDK="12" targetSDK="18" versionCode="1" versionName="1.0" contains="//@createLayout.1 //@createLayout.2 //@createLayout.0" creates="//@create_String.0" run="//@createActivity.0 //@createActivity.1 //@createActivity.2">
+    <permissions>INTERNET</permissions>
+    <permissions>CAMERA</permissions>
+  </createApp>
+  <createActivity name="Buscador" package="gui" main="true" runsIn="//@createApp" muestra="//@createLayout.0"/>
+  <createActivity name="Perfil" package="gui" runsIn="//@createApp" muestra="//@createLayout.1"/>
+  <createActivity name="Nuevo anuncio" package="gui" show="//@createMenu.0" runsIn="//@createApp" muestra="//@createLayout.2"/>
+  <createMenu id="menu1" isShowed="//@createActivity.2" hasItem="//@createItem.0 //@createItem.1"/>
+  <create_String stored="//@createApp" name="AppName" value="Buscador de pisos"/>
+  <createLayout name="LayoutBuscador" contains="//@createWidget.0 //@createWidget.3" layOn="//@createApp" esMostrado="//@createActivity.0"/>
+  <createLayout name="Layout Perfil" contains="//@createWidget.1 //@createWidget.2" layOn="//@createApp" esMostrado="//@createActivity.1"/>
+  <createLayout name="LayoutNuevo Anuncio" contains="//@createWidget.4 //@createWidget.5 //@createWidget.6 //@createWidget.7 //@createWidget.8 //@createWidget.9 //@createWidget.11 //@createWidget.10" layOn="//@createApp" esMostrado="//@createActivity.2"/>
+  <createItem tittle="Configuracion" order="1" id="id1" menuOwner="//@createMenu.0"/>
+  <createItem tittle="Modo lista o modo cuadricula" order="2" showAsAction="IFROOM" id="id2" menuOwner="//@createMenu.0"/>
+  <createWidget xsi:type="android:Button" name="Buscar" text="Buscar" id="idBuscar" layoutOwner="//@createLayout.0" triggers="//@createAction.0 //@createAction.1"/>
+  <createWidget xsi:type="android:TextView" name="Nombre" text="Nombre" id="idNombre" layoutOwner="//@createLayout.1"/>
+  <createWidget xsi:type="android:TextView" name="labelApellido" text="Apellidos" id="idApellidos" layoutOwner="//@createLayout.1"/>
+  <createWidget xsi:type="android:TextField" name="Ciudad" text="Ciudad" id="idCiudad" layoutOwner="//@createLayout.0" input="TEXT"/>
+  <createWidget xsi:type="android:TextField" name="Precio" id="idPrecio" layoutOwner="//@createLayout.2" input="NUMERIC"/>
+  <createWidget xsi:type="android:TextField" name="Ciudad" text="" id="idCiudad" layoutOwner="//@createLayout.2" input="TEXT"/>
+  <createWidget xsi:type="android:TextView" name="Precio" text="Precio" id="idPrecio" layoutOwner="//@createLayout.2"/>
+  <createWidget xsi:type="android:TextView" name="Ciudad" text="Ciudad" id="idCiudad" layoutOwner="//@createLayout.2"/>
+  <createWidget xsi:type="android:TextView" name="Habitaciones" text="Habitaciones disponibles" id="idhab" layoutOwner="//@createLayout.2"/>
+  <createWidget xsi:type="android:TextField" name="nHabitaciones" id="idHab" layoutOwner="//@createLayout.2" input="NUMERIC"/>
+  <createWidget xsi:type="android:TextView" name="Descripcion" text="descripcion" id="idDescript" layoutOwner="//@createLayout.2"/>
+  <createWidget xsi:type="android:TextField" name="Descripcion" id="idDescrp" layoutOwner="//@createLayout.2" input="TEXT"/>
+  <createAction buttonOwner="//@createWidget.0" shows="//@createDialog.0"/>
+  <createAction type="LONGCLICK" buttonOwner="//@createWidget.0" shows="//@createDialog.1"/>
+  <createDialog time="SHORT" text="¿Seguro que desea buscar en esta ciudad?" actionOwner="//@createAction.0"/>
+  <createDialog text="Consulta con tiempo excesivo¿Quiere seguir esperando?" actionOwner="//@createAction.1"/>
+</android:MetaApp>

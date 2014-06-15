@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+ <item
+        android:id="id1"
+        android:orderInCategory="1"
+        android:showAsAction="ALWAYS"
+        android:title="Configuracion"/>
+
+ <item
+        android:id="id2"
+        android:orderInCategory="2"
+        android:showAsAction="IFROOM"
+        android:title="Modo lista o modo cuadricula"/>
+
+</menu>

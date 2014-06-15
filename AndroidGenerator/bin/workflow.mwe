@@ -1,6 +1,6 @@
 <workflow> 
-  <property name="modelFile" value="default.android"/> 
-  <property name="metaModelPackage" value="android.AndroidPackage"/> 
+  <property name="modelFile" value="ejemploTwitter.android"/> 
+  <property name="metaModelPackage" value="android2.AndroidPackage"/> 
   <property name="srcGenPath" value="src-gen"/> 
   <property name="fileEncoding" value="ISO-8859-1"/> 
 

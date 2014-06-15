@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     android:orientation="VERTICAL"
+   
+    
+   	
+   <TextView
+        android:id="@+id/idPrecio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Precio" />
+
+   <TextView
+        android:id="@+id/idCiudad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ciudad" />
+
+   <TextView
+        android:id="@+id/idhab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Habitaciones disponibles" />
+
+   <TextView
+        android:id="@+id/idDescript"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="descripcion" />
+
+    
+    <EditText
+        android:id="@+id/idPrecio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" >
+        android:inputType="NUMERIC"
+        <requestFocus />
+
+    <EditText
+        android:id="@+id/idCiudad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" >
+        android:inputType="TEXT"
+        <requestFocus />
+
+    <EditText
+        android:id="@+id/idHab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" >
+        android:inputType="NUMERIC"
+        <requestFocus />
+
+    <EditText
+        android:id="@+id/idDescrp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" >
+        android:inputType="TEXT"
+        <requestFocus />
+
+</LinearLayout>
+	

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:android="http://android/1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_1iDSYN68EeO8U4Ur9B-XAQ" type="Android" name="default.android_diagram" measurementUnit="Pixel">
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:android="http://android/1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_1iDSYN68EeO8U4Ur9B-XAQ" type="Android" name="ejemploTwitter.android_diagram" measurementUnit="Pixel">
   <children xmi:type="notation:Node" xmi:id="_2bnXoN68EeO8U4Ur9B-XAQ" type="2001">
     <children xmi:type="notation:DecorationNode" xmi:id="_2brCAN68EeO8U4Ur9B-XAQ" type="5001"/>
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_2bnXod68EeO8U4Ur9B-XAQ"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_2bnXot68EeO8U4Ur9B-XAQ" fontName="Segoe UI"/>
-    <element xmi:type="android:Aplication" href="default.android#//@createApp"/>
+    <element xmi:type="android:Aplication" href="ejemploTwitter.android#//@createApp"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2bn-sN68EeO8U4Ur9B-XAQ" x="35" y="110"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_25ltEN68EeO8U4Ur9B-XAQ" type="2008">
@@ -12,7 +12,7 @@
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_25ltEd68EeO8U4Ur9B-XAQ"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_25ltEt68EeO8U4Ur9B-XAQ" fontName="Segoe UI"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_25ltE968EeO8U4Ur9B-XAQ"/>
-    <element xmi:type="android:Layout" href="default.android#//@createLayout.0"/>
+    <element xmi:type="android:Layout" href="ejemploTwitter.android#//@createLayout.0"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_25ltFN68EeO8U4Ur9B-XAQ" x="165" y="170"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_80OfgN68EeO8U4Ur9B-XAQ" type="2008">
@@ -20,7 +20,7 @@
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_80Ofgd68EeO8U4Ur9B-XAQ"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_80Ofgt68EeO8U4Ur9B-XAQ" fontName="Segoe UI"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_80Ofg968EeO8U4Ur9B-XAQ"/>
-    <element xmi:type="android:Layout" href="default.android#//@createLayout.1"/>
+    <element xmi:type="android:Layout" href="ejemploTwitter.android#//@createLayout.1"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_80OfhN68EeO8U4Ur9B-XAQ" x="340" y="165"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_-GbHMN68EeO8U4Ur9B-XAQ" type="2008">
@@ -28,7 +28,7 @@
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_-GbHMd68EeO8U4Ur9B-XAQ"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_-GbHMt68EeO8U4Ur9B-XAQ" fontName="Segoe UI"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_-GbHM968EeO8U4Ur9B-XAQ"/>
-    <element xmi:type="android:Layout" href="default.android#//@createLayout.2"/>
+    <element xmi:type="android:Layout" href="ejemploTwitter.android#//@createLayout.2"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-GbHNN68EeO8U4Ur9B-XAQ" x="470" y="140"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_EjJTAN69EeO8U4Ur9B-XAQ" type="2006">
@@ -36,7 +36,7 @@
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_EjJTAd69EeO8U4Ur9B-XAQ"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_EjJTAt69EeO8U4Ur9B-XAQ" fontName="Segoe UI"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_EjJTA969EeO8U4Ur9B-XAQ"/>
-    <element xmi:type="android:Button" href="default.android#//@createWidget.0"/>
+    <element xmi:type="android:Button" href="ejemploTwitter.android#//@createWidget.0"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EjJTBN69EeO8U4Ur9B-XAQ" x="325" y="345"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_I61sAN69EeO8U4Ur9B-XAQ" type="2009">
@@ -44,7 +44,7 @@
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_I61sAd69EeO8U4Ur9B-XAQ"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_I61sAt69EeO8U4Ur9B-XAQ" fontName="Segoe UI"/>
     <styles xmi:type="notation:FillStyle" xmi:id="_I61sA969EeO8U4Ur9B-XAQ"/>
-    <element xmi:type="android:TextField" href="default.android#//@createWidget.1"/>
+    <element xmi:type="android:TextField" href="ejemploTwitter.android#//@createWidget.1"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I61sBN69EeO8U4Ur9B-XAQ" x="440" y="270"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_UIyLIN69EeO8U4Ur9B-XAQ" type="2012">
@@ -52,7 +52,7 @@
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_UIyLId69EeO8U4Ur9B-XAQ"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_UIyLIt69EeO8U4Ur9B-XAQ" fontName="Segoe UI"/>
     <styles xmi:type="notation:FillStyle" xmi:id="_UIyLI969EeO8U4Ur9B-XAQ"/>
-    <element xmi:type="android:TextView" href="default.android#//@createWidget.2"/>
+    <element xmi:type="android:TextView" href="ejemploTwitter.android#//@createWidget.2"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UIyLJN69EeO8U4Ur9B-XAQ" x="570" y="200" width="136"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_cBo9wN69EeO8U4Ur9B-XAQ" type="2010">
@@ -60,7 +60,7 @@
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_cBo9wd69EeO8U4Ur9B-XAQ"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_cBo9wt69EeO8U4Ur9B-XAQ" fontName="Segoe UI"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_cBo9w969EeO8U4Ur9B-XAQ"/>
-    <element xmi:type="android:Activity" href="default.android#//@createActivity.0"/>
+    <element xmi:type="android:Activity" href="ejemploTwitter.android#//@createActivity.0"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cBo9xN69EeO8U4Ur9B-XAQ" x="15" y="170"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_j6DrgN69EeO8U4Ur9B-XAQ" type="2010">
@@ -68,7 +68,7 @@
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_j6Drgd69EeO8U4Ur9B-XAQ"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_j6Drgt69EeO8U4Ur9B-XAQ" fontName="Segoe UI"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_j6Drg969EeO8U4Ur9B-XAQ"/>
-    <element xmi:type="android:Activity" href="default.android#//@createActivity.1"/>
+    <element xmi:type="android:Activity" href="ejemploTwitter.android#//@createActivity.1"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_j6DrhN69EeO8U4Ur9B-XAQ" x="383" y="37"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_FJvjgN6-EeO8U4Ur9B-XAQ" type="2002">
@@ -76,7 +76,7 @@
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_FJvjgd6-EeO8U4Ur9B-XAQ"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_FJvjgt6-EeO8U4Ur9B-XAQ" fontName="Segoe UI"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_FJvjg96-EeO8U4Ur9B-XAQ"/>
-    <element xmi:type="android:CreateString" href="default.android#//@create_String.0"/>
+    <element xmi:type="android:CreateString" href="ejemploTwitter.android#//@create_String.0"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FJvjhN6-EeO8U4Ur9B-XAQ" x="62" y="25"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_JS7mcN6-EeO8U4Ur9B-XAQ" type="2002">
@@ -84,7 +84,7 @@
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_JS7mcd6-EeO8U4Ur9B-XAQ"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_JS7mct6-EeO8U4Ur9B-XAQ" fontName="Segoe UI"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_JS7mc96-EeO8U4Ur9B-XAQ"/>
-    <element xmi:type="android:CreateString" href="default.android#//@create_String.1"/>
+    <element xmi:type="android:CreateString" href="ejemploTwitter.android#//@create_String.1"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JS7mdN6-EeO8U4Ur9B-XAQ" x="140" y="25"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_PWYWoN6-EeO8U4Ur9B-XAQ" type="2011">
@@ -92,7 +92,7 @@
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_PWYWod6-EeO8U4Ur9B-XAQ"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_PWYWot6-EeO8U4Ur9B-XAQ" fontName="Segoe UI"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_PWYWo96-EeO8U4Ur9B-XAQ"/>
-    <element xmi:type="android:Menu" href="default.android#//@createMenu.0"/>
+    <element xmi:type="android:Menu" href="ejemploTwitter.android#//@createMenu.0"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PWYWpN6-EeO8U4Ur9B-XAQ" x="587" y="36"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_RbBH4N6-EeO8U4Ur9B-XAQ" type="2005">
@@ -100,7 +100,7 @@
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_RbBu8N6-EeO8U4Ur9B-XAQ"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_RbBu8d6-EeO8U4Ur9B-XAQ" fontName="Segoe UI"/>
     <styles xmi:type="notation:FillStyle" xmi:id="_RbBu8t6-EeO8U4Ur9B-XAQ"/>
-    <element xmi:type="android:Item" href="default.android#//@createItem.0"/>
+    <element xmi:type="android:Item" href="ejemploTwitter.android#//@createItem.0"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RbBu896-EeO8U4Ur9B-XAQ" x="750" y="25"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_XqdFoN6-EeO8U4Ur9B-XAQ" type="2005">
@@ -108,7 +108,7 @@
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_XqdFod6-EeO8U4Ur9B-XAQ"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_XqdFot6-EeO8U4Ur9B-XAQ" fontName="Segoe UI"/>
     <styles xmi:type="notation:FillStyle" xmi:id="_XqdFo96-EeO8U4Ur9B-XAQ"/>
-    <element xmi:type="android:Item" href="default.android#//@createItem.1"/>
+    <element xmi:type="android:Item" href="ejemploTwitter.android#//@createItem.1"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XqdFpN6-EeO8U4Ur9B-XAQ" x="750" y="-15"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_dtPugN6-EeO8U4Ur9B-XAQ" type="2005">
@@ -116,7 +116,7 @@
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_dtPugd6-EeO8U4Ur9B-XAQ"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_dtPugt6-EeO8U4Ur9B-XAQ" fontName="Segoe UI"/>
     <styles xmi:type="notation:FillStyle" xmi:id="_dtPug96-EeO8U4Ur9B-XAQ"/>
-    <element xmi:type="android:Item" href="default.android#//@createItem.2"/>
+    <element xmi:type="android:Item" href="ejemploTwitter.android#//@createItem.2"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dtPuhN6-EeO8U4Ur9B-XAQ" x="750" y="105"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_f6-KUN6-EeO8U4Ur9B-XAQ" type="2005">
@@ -124,14 +124,14 @@
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_f6-KUd6-EeO8U4Ur9B-XAQ"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_f6-KUt6-EeO8U4Ur9B-XAQ" fontName="Segoe UI"/>
     <styles xmi:type="notation:FillStyle" xmi:id="_f6-KU96-EeO8U4Ur9B-XAQ"/>
-    <element xmi:type="android:Item" href="default.android#//@createItem.3"/>
+    <element xmi:type="android:Item" href="ejemploTwitter.android#//@createItem.3"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_f6-KVN6-EeO8U4Ur9B-XAQ" x="750" y="65"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_xBDhgN6-EeO8U4Ur9B-XAQ" type="2003">
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_xBDhgd6-EeO8U4Ur9B-XAQ"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_xBDhgt6-EeO8U4Ur9B-XAQ" fontName="Segoe UI"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_xBDhg96-EeO8U4Ur9B-XAQ"/>
-    <element xmi:type="android:Action" href="default.android#//@createAction.0"/>
+    <element xmi:type="android:Action" href="ejemploTwitter.android#//@createAction.0"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xBDhhN6-EeO8U4Ur9B-XAQ" x="505" y="360"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_yQmd0N6-EeO8U4Ur9B-XAQ" type="2007">
@@ -139,7 +139,7 @@
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_yQmd0d6-EeO8U4Ur9B-XAQ"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_yQmd0t6-EeO8U4Ur9B-XAQ" fontName="Segoe UI"/>
     <styles xmi:type="notation:FillStyle" xmi:id="_yQmd096-EeO8U4Ur9B-XAQ"/>
-    <element xmi:type="android:Dialog" href="default.android#//@createDialog.0"/>
+    <element xmi:type="android:Dialog" href="ejemploTwitter.android#//@createDialog.0"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yQmd1N6-EeO8U4Ur9B-XAQ" x="580" y="360"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_TyguQN6_EeO8U4Ur9B-XAQ" type="2002">
@@ -147,7 +147,7 @@
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_TyguQd6_EeO8U4Ur9B-XAQ"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_TyguQt6_EeO8U4Ur9B-XAQ" fontName="Segoe UI"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_TyguQ96_EeO8U4Ur9B-XAQ"/>
-    <element xmi:type="android:CreateString" href="default.android#//@create_String.2"/>
+    <element xmi:type="android:CreateString" href="ejemploTwitter.android#//@create_String.2"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TyguRN6_EeO8U4Ur9B-XAQ" x="60" y="-20"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_ebffIN6_EeO8U4Ur9B-XAQ" type="2012">
@@ -155,7 +155,7 @@
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_ebffId6_EeO8U4Ur9B-XAQ"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_ebffIt6_EeO8U4Ur9B-XAQ" fontName="Segoe UI"/>
     <styles xmi:type="notation:FillStyle" xmi:id="_ebffI96_EeO8U4Ur9B-XAQ"/>
-    <element xmi:type="android:TextView" href="default.android#//@createWidget.3"/>
+    <element xmi:type="android:TextView" href="ejemploTwitter.android#//@createWidget.3"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ebffJN6_EeO8U4Ur9B-XAQ" x="-50" y="215"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_jmwDEN6_EeO8U4Ur9B-XAQ" type="2012">
@@ -163,7 +163,7 @@
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_jmwDEd6_EeO8U4Ur9B-XAQ"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_jmwDEt6_EeO8U4Ur9B-XAQ" fontName="Segoe UI"/>
     <styles xmi:type="notation:FillStyle" xmi:id="_jmwDE96_EeO8U4Ur9B-XAQ"/>
-    <element xmi:type="android:TextView" href="default.android#//@createWidget.4"/>
+    <element xmi:type="android:TextView" href="ejemploTwitter.android#//@createWidget.4"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jmwDFN6_EeO8U4Ur9B-XAQ" x="-50" y="295"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_nMeMkN6_EeO8U4Ur9B-XAQ" type="2009">
@@ -171,7 +171,7 @@
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_nMeMkd6_EeO8U4Ur9B-XAQ"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_nMeMkt6_EeO8U4Ur9B-XAQ" fontName="Segoe UI"/>
     <styles xmi:type="notation:FillStyle" xmi:id="_nMeMk96_EeO8U4Ur9B-XAQ"/>
-    <element xmi:type="android:TextField" href="default.android#//@createWidget.5"/>
+    <element xmi:type="android:TextField" href="ejemploTwitter.android#//@createWidget.5"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nMeMlN6_EeO8U4Ur9B-XAQ" x="-50" y="255"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_p2kbUN6_EeO8U4Ur9B-XAQ" type="2009">
@@ -179,7 +179,7 @@
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_p2kbUd6_EeO8U4Ur9B-XAQ"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_p2kbUt6_EeO8U4Ur9B-XAQ" fontName="Segoe UI"/>
     <styles xmi:type="notation:FillStyle" xmi:id="_p2kbU96_EeO8U4Ur9B-XAQ"/>
-    <element xmi:type="android:TextField" href="default.android#//@createWidget.6"/>
+    <element xmi:type="android:TextField" href="ejemploTwitter.android#//@createWidget.6"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p2kbVN6_EeO8U4Ur9B-XAQ" x="-50" y="335"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_sucnYN6_EeO8U4Ur9B-XAQ" type="2006">
@@ -187,11 +187,11 @@
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_sucnYd6_EeO8U4Ur9B-XAQ"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_sucnYt6_EeO8U4Ur9B-XAQ" fontName="Segoe UI"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_sucnY96_EeO8U4Ur9B-XAQ"/>
-    <element xmi:type="android:Button" href="default.android#//@createWidget.7"/>
+    <element xmi:type="android:Button" href="ejemploTwitter.android#//@createWidget.7"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sucnZN6_EeO8U4Ur9B-XAQ" x="-50" y="375"/>
   </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_1iD5cN68EeO8U4Ur9B-XAQ"/>
-  <element xmi:type="android:MetaApp" href="default.android#/"/>
+  <element xmi:type="android:MetaApp" href="ejemploTwitter.android#/"/>
   <edges xmi:type="notation:Connector" xmi:id="_Cx2UgN69EeO8U4Ur9B-XAQ" type="4007" source="_2bnXoN68EeO8U4Ur9B-XAQ" target="_25ltEN68EeO8U4Ur9B-XAQ">
     <styles xmi:type="notation:FontStyle" xmi:id="_Cx2Ugd69EeO8U4Ur9B-XAQ" fontName="Segoe UI"/>
     <element xsi:nil="true"/>
